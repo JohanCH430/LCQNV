@@ -32,9 +32,9 @@ public class PruebaEscribirBD extends AppCompatActivity {
                         int res = accesoBD.escribirBD(String.valueOf(tNombre.getText()), String.valueOf(tDescripcion.getText()));
                         if(res == 0){
                         feedback.setText("Nombre y descripción añadidas correctamente");
-                    } else{
-                        feedback.setText("ERROR: Introduce un nombre y una descripción");
-                    }
+                        } else{
+                            feedback.setText("ERROR: Introduce un nombre y una descripción");
+                        }
                     }
                 });
 
