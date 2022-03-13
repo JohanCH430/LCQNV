@@ -27,10 +27,10 @@ jobs:
       run: chmod +x gradle
 
     - name: Build Project
-      run: gradle assemble
+      run: ./gradle assemble
 
     - name: Run Tests
-      run: gradle test
+      run: ./gradle test --tests"*"
 
     - name: Upload test report
       uses: actions/upload-artifact@v2
