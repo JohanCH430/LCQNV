@@ -36,7 +36,7 @@ task assemble {
 }
 
 task test {
-
+ useJUnit()
  doLast {
   println 'Hello World!'
  }
