@@ -27,7 +27,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Run Tests
-      run: ./gradlew test --tests"*"
+      run: ./gradlew test --tests "*"
 
     - name: Upload test report
       uses: actions/upload-artifact@v2
