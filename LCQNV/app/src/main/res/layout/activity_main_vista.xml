@@ -7,30 +7,30 @@
     tools:context=".MainVista">
 
     <ImageView
-        android:id = "@+id/imagen"
-        android:layout_width="205dp"
-        android:layout_height="224dp"
+        android:id="@+id/imagen"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:src="@mipmap/lcqnv_logo_sin_fondo" />
 
     <Button
         android:id="@+id/btnModoAdmin"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/imagen"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="MODO ADMIN" />
 
     <Button
         android:id="@+id/btnJugar"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnModoAdmin"
         android:layout_marginTop="20dp"
-        android:text="JUGAR" />
+        android:text="JUGAR (WIP)" />
 
     <TextView
         android:id="@+id/txtVersion"
