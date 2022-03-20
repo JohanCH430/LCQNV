@@ -1,7 +1,6 @@
-package com.example.lascosasquenovemos.Vista;
+package com.example.lascosasquenovemos.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainVista extends AppCompatActivity {
