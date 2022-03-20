@@ -20,7 +20,7 @@ public class MainVista extends AppCompatActivity {
         setContentView(R.layout.activity_main_vista);
 
         //Creo los Intents de las activities a las que tiene que redireccionar.
-        //iAdminMode = new Intent(MainVista.this, AdminVista.class);
+        iAdminMode = new Intent(MainVista.this, AdminVista.class);
         //iJugar = new Intent(MainVista.this, );
 
         //Inicializado las variables con los diferentes elementos de la vista.
@@ -49,7 +49,6 @@ public class MainVista extends AppCompatActivity {
 
     //Método que comienza la actividad con la vista de administrador.
     private void modoAdmin(){
-        iAdminMode = new Intent(this, AdminVista.class);
         startActivity(iAdminMode);
     }
 
