@@ -1,17 +1,12 @@
 package com.example.lascosasquenovemos;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class PruebaEscribirBDTest{
 
-    DBAccess pruebaEscribirBD;
+    /*DBAccess pruebaEscribirBD;
 
     @Before
     public void setupTests() {
@@ -49,6 +44,6 @@ public class PruebaEscribirBDTest{
         String descripcion = "";
 
         assertFalse(pruebaEscribirBD.comprobarFormato(nombre,descripcion));
-    }
+    }*/
 
 }

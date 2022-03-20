@@ -1,14 +1,12 @@
 package com.example.lascosasquenovemos.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.lascosasquenovemos.view.BuildConfig;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainVista extends AppCompatActivity {
 
@@ -51,6 +49,7 @@ public class MainVista extends AppCompatActivity {
 
     //Método que comienza la actividad con la vista de administrador.
     private void modoAdmin(){
+        iAdminMode = new Intent(this, AdminVista.class);
         startActivity(iAdminMode);
     }
 
