@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextoVista">
+
+
+    <TextView
+        android:id="@+id/Titulo_del_texto"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="Titulo del texto :" />
+
+    <EditText
+        android:id="@+id/txtInpTitulo"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:hint="Titulo"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtTexto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:hint="Texto"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="690dp"
+        android:text="Inicio" />
+
+    <Button
+        android:id="@+id/buttonCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="690dp"
+        android:layout_marginLeft="340dp"
+        android:text="Crear" />
+
+    <TextView
+        android:id="@+id/textTexto"
+        android:layout_width="500dp"
+        android:layout_height="26dp"
+        android:text="Texto"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp" />
+
+    <Spinner
+        android:id="@+id/list"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="30dp"
+        android:spinnerMode="dropdown"
+
+
+        />
+
+</RelativeLayout>
