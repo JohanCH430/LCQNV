@@ -1,6 +1,7 @@
 package com.example.lascosasquenovemos.bll;
 
 import com.example.lascosasquenovemos.dal.TextoDAL;
+import com.example.lascosasquenovemos.model.TextoModelo;
 
 public class TextoBll {
 
@@ -9,6 +10,11 @@ public class TextoBll {
     public int crearTexto(){
         //TODO depende de los Transfers
         return textoDAL.crearTexto();
+    }
+    public boolean comprobarSintaxis(TextoModelo texto){
+        if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)
+            return true;
+        return false;
     }
 
 }
