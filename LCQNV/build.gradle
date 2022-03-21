@@ -29,6 +29,7 @@ allprojects {
 
 task test {
     doLast {
+        useJUnit()
         println 'hello world'
     }
 }

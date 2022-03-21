@@ -2,9 +2,9 @@ name: Android Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Shuyi ]
   pull_request:
-    branches: [ main ]
+    branches: [ Shuyi ]
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew assemble
 
       - name: Run Tests
-        run: ./gradlew test
+        run: ./gradlew test --tests "*"
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
