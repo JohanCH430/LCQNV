@@ -33,6 +33,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto_vista);
+
         txtTitulo = findViewById(R.id.txtInpTitulo);
         txttexto = findViewById(R.id.txtTexto);
         btnCrear = findViewById(R.id.buttonCrear);

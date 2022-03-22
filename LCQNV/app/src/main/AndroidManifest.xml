@@ -16,6 +16,9 @@
             android:name=".CrearQuizVista"
             android:exported="false" />
         <activity
+            android:name=".TextoVista"
+            android:exported="false"/>
+        <activity
             android:name=".AdminVista"
             android:exported="false" />
         <activity
