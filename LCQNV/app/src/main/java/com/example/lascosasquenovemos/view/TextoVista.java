@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.lascosasquenovemos.bll.TextoBll;
+
 import java.util.ArrayList;
 
 public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -22,6 +24,9 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     Intent iInicio, iCrear;
     Spinner list;
     private ArrayList<String> lista;
+    private TextoBll bd;
+    private String tema;
+    TextView Error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +37,12 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         btnCrear = findViewById(R.id.buttonCrear);
         btnInicio = findViewById(R.id.buttonInicio);
         list = findViewById(R.id.list);
+        Error = findViewById(R.id.Error);
         lista = new ArrayList<String>();
         lista.add("Tipo");
+        lista.add("Visual");
+        lista.add("Auditiva");
+        lista.add("Fisica");
         //lista = addType();
         list.setOnItemSelectedListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
@@ -52,7 +61,15 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
             public void onClick(View view) {
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
-                startActivity(iCrear);//Falta iniciar intent
+                String t= txttexto.toString();
+                boolean ok = bd.crearTexto(tema, t);
+                if(ok){
+                    startActivity(iCrear);//Falta iniciar intent
+                }
+                else{
+                    Error.setText("Error al crear texto");
+                }
+
             }
         });
 
@@ -65,6 +82,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         {
             case R.id.list:
                 Toast.makeText(this,adapterView.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+                tema = lista.get(i).toString();
                 break;
 
             default:
