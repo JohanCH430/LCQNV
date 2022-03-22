@@ -12,7 +12,7 @@ public class TextoBll {
         if(!comprobarSintaxis(texto)){
             return false;
         } else{
-           textoDAL.obtainId();
+           textoDAL.escribirTexto();
 
            //if(i == 0){
                return true;
