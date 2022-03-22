@@ -5,12 +5,14 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.lascosasquenovemos.model.TextoModelo;
 import com.example.lascosasquenovemos.view.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,8 @@ import java.util.List;
 public class TextoDAL {
 
     private DatabaseReference DataBase;
+    private DatabaseReference refTextos;
+    private DatabaseReference refTematicaTexto;
     private Context appContext;
 
     //Constructor con un parámetro para que se pase el contexto de la aplicación que es necesario para usar la base de datos
@@ -29,19 +33,26 @@ public class TextoDAL {
         //Se pone la persistencia a "true" para que los cambios se guarden
         DataBaseInstance.setPersistenceEnabled(true);
         DataBase = DataBaseInstance.getReference();
+        refTextos = DataBase.child("Texto");
+        refTematicaTexto = DataBase.child("TematicaTexto");
     }
 
     //Método utilizado para crear un nuevo texto en la base de datos
-    public int crearTexto(){
+    public int crearTexto(TextoModelo texto){
+        String id = obtainId();
+        //Ha habido un error al generar el id y por tanto no se puede acceder a la base de datos
+        if (id == "") return -1;
+        texto.setIDTexto(id);
+
+        //Este hijo es el que se va a usar en firebase para la creacion de textos ya que el conteindo cuelga del id
+        DatabaseReference refId = refTextos.child(texto.getIDTexto());
+
         //Atributo local que se pondrá a true en caso de que haya algún error al insertar en la base de datos
-        final boolean[] hasFailed = {false};
-        //TODO cambiar acceso a BD (FALTAN FUNCIONES DEL TRANSFER)
-        //TODO hacer lectura a la BD para extraer el ultimo id usado (?)
-        String JSONTexto = crearJSONTexto("1", "1", "1");
-        String JSONTematicaTexto = crearJSONTemáticaTexto("1", "1", new ArrayList<String>());
+        final boolean[] hasFailed = {false,false,false};
+        String ArrayTematicaTexto = crearArrayTemáticaTexto(texto.getTemática(), texto.getIDTexto());
 
         //Acceso a la base de datos para escribir el valor en la tabla de Tematicatexto
-        DataBase.child("TematicaTexto").setValue(JSONTematicaTexto).addOnFailureListener(new OnFailureListener() {
+        refTematicaTexto.child(texto.getTemática()).setValue(ArrayTematicaTexto).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Log.d("firebase", e.getLocalizedMessage());
@@ -52,55 +63,81 @@ public class TextoDAL {
         //Solo se hace la segunda escritura si la primera no ha dado fallos
         if (hasFailed[0] == false) {
             //Acceso a la base de datos para escribir el valor en la tabla de Texto
-            DataBase.child("Texto").setValue(JSONTexto).addOnFailureListener(new OnFailureListener() {
+            refId.child("Contenido").setValue(texto.getTexto()).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     Log.d("firebase", e.getLocalizedMessage());
-                    hasFailed[0] = true;
+                    hasFailed[1] = true;
+                }
+            });
+            refId.child("Titulo").setValue(texto.getTítulo()).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.d("firebase", e.getLocalizedMessage());
+                    hasFailed[2] = true;
                 }
             });
         }
 
-        if (hasFailed[0] == true) return -1; //Ha fallado el método al acceder a la base de datos
+        //Si ha fallado en las siguientes inserciones e borra todo lo hecho anteriormente en la base de datos y se devuelve -1 indicando que ha habido un error
+        if (hasFailed[1] == true || hasFailed[2] == true){
+            refTextos.child(texto.getIDTexto()).removeValue();
+            refTematicaTexto.child(texto.getTemática()).removeValue();
+            return -1;
+
+        }
         else return 0; //El método ha tenido éxito
     }
 
-    private String crearJSONTexto(String idTexto, String contenido, String titulo){
-        //Objeto JSON con el id y anidado con otro JSON con los datos
-        JSONObject object1 = new JSONObject();
-        //Objeto JSON con los datos del texto
-        JSONObject object2 = new JSONObject();
 
-        try {
-            //Se añade al JSON de datos los valores de titulo y contenido
-            object2.put("Titulo", titulo);
-            object2.put("Contenido", contenido);
-            //Se añade al JSON final el JSON de los datos junto con el id del texto
-            object1.put(idTexto,object2);
-        }
-        catch (Exception exception){
-            //Se añade al log el error que ha podido dar la creación del JSON
-            Log.d("CreacionJSONTexto", exception.getLocalizedMessage());
-        }
-
-        return object1.toString();
-    }
-
-    private String crearJSONTemáticaTexto(String idTematica, String idTitulo, List<String> listaTextos){
-        JSONObject object = new JSONObject();
-
+    private String crearArrayTemáticaTexto(String idTematica, String idTitulo){
+        List listaTextos = new ArrayList();
         //Se añade el nuevo texto a la lista de temáticas asociadas
         listaTextos.add(idTitulo);
-        try {
-            object.put(idTematica, listaTextos);
-        }
-        catch (Exception exception){
-            //Se añade al log el error que ha podido dar la creación del JSON
-            Log.d("CreacionJSONTematTexto", exception.getLocalizedMessage());
-        }
-
-        return object.toString();
+        return listaTextos.toString();
     }
 
+    private String obtainId(){
 
+        final String[] UltimoID = {""};
+
+        //Lectura del ultimo id usado para los textos
+        DataBase.child("IDTexto").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                    if(String.valueOf(task.getResult().getValue()) == "null"){
+
+                    }
+
+                    else{
+                        UltimoID[0] = String.valueOf(task.getResult().getValue());
+                    }
+
+                }
+            }
+        });
+
+        /*//Se crea un nuevo id añadiendole 1 al valor original
+        String[] datos = UltimoID[0].split("-");
+        int aux = Integer.parseInt(datos[1 ]) + 1;
+        String nuevoID = datos[0] + "-" + String.valueOf(aux);*/
+
+        String nuevoID = "aaaa";
+        //Se escribe el nuevo valor en la BD
+        DataBase.child("IDTexto").setValue(nuevoID).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("firebase", e.getLocalizedMessage());
+            }
+        });
+
+        //Se devuelve el nuevo valor
+        return nuevoID;
+    }
 }

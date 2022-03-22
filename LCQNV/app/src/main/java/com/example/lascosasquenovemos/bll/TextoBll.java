@@ -7,9 +7,10 @@ public class TextoBll {
 
     private TextoDAL textoDAL;
 
-    public int crearTexto(TextoModelo texto){
+    public int crearTexto(){
         //TODO depende de los Transfers
-        //return textoDAL.crearTexto(texto);
+        //return textoDAL.crearTexto();
+        return -1;
     }
     public boolean comprobarSintaxis(TextoModelo texto){
         if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)
