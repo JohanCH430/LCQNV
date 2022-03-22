@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.model.TextoModelo;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,6 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         lista.add("Visual");
         lista.add("Auditiva");
         lista.add("Fisica");
-        //lista = addType();
         list.setOnItemSelectedListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -61,8 +61,8 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
             public void onClick(View view) {
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
-                String t= txttexto.toString();
-                boolean ok = bd.crearTexto(tema, t);
+                TextoModelo texto = new TextoModelo("0",txtTitulo.toString(), txttexto.toString(), tema);
+                boolean ok = bd.crearTexto(texto);
                 if(ok){
                     startActivity(iCrear);//Falta iniciar intent
                 }
