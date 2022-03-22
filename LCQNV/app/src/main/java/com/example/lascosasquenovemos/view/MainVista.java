@@ -8,16 +8,25 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
+
 public class MainVista extends AppCompatActivity {
 
     TextView txtVersion;
     Button btnAdminMode, btnJugar;
     Intent iAdminMode, iJugar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_vista);
+
+        //Inicializar la referencia a la base da datos através de la variable static dataBase.
+        new FirebaseDAL(getApplicationContext());
+
+        //PRUEBAS
+        //startActivity(new Intent(MainVista.this, CrearQuizVista.class));
 
         //Creo los Intents de las activities a las que tiene que redireccionar.
         iAdminMode = new Intent(MainVista.this, AdminVista.class);
