@@ -10,13 +10,18 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 
-public class CrearQuizVista extends AppCompatActivity{
+public class CrearQuizVista extends AppCompatActivity implements QuizListener {
+
     TextView txtPreg, txtOp1, txtOp2, txtOp3, txtOp4, teoria, Error;
     RadioButton rd1, rd2, rd3, rd4;
     Button btnInicio, btnCrear;
     Intent iInicio, iCrear;
+
+    //Boolean que sabe si se ha podido añadir o no.
+    Boolean escrituraCorrecta;
     //TODO QuizBll
 
 
@@ -58,4 +63,24 @@ public class CrearQuizVista extends AppCompatActivity{
         });
     }
 
+    /*
+        Lectura:
+        QuizBll.leerQuiz("Q-1", this);
+
+        Ejemplo Escritura:
+        QuizModelo quizM = new QuizModelo("Johaasn", "Jsd", "Ofsd", "fH", "Asdf", "sdffsdN");
+        QuizBll.crearQuiz(quizM, this);
+    * */
+
+
+    //Metodos del Listener
+    @Override
+    public void onQuizReadSucced(QuizModelo quiz) {
+        QuizModelo prueba = quiz;
+    }
+
+    @Override
+    public void onQuizWriteSucced(Boolean bool) {
+        escrituraCorrecta = bool;
+    }
 }
