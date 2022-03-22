@@ -3,11 +3,10 @@ package com.example.lascosasquenovemos.view;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminVista extends AppCompatActivity {
-
+    Intent iTexto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,8 @@ public class AdminVista extends AppCompatActivity {
         botonCrearTexto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO Redirección a la vista CrearTexto
+                iTexto = new Intent(AdminVista.this, TextoVista.class);
+                startActivity(iTexto);
             }
         });
 
