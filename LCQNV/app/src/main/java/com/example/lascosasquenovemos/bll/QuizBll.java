@@ -1,17 +1,18 @@
 package com.example.lascosasquenovemos.bll;
 
+import com.example.lascosasquenovemos.dal.QuizDAL;
 import com.example.lascosasquenovemos.dal.TextoDAL;
+import com.example.lascosasquenovemos.model.FirebaseListener;
+import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 
 public class QuizBll {
-    private QuizDAL integracion;
 
-    public QuizBll(){
-
+    public static void crearQuiz(QuizModelo quiz, QuizListener qL) {
+        QuizDAL.crearQuiz(quiz, qL);
     }
-    private boolean crearQuiz(QuizModelo quiz){
-        //Comprobar el sintaxis
-        //Si es correcto entonces podemos seguir sino devuelve un false para la pantalla quizVista
 
+    public static void leerQuiz(String id, QuizListener qL) {
+        QuizDAL.leerQuiz(id, qL);
     }
 }
