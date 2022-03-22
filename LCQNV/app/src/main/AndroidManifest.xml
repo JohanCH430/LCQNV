@@ -13,11 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".InfoVista"
+            android:exported="false" />
+        <activity
             android:name=".CrearQuizVista"
             android:exported="false" />
         <activity
             android:name=".TextoVista"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".AdminVista"
             android:exported="false" />

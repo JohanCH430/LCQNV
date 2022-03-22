@@ -49,46 +49,26 @@ public class TextoDAL implements FirebaseListener {
         //Este hijo es el que se va a usar en firebase para la creacion de textos ya que el conteindo cuelga del id
         DatabaseReference refId = refTextos.child(texto.getIDTexto());
 
-        //Atributo local que se pondrá a true en caso de que haya algún error al insertar en la base de datos
-        final boolean[] hasFailed = {false,false,false};
-        String ArrayTematicaTexto = crearArrayTemáticaTexto(texto.getTemática(), texto.getIDTexto());
-
-        //Acceso a la base de datos para escribir el valor en la tabla de Tematicatexto
-        refTematicaTexto.child(texto.getTemática()).setValue(ArrayTematicaTexto).addOnFailureListener(new OnFailureListener() {
+        //Solo se hace la segunda escritura si la primera no ha dado fallos
+        //Acceso a la base de datos para escribir el valor en la tabla de Texto
+        refId.child("Contenido").setValue(texto.getTexto()).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Log.d("firebase", e.getLocalizedMessage());
-                hasFailed[0] = true;
-            }
+                }
+        });
+        refId.child("Titulo").setValue(texto.getTítulo()).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("firebase", e.getLocalizedMessage());
+                }
         });
 
-        //Solo se hace la segunda escritura si la primera no ha dado fallos
-        if (hasFailed[0] == false) {
-            //Acceso a la base de datos para escribir el valor en la tabla de Texto
-            refId.child("Contenido").setValue(texto.getTexto()).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.d("firebase", e.getLocalizedMessage());
-                    hasFailed[1] = true;
-                }
-            });
-            refId.child("Titulo").setValue(texto.getTítulo()).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.d("firebase", e.getLocalizedMessage());
-                    hasFailed[2] = true;
-                }
-            });
-        }
+        //Llamada a la funcion encargada de la generacion de los datos en la tabla TematicaTexto
+        obtainList();
 
         //Si ha fallado en las siguientes inserciones e borra todo lo hecho anteriormente en la base de datos y se devuelve -1 indicando que ha habido un error
-        if (hasFailed[1] == true || hasFailed[2] == true){
-            refTextos.child(texto.getIDTexto()).removeValue();
-            refTematicaTexto.child(texto.getTemática()).removeValue();
-            return -1;
-
-        }
-        else return 0; //El método ha tenido éxito
+        return 0; //El método ha tenido éxito
     }
 
 
@@ -117,7 +97,35 @@ public class TextoDAL implements FirebaseListener {
                     }
 
                     else{
-                        onSucced(task);
+                        //Si la tarea se ha hecho con exito se llama a onSucced para que redirija el código
+                        afterReadID(task);
+                    }
+
+                }
+            }
+        });
+
+    }
+
+    public void obtainList(){
+
+        //Lectura del ultimo id usado para los textos
+        refTematicaTexto.child(texto.getTemática()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase error", "Error getting data", task.getException());
+                }
+                else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                    if(String.valueOf(task.getResult().getValue()) == "null"){
+
+                    }
+
+                    else{
+                        //Si la tarea se ha hecho con exito se llama a onSucced para que redirija el código
+                        afterReadList(task);
                     }
 
                 }
@@ -128,6 +136,11 @@ public class TextoDAL implements FirebaseListener {
 
     @Override
     public void onSucced(Task<DataSnapshot> task) {
+
+    }
+
+    @Override
+    public void afterReadID(Task<DataSnapshot> task) {
         //Se crea un nuevo id añadiendole 1 al valor original
         String[] datos = String.valueOf(task.getResult().getValue()).split("-");
         int aux = Integer.parseInt(datos[1 ]) + 1;
@@ -144,8 +157,20 @@ public class TextoDAL implements FirebaseListener {
 
         crearTexto(nuevoID);
 
+    }
 
-
+    @Override
+    public void afterReadList(Task<DataSnapshot> task) {
+        String[] ArrayTematicaTexto = String.valueOf(task.getResult().getValue()).split("]");
+        //Se crea el array con el nuevo texto
+        String listaCompleta = ArrayTematicaTexto[0] + "," + texto.getIDTexto() + "]";
+        //Acceso a la base de datos para escribir el valor en la tabla de Tematicatexto
+        refTematicaTexto.child(texto.getTemática()).setValue(listaCompleta).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("firebase", e.getLocalizedMessage());
+            }
+        });
     }
 
     @Override

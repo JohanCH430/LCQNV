@@ -12,13 +12,13 @@ public class TextoBll {
         if(!comprobarSintaxis(texto)){
             return false;
         } else{
-           int i = textoDAL.crearTexto(texto);
+           textoDAL.obtainId();
 
-           if(i == 0){
+           //if(i == 0){
                return true;
-           } else{
-               return false;
-           }
+           //} else{
+           //    return false;
+           //}
         }
 
 

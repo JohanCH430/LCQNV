@@ -5,5 +5,7 @@ import com.google.firebase.database.DataSnapshot;
 
 public interface FirebaseListener {
     void onSucced(Task<DataSnapshot> task);
+    void afterReadID(Task<DataSnapshot> task);
+    void afterReadList(Task<DataSnapshot> task);
     void onFailure(Exception e);
 }
