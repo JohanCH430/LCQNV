@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminVista extends AppCompatActivity {
     Intent iTexto;
+    Intent iQuiz;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,8 @@ public class AdminVista extends AppCompatActivity {
         botonCrearQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO Redirección a la vista CrearQuiz
+                iQuiz = new Intent(AdminVista.this, CrearQuizVista.class);
+                startActivity(iQuiz);
             }
         });
 
