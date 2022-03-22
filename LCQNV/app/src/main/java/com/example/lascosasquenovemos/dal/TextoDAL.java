@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.lascosasquenovemos.model.FirebaseListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import com.example.lascosasquenovemos.view.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,15 +18,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextoDAL {
+public class TextoDAL implements FirebaseListener {
 
     private DatabaseReference DataBase;
     private DatabaseReference refTextos;
     private DatabaseReference refTematicaTexto;
     private Context appContext;
+    private TextoModelo texto;
 
     //Constructor con un parámetro para que se pase el contexto de la aplicación que es necesario para usar la base de datos
-    public TextoDAL(Context application_context){
+    public TextoDAL(TextoModelo texto, Context application_context){
         //Se inicializa el contexto
         appContext = application_context;
         //Se obtiene la instancia de la base de datos con el link de firebase
@@ -35,11 +37,11 @@ public class TextoDAL {
         DataBase = DataBaseInstance.getReference();
         refTextos = DataBase.child("Texto");
         refTematicaTexto = DataBase.child("TematicaTexto");
+        this.texto = texto;
     }
 
     //Método utilizado para crear un nuevo texto en la base de datos
-    public int crearTexto(TextoModelo texto){
-        String id = obtainId();
+    public int crearTexto(String id){
         //Ha habido un error al generar el id y por tanto no se puede acceder a la base de datos
         if (id == "") return -1;
         texto.setIDTexto(id);
@@ -90,6 +92,7 @@ public class TextoDAL {
     }
 
 
+
     private String crearArrayTemáticaTexto(String idTematica, String idTitulo){
         List listaTextos = new ArrayList();
         //Se añade el nuevo texto a la lista de temáticas asociadas
@@ -97,16 +100,14 @@ public class TextoDAL {
         return listaTextos.toString();
     }
 
-    private String obtainId(){
-
-        final String[] UltimoID = {""};
+    public void obtainId(){
 
         //Lectura del ultimo id usado para los textos
         DataBase.child("IDTexto").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (!task.isSuccessful()) {
-                    Log.e("firebase", "Error getting data", task.getException());
+                    Log.e("firebase error", "Error getting data", task.getException());
                 }
                 else {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
@@ -116,19 +117,23 @@ public class TextoDAL {
                     }
 
                     else{
-                        UltimoID[0] = String.valueOf(task.getResult().getValue());
+                        onSucced(task);
                     }
 
                 }
             }
         });
 
-        /*//Se crea un nuevo id añadiendole 1 al valor original
-        String[] datos = UltimoID[0].split("-");
-        int aux = Integer.parseInt(datos[1 ]) + 1;
-        String nuevoID = datos[0] + "-" + String.valueOf(aux);*/
+    }
 
-        String nuevoID = "aaaa";
+    @Override
+    public void onSucced(Task<DataSnapshot> task) {
+        //Se crea un nuevo id añadiendole 1 al valor original
+        String[] datos = String.valueOf(task.getResult().getValue()).split("-");
+        int aux = Integer.parseInt(datos[1 ]) + 1;
+        String nuevoID = datos[0] + "-" + String.valueOf(aux);
+
+        //String nuevoID = "aaaa";
         //Se escribe el nuevo valor en la BD
         DataBase.child("IDTexto").setValue(nuevoID).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -137,7 +142,15 @@ public class TextoDAL {
             }
         });
 
-        //Se devuelve el nuevo valor
-        return nuevoID;
+        crearTexto(nuevoID);
+
+
+
     }
+
+    @Override
+    public void onFailure(Exception e) {
+
+    }
+
 }
