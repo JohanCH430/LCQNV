@@ -11,5 +11,10 @@ public class TextoBll {
         //TODO depende de los Transfers
         //return textoDAL.crearTexto(texto);
     }
+    public boolean comprobarSintaxis(TextoModelo texto){
+        if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)
+            return true;
+        return false;
+    }
 
 }
