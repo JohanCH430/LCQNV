@@ -37,7 +37,8 @@ public class TextoDAL implements FirebaseListener {
         refTematicaTexto = DataBase.child("TematicaTexto");
 
         //Se pone la persistencia a "true" para que los cambios se guarden
-        DataBaseInstance.setPersistenceEnabled(true);
+
+        //DataBaseInstance.setPersistenceEnabled(true);
 
     }
 

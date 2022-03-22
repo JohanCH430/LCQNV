@@ -63,7 +63,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
                 TextoModelo texto = new TextoModelo("0",txtTitulo.toString(), txttexto.toString(), tema);
-                boolean ok = bd.crearTexto(texto);
+                boolean ok = bd.crearTexto(texto, getApplicationContext());
                 if(ok){
                     startActivity(iCrear);//Falta iniciar intent
                 }
