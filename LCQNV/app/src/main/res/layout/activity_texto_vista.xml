@@ -38,15 +38,16 @@
         android:id="@+id/buttonInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="30dp"
         android:text="Inicio" />
 
     <Button
         android:id="@+id/buttonCrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
-        android:layout_marginLeft="340dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="300dp"
         android:text="Crear" />
 
     <TextView
