@@ -4,19 +4,20 @@ import org.json.JSONObject;
 
 public class QuizModelo {
 
-    String pregunta, opcionA, opcionB, opcionC, opcionD, solucion;
+    String pregunta, opcionA, opcionB, opcionC, opcionD, solucion, textId;
 
     public QuizModelo(){
 
     }
 
-    public QuizModelo(String pregunta, String opcionA, String opcionB, String opcionC, String opcionD, String solucion) {
+    public QuizModelo(String pregunta, String opcionA, String opcionB, String opcionC, String opcionD, String solucion, String textId) {
         this.pregunta = pregunta;
         this.opcionA = opcionA;
         this.opcionB = opcionB;
         this.opcionC = opcionC;
         this.opcionD = opcionD;
         this.solucion = solucion;
+        this.textId = textId;
     }
 
     public String getPregunta() {
@@ -66,4 +67,13 @@ public class QuizModelo {
     public void setSolucion(String solucion) {
         this.solucion = solucion;
     }
+
+    public String getTextId() {
+        return textId;
+    }
+
+    public void setTextId(String textId) {
+        this.textId = textId;
+    }
+
 }

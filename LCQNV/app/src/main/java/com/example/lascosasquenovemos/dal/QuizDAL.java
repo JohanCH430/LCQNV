@@ -39,6 +39,7 @@ public class QuizDAL extends FirebaseDAL {
 
                         String pregunta = (String) result.get("Pregunta");
                         String solucion = (String) result.get("Solucion");
+                        String textId = (String) result.get("TextId");
 
                         HashMap<String, String> opciones = (HashMap<String, String>) result.get("Opciones");
 
@@ -47,7 +48,7 @@ public class QuizDAL extends FirebaseDAL {
                         String oC = opciones.get("c");
                         String oD = opciones.get("d");
 
-                        qL.onQuizReadSucced(new QuizModelo(pregunta, oA, oB, oC, oD, solucion));
+                        qL.onQuizReadSucced(new QuizModelo(pregunta, oA, oB, oC, oD, solucion, textId));
 
                     }
 
@@ -98,6 +99,7 @@ public class QuizDAL extends FirebaseDAL {
                    quizMap.put("Opciones", opt);
                    quizMap.put("Pregunta", quiz.getPregunta());
                    quizMap.put("Solucion", quiz.getSolucion());
+                   quizMap.put("TextId", quiz.getTextId());
 
                     //Añado el mapa a la bd
                     refQuiz.child(nuevoID).setValue(quizMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -107,7 +109,8 @@ public class QuizDAL extends FirebaseDAL {
                         }
                     });
 
-                    //TODO Añadir relación texto-pregunta
+                    //TODO Añadir relación texto-pregunta Preguntar
+
 
                 }
 
