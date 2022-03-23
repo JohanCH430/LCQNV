@@ -110,21 +110,26 @@ public class QuizDAL extends FirebaseDAL {
                     });
 
                     //TODO Añadir relación texto-pregunta Preguntar Sujeto a cambio
-
                     //Añado la relación entre Texto y pregunta. (Un texto, muchas preguntas) (Tiene que existir la referencia en la BD, no te la autocrea)
                     refTextoQuiz.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DataSnapshot> task) {
-                            HashMap<String, String> resultTextoPregunta = (HashMap<String, String>) task.getResult().getValue();
 
-                            if(resultTextoPregunta.get(quiz.getTextId()) == null){
-                                refTextoQuiz.child(quiz.getTextId()).setValue(nuevoID);
-                            }else{
-                                String suma = resultTextoPregunta.get(quiz.getTextId());
-                                suma += ", " + nuevoID;
-                                refTextoQuiz.child(quiz.getTextId()).setValue(suma);
+                            if (!task.isSuccessful()) {
+                                Log.e("firebase error", "Error getting data", task.getException());
+                            } else{
+                                Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                                HashMap<String, String> resultTextoPregunta = (HashMap<String, String>) task.getResult().getValue();
+
+                                if(resultTextoPregunta.get(quiz.getTextId()) == null){
+                                    refTextoQuiz.child(quiz.getTextId()).setValue(nuevoID);
+                                }else{
+                                    String suma = resultTextoPregunta.get(quiz.getTextId());
+                                    suma += ", " + nuevoID;
+                                    refTextoQuiz.child(quiz.getTextId()).setValue(suma);
+                                }
                             }
-
                         }
                     });
 
