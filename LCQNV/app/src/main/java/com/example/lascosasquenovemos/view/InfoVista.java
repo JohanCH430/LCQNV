@@ -23,7 +23,8 @@ public class InfoVista extends AppCompatActivity implements TextListener {
         setContentView(R.layout.activity_info_vista);
 
         bd = new TextoBll();
-        idTexto = "T-5";
+        //TODO el id se debería de obtener de un parámetro que se obtiene de la función de creación de pantalla que se llama desde la vista anterior
+        idTexto = "PRUEBA";
 
         Button continuar = findViewById(R.id.btnContinuar);
         texto = findViewById(R.id.txtViewTexto);
