@@ -1,33 +1,15 @@
 package com.example.lascosasquenovemos.bll;
 
-import android.content.Context;
-
 import com.example.lascosasquenovemos.dal.TextoDAL;
+import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
 public class TextoBll {
 
-    private TextoDAL textoDAL;
 
-    public boolean crearTexto(TextoModelo texto, Context appContext){
+    public static void crearTexto(TextoModelo texto, TextListener tl){TextoDAL.creartexto(texto,tl);}
 
-        if(!comprobarSintaxis(texto)){
-            return false;
-        } else{
-           textoDAL = new TextoDAL(texto, appContext);
-           textoDAL.escribirTexto();
-           return true;
-        }
-    }
-
-    public TextoModelo leerTexto(String id, Context appContext){
-        TextoModelo texto = new TextoModelo(id, "","","");
-        textoDAL = new TextoDAL(texto, appContext);
-        textoDAL.leerTexto();
-        TextoModelo aux= textoDAL.obtenerLecturaBD();
-        texto = aux;
-        return texto;
-        }
+    public static void leerTexto(String id, TextListener tl){TextoDAL.leerTexto(id,tl);}
 
     public boolean comprobarSintaxis(TextoModelo texto){
         if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)

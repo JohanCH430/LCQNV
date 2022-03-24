@@ -8,11 +8,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.model.Interfaces.TextListener;
+import com.example.lascosasquenovemos.model.TextoModelo;
 
-public class InfoVista extends AppCompatActivity {
+public class InfoVista extends AppCompatActivity implements TextListener {
     private String idTexto;
     private TextoBll bd;
     private String text;
+    TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +26,9 @@ public class InfoVista extends AppCompatActivity {
         idTexto = "T-5";
 
         Button continuar = findViewById(R.id.btnContinuar);
-        TextView texto = findViewById(R.id.txtViewTexto);
+        texto = findViewById(R.id.txtViewTexto);
         //Se actualiza el textView con el valor obtenido en la lectura de la Base de Datos
-        text = getTexto(idTexto);
-        texto.setText(text);
+        bd.leerTexto(idTexto, this);
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,8 +37,14 @@ public class InfoVista extends AppCompatActivity {
         });
     }
 
-    private String getTexto(String id){
-        return bd.leerTexto(id, getApplicationContext()).getTexto();
+
+    @Override
+    public void onTextReadSucced(TextoModelo texto) {
+        this.texto.setText(texto.getTexto());
     }
 
+    @Override
+    public void onTextWriteSucced(Boolean bool) {
+        //No se implementa porque desde esta vista solo se lee
+    }
 }
