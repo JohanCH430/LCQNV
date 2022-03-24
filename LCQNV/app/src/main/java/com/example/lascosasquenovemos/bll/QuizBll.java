@@ -15,9 +15,17 @@ public class QuizBll {
     }
 
     public boolean comprobarSintaxis(QuizModelo modelo){
-        if(!modelo.getPregunta().equals("") && modelo.getPregunta().length() <= 50){
+        if(!modelo.getOpcionA().equals("") && modelo.getOpcionA().length() <= 50){
+            return true;
+        }else if(!modelo.getOpcionB().equals("") && modelo.getOpcionB().length() <= 50){
+            return true;
+        }else if(!modelo.getOpcionC().equals("") && modelo.getOpcionC().length() <= 50){
+            return true;
+        }else if(!modelo.getOpcionD().equals("") && modelo.getOpcionD().length() <= 50){
             return true;
         }else if(!modelo.getSolucion().equals("") && modelo.getSolucion().length() <= 50){
+            return true;
+        }else if(!modelo.getTextId().isEmpty()){
             return true;
         }
         return false;
