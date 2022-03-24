@@ -26,7 +26,6 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     Intent intentActual, iComprobacion;
 
     String solucion = null;
-    Boolean
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +52,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
                 if(solucion != null){
 
+                    //TODO no puedo terminarlo aún
                     //Le añado al Intent el resultado para que la activity pueda cambiar según sea o no correcto.
                    /* iComprobacion=new Intent(this, .class);
                     iComprobacion.putExtra("resul", resultado);
