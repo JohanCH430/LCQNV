@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".VerQuizVista"
+            android:exported="false" />
+        <activity
             android:name=".InfoVista"
             android:exported="false" />
         <activity
