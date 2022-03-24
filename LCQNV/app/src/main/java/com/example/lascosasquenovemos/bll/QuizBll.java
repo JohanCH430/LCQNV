@@ -1,11 +1,8 @@
 package com.example.lascosasquenovemos.bll;
 
 import com.example.lascosasquenovemos.dal.QuizDAL;
-import com.example.lascosasquenovemos.dal.TextoDAL;
-import com.example.lascosasquenovemos.model.FirebaseListener;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
-import com.example.lascosasquenovemos.model.TextoModelo;
 
 public class QuizBll {
 

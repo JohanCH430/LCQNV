@@ -1,6 +1,5 @@
 package com.example.lascosasquenovemos.dal;
 
-import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -30,8 +29,8 @@ public class QuizDAL extends FirebaseDAL {
                 } else {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
 
-                    if (String.valueOf(task.getResult().getValue()) == "null") {
-
+                    if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún Quiz con esa id, te devuelve un null.
+                        qL.onQuizReadSucced(null);
                     } else {
 
                         //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
@@ -62,7 +61,7 @@ public class QuizDAL extends FirebaseDAL {
 
         DatabaseReference refQuizID = FirebaseDAL.dataBase.child("IDQuiz");
         DatabaseReference refQuiz = FirebaseDAL.dataBase.child("Quiz");
-        DatabaseReference refTextoQuiz = FirebaseDAL.dataBase.child("Quiz");
+        DatabaseReference refTextoQuiz = FirebaseDAL.dataBase.child("TextoPregunta");
 
         refQuizID.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -109,8 +108,29 @@ public class QuizDAL extends FirebaseDAL {
                         }
                     });
 
-                    //TODO Añadir relación texto-pregunta Preguntar
+                    //TODO Añadir relación texto-pregunta Preguntar Sujeto a cambio
+                    //Añado la relación entre Texto y pregunta. (Un texto, muchas preguntas) (Tiene que existir la referencia en la BD, no te la autocrea)
+                    refTextoQuiz.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
 
+                            if (!task.isSuccessful()) {
+                                Log.e("firebase error", "Error getting data", task.getException());
+                            } else{
+                                Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                                HashMap<String, String> resultTextoPregunta = (HashMap<String, String>) task.getResult().getValue();
+
+                                if(resultTextoPregunta.get(quiz.getTextId()) == null){
+                                    refTextoQuiz.child(quiz.getTextId()).setValue(nuevoID);
+                                }else{
+                                    String suma = resultTextoPregunta.get(quiz.getTextId());
+                                    suma += ", " + nuevoID;
+                                    refTextoQuiz.child(quiz.getTextId()).setValue(suma);
+                                }
+                            }
+                        }
+                    });
 
                 }
 

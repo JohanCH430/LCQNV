@@ -1,6 +1,5 @@
 package com.example.lascosasquenovemos.model.Interfaces;
 
-import com.example.lascosasquenovemos.model.FirebaseListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 
 public interface QuizListener{
