@@ -1,16 +1,18 @@
 package com.example.lascosasquenovemos;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-
 import com.example.lascosasquenovemos.bll.QuizBll;
 import com.example.lascosasquenovemos.model.QuizModelo;
-
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 // public QuizModelo(String pregunta, String opcionA, String opcionB, String opcionC, String opcionD, String solucion, String textId)
-
+@RunWith(JUnit4.class)
 public class PruebasUnitariasCrearQuiz {
 
     QuizBll quizBll;
@@ -19,6 +21,11 @@ public class PruebasUnitariasCrearQuiz {
     @Before
     public void setUpTests(){
         quizBll = new QuizBll();
+    }
+
+    @Test
+    public void operacionNotNull(){
+        assertNotNull(quizBll);
     }
 
     //Test de ejemplo de un Quiz correcto con la primera opción correcta
@@ -292,4 +299,6 @@ public class PruebasUnitariasCrearQuiz {
         QuizModelo quiz = new QuizModelo(pregunta, opcion1, opcion2, opcion3, opcion4, solucion, textoId);
         assertFalse(quizBll.comprobarSintaxis(quiz));
     }
+
+
 }
