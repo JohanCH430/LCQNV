@@ -7,13 +7,11 @@ import androidx.annotation.NonNull;
 
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
-import com.example.lascosasquenovemos.view.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
@@ -25,30 +23,12 @@ public class TextoDAL extends FirebaseDAL {
     private Context appContext;
     private TextoModelo texto;
 
-    //Constructor con un parámetro para que se pase el contexto de la aplicación que es necesario para usar la base de datos
-    public TextoDAL(TextoModelo texto, Context application_context){
-
-        //Se inicializa las variables necesarias
-        appContext = application_context;
-        this.texto = texto;
-        //Se obtiene la instancia de la base de datos con el link de firebase
-        FirebaseDatabase DataBaseInstance = FirebaseDatabase.getInstance(appContext.getString(R.string.firebase_realtime_database_URL));
-
-        DataBase = DataBaseInstance.getReference();
-        refTextos = DataBase.child("Texto");
-        refTematicaTexto = DataBase.child("TematicaTexto");
-
-        //Se pone la persistencia a "true" para que los cambios se guarden
-
-        //DataBaseInstance.setPersistenceEnabled(true);
-
-    }
 
 ///////////////////////////////////////////////////////FUNCIONES PARA ESCRITURA DE UN NUEVO TEXTO EN BD////////////////////////////////////////////////////////////
 
     public static void creartexto(TextoModelo texto, TextListener tL){
 
-        DatabaseReference refTextoID = FirebaseDAL.dataBase.child("IDtexto");
+        DatabaseReference refTextoID = FirebaseDAL.dataBase.child("IDTexto");
         DatabaseReference refTexto = FirebaseDAL.dataBase.child("Texto");
         DatabaseReference refTematicaTexto = FirebaseDAL.dataBase.child("TematicaTexto");
 
@@ -63,7 +43,7 @@ public class TextoDAL extends FirebaseDAL {
 
                     //Creo un nuevo ID que es el siguiente al que hay guardado.
                     String[] datos = String.valueOf(task.getResult().getValue()).split("-");
-                    int aux = Integer.parseInt(datos[1 ]) + 1;
+                    int aux = Integer.parseInt(datos[1]) + 1;
                     String nuevoID = datos[0] + "-" + String.valueOf(aux);
 
                     //Actualizado el valor con el nuevo ID.
@@ -89,9 +69,8 @@ public class TextoDAL extends FirebaseDAL {
                         }
                     });
 
-                    //TODO Añadir relación texto-pregunta Preguntar Sujeto a cambio
-                    //Añado la relación entre Texto y pregunta. (Un texto, muchas preguntas) (Tiene que existir la referencia en la BD, no te la autocrea)
-                    /*refTextoQuiz.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+                    refTematicaTexto.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DataSnapshot> task) {
 
@@ -102,16 +81,16 @@ public class TextoDAL extends FirebaseDAL {
 
                                 HashMap<String, String> resultTextoPregunta = (HashMap<String, String>) task.getResult().getValue();
 
-                                if(resultTextoPregunta.get(quiz.getTextId()) == null){
-                                    refTextoQuiz.child(quiz.getTextId()).setValue(nuevoID);
+                                if(resultTextoPregunta.get(texto.getTemática()) == null){
+                                    refTematicaTexto.child(texto.getTemática()).setValue(nuevoID);
                                 }else{
-                                    String suma = resultTextoPregunta.get(quiz.getTextId());
+                                    String suma = resultTextoPregunta.get(texto.getTemática());
                                     suma += ", " + nuevoID;
-                                    refTextoQuiz.child(quiz.getTextId()).setValue(suma);
+                                    refTematicaTexto.child(texto.getTemática()).setValue(suma);
                                 }
                             }
                         }
-                    });*/
+                    });
 
                 }
 

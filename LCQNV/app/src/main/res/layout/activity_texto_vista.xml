@@ -19,8 +19,8 @@
         android:id="@+id/txtInpTitulo"
         android:layout_width="400dp"
         android:layout_height="42dp"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:hint="Titulo"
         android:inputType="text" />
 
@@ -32,7 +32,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:hint="Texto"
-        android:inputType="text" />
+        android:inputType="text|textMultiLine" />
 
     <Button
         android:id="@+id/buttonInicio"

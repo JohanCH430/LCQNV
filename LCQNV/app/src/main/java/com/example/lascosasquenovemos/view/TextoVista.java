@@ -29,7 +29,6 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     private TextoBll txtBll;
     private String tema;
     TextView Error;
-    private Boolean escrituraCorrecta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +49,11 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         list.setAdapter(adapter);
-
+        txtBll = new TextoBll();
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(iInicio);//Falta iniciar intent
+                    finish();
                 }
         });
 
@@ -63,16 +62,8 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
             public void onClick(View view) {
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
-                TextoModelo texto = new TextoModelo("0",txtTitulo.toString(), txttexto.toString(), tema);
-                //txtBll.crearTexto(texto, this);
-                if(escrituraCorrecta){
-                    Error.setText("Texto creado con éxito");
-                    //startActivity(iCrear);//Falta iniciar intent
-                }
-                else{
-                    Error.setText("Error al crear texto");
-                }
-
+                TextoModelo texto = new TextoModelo("0",txtTitulo.getText().toString(), txttexto.getText().toString(), tema);
+                txtBll.crearTexto(texto, TextoVista.this);
             }
         });
 
@@ -87,7 +78,17 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
 
     @Override
     public void onTextWriteSucced(Boolean bool) {
-        this.escrituraCorrecta = bool;
+        if(bool){
+            Error.setText("Texto creado con éxito");
+            //Si no ha habido ningún fallo en la base de datos se limpian el titulo y texyo introducidos
+            txtTitulo.setText("");
+            txttexto.setText("");
+            list.setSelection(0);
+        }
+        else{
+            Error.setText("Error al crear texto");
+        }
+
     }
 
     @Override
