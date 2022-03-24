@@ -13,11 +13,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
 import java.util.ArrayList;
 
-public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener {
 
 
     TextView txtTitulo, txttexto;
@@ -25,15 +26,15 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     Intent iInicio, iCrear;
     Spinner list;
     private ArrayList<String> lista;
-    private TextoBll bd;
+    private TextoBll txtBll;
     private String tema;
     TextView Error;
+    private Boolean escrituraCorrecta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto_vista);
-
         txtTitulo = findViewById(R.id.txtInpTitulo);
         txttexto = findViewById(R.id.txtTexto);
         btnCrear = findViewById(R.id.buttonCrear);
@@ -63,9 +64,10 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
                 TextoModelo texto = new TextoModelo("0",txtTitulo.toString(), txttexto.toString(), tema);
-                boolean ok = bd.crearTexto(texto, getApplicationContext());
-                if(ok){
-                    startActivity(iCrear);//Falta iniciar intent
+                //txtBll.crearTexto(texto, this);
+                if(escrituraCorrecta){
+                    Error.setText("Texto creado con éxito");
+                    //startActivity(iCrear);//Falta iniciar intent
                 }
                 else{
                     Error.setText("Error al crear texto");
@@ -75,6 +77,17 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         });
 
 
+    }
+
+    //LISTENER DE LA BASE DE DATOS
+    @Override
+    public void onTextReadSucced(TextoModelo texto) {
+        //No se implementa ya que esta clase no hace una lectura
+    }
+
+    @Override
+    public void onTextWriteSucced(Boolean bool) {
+        this.escrituraCorrecta = bool;
     }
 
     @Override
@@ -95,4 +108,5 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
 }
