@@ -14,20 +14,28 @@ public class QuizBll {
         QuizDAL.leerQuiz(id, qL);
     }
 
-    public boolean comprobarSintaxis(QuizModelo modelo){
-        if(!modelo.getOpcionA().equals("") && modelo.getOpcionA().length() <= 50){
-            return true;
-        }else if(!modelo.getOpcionB().equals("") && modelo.getOpcionB().length() <= 50){
-            return true;
-        }else if(!modelo.getOpcionC().equals("") && modelo.getOpcionC().length() <= 50){
-            return true;
-        }else if(!modelo.getOpcionD().equals("") && modelo.getOpcionD().length() <= 50){
-            return true;
-        }else if(!modelo.getSolucion().equals("") && modelo.getSolucion().length() <= 50){
-            return true;
-        }else if(!modelo.getTextId().isEmpty()){
-            return true;
+    public boolean comprobarSintaxis(QuizModelo modelo) {
+        if (modelo.getOpcionA().equals("") && modelo.getOpcionA().length() > 50) {
+            return false;
         }
-        return false;
+        if (modelo.getOpcionB().equals("") && modelo.getOpcionB().length() > 50) {
+            return false;
+        }
+        if (modelo.getOpcionC().equals("") && modelo.getOpcionC().length() > 50) {
+            return false;
+        }
+        if (modelo.getOpcionD().equals("") && modelo.getOpcionD().length() > 50) {
+            return false;
+        }
+        if (modelo.getSolucion().equals("") && modelo.getSolucion().length() > 50) {
+            return false;
+        }
+        if (modelo.getTextId().isEmpty()) {
+            return false;
+        }
+        if (!modelo.getSolucion().equals(modelo.getOpcionA()) && !modelo.getSolucion().equals(modelo.getOpcionB()) && !modelo.getSolucion().equals(modelo.getOpcionC()) && !modelo.getSolucion().equals(modelo.getOpcionD())){
+            return false;
+        }
+        return true;
     }
 }
