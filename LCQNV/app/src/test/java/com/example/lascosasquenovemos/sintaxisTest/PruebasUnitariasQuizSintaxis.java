@@ -1,25 +1,23 @@
-package com.example.lascosasquenovemos;
+package com.example.lascosasquenovemos.sintaxisTest;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import com.example.lascosasquenovemos.bll.QuizBll;
 import com.example.lascosasquenovemos.model.QuizModelo;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 
-// public QuizModelo(String pregunta, String opcionA, String opcionB, String opcionC, String opcionD, String solucion, String textId)
-@RunWith(JUnit4.class)
-public class PruebasUnitariasCrearQuiz {
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-    QuizBll quizBll;
+
+public class PruebasUnitariasQuizSintaxis {
+
+    private static QuizBll quizBll;
 
     //Se inicializa el negocio para poder hacer los test de unidad sobre la clase correspondiente
-    @Before
-    public void setUpTests(){
+    @BeforeAll
+    public static void setUpTests(){
         quizBll = new QuizBll();
     }
 
