@@ -33,6 +33,14 @@ android {
         unitTests.returnDefaultValues = true
     }
 
+    tasks.withType(Test){
+        useJUnitPlatform()
+        testLogging {
+            exceptionFormat "full"
+            events "started", "skipped", "passed", "failed"
+            showStandardStreams true
+        }
+    }
     useLibrary 'android.test.mock'
 }
 
