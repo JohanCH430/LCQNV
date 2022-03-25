@@ -2,9 +2,9 @@ name: Android Build
 
 on:
   push:
-    branches: [ Shuyi ]
+    branches: [ Inigo ]
   pull_request:
-    branches: [ Shuyi ]
+    branches: [ Inigo ]
 
 jobs:
   build:
@@ -24,13 +24,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
+        run: chmod +x gradlew
 
       - name: Build Project
-        run: ./gradlew assemble
+        run: ./gradlew build
 
       - name: Run Tests
-        run: ./gradlew test --tests "*"
+        run: ./gradlew clean build test
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
