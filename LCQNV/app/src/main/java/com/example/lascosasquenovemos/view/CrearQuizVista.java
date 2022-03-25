@@ -48,7 +48,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
 
             @Override
             public void onClick(View view) {
-                startActivity(iInicio);
+                finish();
             }
         });
 
@@ -56,6 +56,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
             @Override
             public void onClick(View view) {
                 //TODO Habrá que cambiarlo (idtexto)
+
                 //QuizModelo quiz = new QuizModelo("0","0",);
                 //TODO Bll.crearQuiz()
 
