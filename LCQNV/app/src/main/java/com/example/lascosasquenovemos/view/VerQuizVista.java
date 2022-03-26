@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
-    TextView tVPregunta;
+    TextView tVPregunta, comprobacion;
     RadioButton rd1, rd2, rd3, rd4, rdSeleccionado;
     RadioGroup rG;
     Button btnComprobar;
@@ -46,6 +46,9 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
         rd4 = findViewById(R.id.ROpc4);
         btnComprobar = findViewById(R.id.btnComprobar);
 
+        //TODO Borrar
+        comprobacion = findViewById(R.id.TextoComprobacionPorAhora);
+
         btnComprobar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +60,24 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                    /* iComprobacion=new Intent(this, .class);
                     iComprobacion.putExtra("resul", resultado);
                     startActivity(iComprobacion);*/
+
+                    String opcionEscogida = null;
+                    int id = rG.getCheckedRadioButtonId();
+
+                    switch (id){
+                        case R.id.ROpc1: opcionEscogida = (String) rd1.getText(); break;
+                        case R.id.ROpc2: opcionEscogida = (String) rd2.getText(); break;
+                        case R.id.ROpc3: opcionEscogida = (String) rd3.getText(); break;
+                        case R.id.ROpc4: opcionEscogida = (String) rd4.getText(); break;
+                        default: opcionEscogida = ""; break;
+                    }
+
+                    if(opcionEscogida.equals(solucion)){
+                        comprobacion.setText("Correcto");
+                    } else{
+                        comprobacion.setText("Respuesta incorrecta o no has seleccionado nada");
+                    }
+
                 }
             }
         });

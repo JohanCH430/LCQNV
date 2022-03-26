@@ -51,6 +51,16 @@
             android:text="Opción 4" />
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/TextoComprobacionPorAhora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/QuizOpcionSeleccionada"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Comprobacion (hasta que creemos pantalla)"
+        />
+
     <Button
         android:id="@+id/btnComprobar"
         android:layout_width="300dp"
