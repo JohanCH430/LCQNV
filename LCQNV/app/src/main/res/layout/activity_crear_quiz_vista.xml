@@ -94,15 +94,17 @@
         android:layout_marginTop="320dp"
         android:layout_marginLeft="20dp"
         android:text="Nombre del texto asociado:"/>
-    <EditText
-        android:id="@+id/InpTextoQuiz"
+
+    <Spinner
+        android:id="@+id/listaTextos"
         android:layout_width="400dp"
         android:layout_height="42dp"
         android:layout_marginTop="330dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="16dp"
-        android:hint="Nombre"
-        android:inputType="text"/>
+        android:layout_marginLeft="30dp"
+        android:spinnerMode="dropdown"
+
+
+        />
     <RadioGroup
         android:id="@+id/Opc_correcta_quiz"
         android:layout_width="400dp"
@@ -113,7 +115,7 @@
             android:id="@+id/Radio_opc1"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:checked="false"
+            android:checked="true"
             android:text="Opción 1"
             />
         <RadioButton
@@ -143,15 +145,15 @@
         android:id="@+id/buttonInicioQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
+        android:layout_marginTop="630dp"
         android:text="Inicio" />
 
     <Button
         android:id="@+id/buttonCrearQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
-        android:layout_marginLeft="340dp"
+        android:layout_marginTop="630dp"
+        android:layout_marginLeft="280dp"
         android:text="Crear" />
 
 
