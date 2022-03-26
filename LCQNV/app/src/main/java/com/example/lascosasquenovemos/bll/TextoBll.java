@@ -11,7 +11,7 @@ public class TextoBll {
 
     public static void leerTexto(String id, TextListener tl){TextoDAL.leerTexto(id,tl);}
 
-    public boolean comprobarSintaxis(TextoModelo texto){
+    public static boolean comprobarSintaxis(TextoModelo texto){
         if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)
             return true;
         return false;

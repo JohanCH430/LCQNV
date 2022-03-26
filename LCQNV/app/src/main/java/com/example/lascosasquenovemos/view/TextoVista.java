@@ -49,7 +49,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         list.setAdapter(adapter);
-        txtBll = new TextoBll();
+
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +63,14 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
                 //Falta introducir en el base de datos
                 //Introducir en el firebase los texto
                 TextoModelo texto = new TextoModelo("0",txtTitulo.getText().toString(), txttexto.getText().toString(), tema);
-                txtBll.crearTexto(texto, TextoVista.this);
+
+                //Compruebo que el texto sea correcto, si no lo es doy mensaje de error.
+                if(TextoBll.comprobarSintaxis(texto)){
+                    TextoBll.crearTexto(texto, TextoVista.this);
+                } else{
+                    Error.setText("Error al crear texto, o esta vacio o supera los 2000 caracteres");
+                }
+
             }
         });
 
@@ -86,7 +93,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
             list.setSelection(0);
         }
         else{
-            Error.setText("Error al crear texto");
+            Error.setText("Error al crear texto, ha habido algún problema con la Base de Datos");
         }
 
     }
