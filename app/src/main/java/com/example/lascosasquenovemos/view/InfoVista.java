@@ -10,6 +10,8 @@ import com.example.lascosasquenovemos.bll.TextoBll;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
+import java.util.List;
+
 public class InfoVista extends AppCompatActivity implements TextListener {
     private String idTexto;
     private TextoBll bd;
@@ -48,5 +50,10 @@ public class InfoVista extends AppCompatActivity implements TextListener {
     @Override
     public void onTextWriteSucced(Boolean bool) {
         //No se implementa porque desde esta vista solo se lee
+    }
+
+    @Override
+    public void onTextReadAllSucced(List<String> textos) {
+
     }
 }
