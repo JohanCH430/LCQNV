@@ -14,7 +14,7 @@ public class QuizBll {
         QuizDAL.leerQuiz(id, qL);
     }
 
-    public boolean comprobarSintaxis(QuizModelo modelo) {
+    public static boolean comprobarSintaxis(QuizModelo modelo) {
         if(modelo.getPregunta().equals("") || modelo.getOpcionA().length() > 50) {
             return false;
         }
