@@ -1,5 +1,6 @@
 package com.example.lascosasquenovemos.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,12 +17,13 @@ public class InfoVista extends AppCompatActivity implements TextListener {
     private TextoBll bd;
     private String text;
     TextView texto;
+    Intent next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_vista);
-
+        next = new Intent(InfoVista.this, VerQuizVista.class);
         bd = new TextoBll();
         //TODO el id se debería de obtener de un parámetro que se obtiene de la función de creación de pantalla que se llama desde la vista anterior
         idTexto = "PRUEBA";
@@ -33,7 +35,8 @@ public class InfoVista extends AppCompatActivity implements TextListener {
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO redirección a la siguiente vista
+                next.putExtra("idQuiz", "prueba");
+                startActivity(next);
             }
         });
     }

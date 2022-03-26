@@ -11,7 +11,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
-*/
+
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -24,7 +24,7 @@ import com.example.lascosasquenovemos.view.VerQuizVista;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
+import org.mockito.Mockito;*/
 
 /**
  * Instrumented test, which will execute on an Android device.
