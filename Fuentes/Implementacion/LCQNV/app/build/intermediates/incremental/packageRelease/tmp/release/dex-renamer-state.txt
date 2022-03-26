@@ -1,4 +1,0 @@
-#Sun Mar 06 19:50:58 CET 2022
-base.0=/home/inirolga/Documentos/GitHub/LCQNV/Fuentes/Implementacion/LCQNV/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
