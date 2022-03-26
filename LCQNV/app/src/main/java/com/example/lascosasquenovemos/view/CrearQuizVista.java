@@ -6,22 +6,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lascosasquenovemos.bll.QuizBll;
+import com.example.lascosasquenovemos.bll.TextoBll;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
+import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
+import com.example.lascosasquenovemos.model.TextoModelo;
 
-public class CrearQuizVista extends AppCompatActivity implements QuizListener {
+import java.util.ArrayList;
+import java.util.List;
 
-    TextView txtPreg, txtOp1, txtOp2, txtOp3, txtOp4, teoria;
+public class CrearQuizVista extends AppCompatActivity implements QuizListener, TextListener, AdapterView.OnItemSelectedListener {
+
+    TextView txtPreg, txtOp1, txtOp2, txtOp3, txtOp4;
     RadioButton btnSolucion;
     Button btnInicio, btnCrear;
     RadioGroup opciones;
+    Spinner textoTeoria;
+    List<String> listaTextos;
+    private String titulo;
+
 
 
     //Boolean que sabe si se ha podido añadir o no.
@@ -40,9 +52,12 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
         txtOp2 = findViewById(R.id.InpOpc2Quiz);txtOp2.setText("");
         txtOp3 = findViewById(R.id.InpOpc3Quiz);txtOp3.setText("");
         txtOp4 = findViewById(R.id.InpOpc4Quiz);txtOp4.setText("");
-        teoria = findViewById(R.id.InpTextoQuiz);teoria.setText("");
         btnInicio = findViewById(R.id.buttonInicioQuiz);
         btnCrear = findViewById(R.id.buttonCrearQuiz);
+        textoTeoria = findViewById(R.id.listaTextos);
+        textoTeoria.setOnItemSelectedListener(this);
+        TextoBll.leerTodoTexto(this);
+
 
         btnInicio.setOnClickListener(new View.OnClickListener(){
 
@@ -58,7 +73,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
                 String msg; //Mensaje a mostrar
                 btnSolucion = (RadioButton) findViewById(opciones.getCheckedRadioButtonId());//Solución de entre las posibles opciones
                 QuizModelo quiz = new QuizModelo(txtPreg.getText().toString(), txtOp1.getText().toString(), txtOp2.getText().toString(), txtOp3.getText().toString(),
-                txtOp4.getText().toString(),btnSolucion.getText().toString(), teoria.getText().toString());
+                txtOp4.getText().toString(),btnSolucion.getText().toString(), textoTeoria.getSelectedItem().toString());
                 if(QuizBll.comprobarSintaxis(quiz)) {
                     QuizBll.crearQuiz(quiz, CrearQuizVista.this);
                     if(escrituraCorrecta) {
@@ -68,7 +83,6 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
                         txtOp2.setText("");
                         txtOp3.setText("");
                         txtOp4.setText("");
-                        teoria.setText("");
                     }
                     else
                         msg = "Ha habido algún fallo a la hora de crear el quiz";
@@ -100,5 +114,42 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener {
     @Override
     public void onQuizWriteSucced(Boolean bool) {
         escrituraCorrecta = bool;
+    }
+
+    @Override
+    public void onTextReadSucced(TextoModelo texto) {
+
+    }
+
+    @Override
+    public void onTextWriteSucced(Boolean bool) {
+
+    }
+
+    @Override
+    public void onTextReadAllSucced(List<String> textos) {
+        listaTextos = textos;
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaTextos);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        textoTeoria.setAdapter(adapter);
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        switch (adapterView.getId())
+        {
+            case R.id.list:
+                titulo = listaTextos.get(i).toString();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

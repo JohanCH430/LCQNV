@@ -17,6 +17,7 @@ import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener {
 
@@ -95,6 +96,11 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         else{
             Error.setText("Error al crear texto, ha habido algún problema con la Base de Datos");
         }
+
+    }
+
+    @Override
+    public void onTextReadAllSucced(List<String> textos) {
 
     }
 
