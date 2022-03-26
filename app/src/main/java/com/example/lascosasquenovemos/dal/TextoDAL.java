@@ -2,7 +2,9 @@ package com.example.lascosasquenovemos.dal;
 
 import android.content.Context;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -10,7 +12,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class TextoDAL extends FirebaseDAL {
 
@@ -126,6 +131,42 @@ public class TextoDAL extends FirebaseDAL {
                         String contenido = (String) result.get("Contenido");
                         //TODO poner temática en la tabla de firebase??
                         tL.onTextReadSucced(new TextoModelo(id, titulo, contenido, ""));
+
+                    }
+
+                }
+            }
+        });
+
+    }
+    public static void leerTodoTexto(TextListener tL) {
+
+        DatabaseReference refTexto = FirebaseDAL.dataBase.child("Texto");
+
+        FirebaseDAL.dataBase.child("Texto").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+
+                if (!task.isSuccessful()) {
+                    Log.e("firebase error", "Error getting data", task.getException());
+                } else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                    if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún texto con esa id, te devuelve un null.
+                        tL.onTextReadSucced(null);
+                    } else {
+                        List<String> listaTextos = new ArrayList<>();
+                        //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
+                        HashMap<String, Object> result = (HashMap<String, Object>) task.getResult().getValue();
+                        Integer i = 0;
+                        for (HashMap.Entry<String, Object> entry : result.entrySet()){
+
+                            //Get user map
+                            HashMap singleUser = (HashMap) entry.getValue();
+                            //Get phone field and append to list
+                            listaTextos.add( "T-" + i.toString() + " : " + (String) singleUser.get("Titulo"));
+                        }
+                        tL.onTextReadAllSucced(listaTextos);
 
                     }
 
