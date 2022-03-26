@@ -50,7 +50,7 @@ public class MainVista extends AppCompatActivity {
         });
 
         //Pongo la versión en base a la que tiene el build.
-        txtVersion.setText("Versión" + BuildConfig.VERSION_NAME);
+        txtVersion.setText("Versión " + 1.0);
     }
 
     //Método que comienza la actividad con la vista de administrador.
