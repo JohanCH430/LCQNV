@@ -19,11 +19,6 @@ public class PruebasUnitariasQuizSintaxis {
         quizBll = new QuizBll();
     }
 
-    @Test
-    public void operacionNotNull(){
-        Assertions.assertNotNull(quizBll);
-    }
-
     //Test de ejemplo de un Quiz correcto con la primera opción correcta
     @Test
     public void testSintaxisQuizCorrecto1(){
