@@ -69,12 +69,14 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                         default: opcionEscogida = ""; break;
                     }
 
-                    if(opcionEscogida.equals(solucion)){
+                    if(QuizBll.respuestaCorrecta(opcionEscogida, solucion)) {
                         comprobacion.setText("Correcto");
-                    } else{
-                        comprobacion.setText("Respuesta incorrecta o no has seleccionado nada");
-                    }
 
+                    }
+                    else {
+                        comprobacion.setText("Respuesta incorrecta o no has seleccionado nada");
+
+                    }
                 }
             }
         });

@@ -2,9 +2,9 @@ name: Android Build
 
 on:
   push:
-    branches: [ Inigo ]
+    branches: [ Dev ]
   pull_request:
-    branches: [ Inigo ]
+    branches: [ Dev ]
 
 jobs:
   build:
