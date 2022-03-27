@@ -164,7 +164,7 @@ public class TextoDAL extends FirebaseDAL {
                             //Get user map
                             HashMap singleUser = (HashMap) entry.getValue();
                             //Get phone field and append to list
-                            listaTextos.add( "T-" + i.toString() + " : " + (String) singleUser.get("Titulo"));
+                            listaTextos.add( "T-" + i.toString() + ":" + (String) singleUser.get("Titulo"));
                         }
                         tL.onTextReadAllSucced(listaTextos);
 

@@ -73,7 +73,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
                 String msg; //Mensaje a mostrar
                 btnSolucion = (RadioButton) findViewById(opciones.getCheckedRadioButtonId());//Solución de entre las posibles opciones
                 QuizModelo quiz = new QuizModelo(txtPreg.getText().toString(), txtOp1.getText().toString(), txtOp2.getText().toString(), txtOp3.getText().toString(),
-                        txtOp4.getText().toString(),btnSolucion.getText().toString(), textoTeoria.getSelectedItem().toString());
+                        txtOp4.getText().toString(),btnSolucion.getText().toString(), titulo.split(":")[0]);//Nos quedamos con la primera parte del Item (ej. En T-0:TextoPrueba nos quedamos con T-0)
                 if(QuizBll.comprobarSintaxis(quiz)) {
                     QuizBll.crearQuiz(quiz, CrearQuizVista.this);
                     if(escrituraCorrecta) {
@@ -139,7 +139,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         switch (adapterView.getId())
         {
-            case R.id.list:
+            case R.id.listaTextos:
                 titulo = listaTextos.get(i).toString();
                 break;
 
