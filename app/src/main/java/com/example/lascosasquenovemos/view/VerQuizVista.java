@@ -52,11 +52,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
                 if(solucion != null){
 
-                    //TODO no puedo terminarlo aún
-                    //Le añado al Intent el resultado para que la activity pueda cambiar según sea o no correcto.
-                   /* iComprobacion=new Intent(this, .class);
-                    iComprobacion.putExtra("resul", resultado);
-                    startActivity(iComprobacion);*/
+                    iComprobacion=new Intent(VerQuizVista.this, ComprobarResultadoVista.class);
 
                     String opcionEscogida = null;
                     int id = rG.getCheckedRadioButtonId();
@@ -68,14 +64,17 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                         case R.id.ROpc4: opcionEscogida = (String) rd4.getText(); break;
                         default: opcionEscogida = ""; break;
                     }
-
-                    if(QuizBll.respuestaCorrecta(opcionEscogida, solucion)) {
-                        comprobacion.setText("Correcto");
+                    if (opcionEscogida == "") {
+                        comprobacion.setText("Se debe seleccionar una respuesta");
+                    }
+                    else if(QuizBll.respuestaCorrecta(opcionEscogida, solucion)) {
+                        iComprobacion.putExtra("Comprobacion", "correcto");
+                        startActivity(iComprobacion);
 
                     }
                     else {
-                        comprobacion.setText("Respuesta incorrecta o no has seleccionado nada");
-
+                        iComprobacion.putExtra("Comprobacion", "incorrecto");
+                        startActivity(iComprobacion);
                     }
                 }
             }
