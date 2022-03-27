@@ -41,4 +41,8 @@ public class QuizBll {
         }
         return true;
     }
+    public static boolean respuestaCorrecta(String opcionSeleccionada, String opcionCorrecta){
+        return opcionSeleccionada.equals(opcionCorrecta);
+    }
+
 }
