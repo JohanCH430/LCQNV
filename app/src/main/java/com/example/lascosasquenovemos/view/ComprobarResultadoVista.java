@@ -42,9 +42,8 @@ public class ComprobarResultadoVista extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(ComprobarResultadoVista.this, MainVista.class);
                 //Se añaden estas flags para que se limpie la pila de pantallas y se vuelta a la pantalla principal sin problemas
-                //TODO singleton de base de datos para que no se llame varias veces
-                //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                //startActivity(i);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
             }
         });
 

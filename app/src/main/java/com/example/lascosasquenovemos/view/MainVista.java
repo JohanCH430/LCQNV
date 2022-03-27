@@ -19,8 +19,8 @@ public class MainVista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_vista);
 
-        //Inicializar la referencia a la base da datos através de la variable static dataBase
-        new FirebaseDAL(getApplicationContext());
+        //Inicializar la referencia a la base da datos através de la variable static dataBase, en caso de que ya exista no la vuelvo a crear.
+        FirebaseDAL.getInstance(getApplicationContext());
 
         //PRUEBAS
         //startActivity(new Intent(MainVista.this, CrearQuizVista.class));

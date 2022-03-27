@@ -57,6 +57,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                     String opcionEscogida = null;
                     int id = rG.getCheckedRadioButtonId();
 
+                    //Según el ID que obtenga del RB seleccionado, cojo la opción seleccionada.
                     switch (id){
                         case R.id.ROpc1: opcionEscogida = (String) rd1.getText(); break;
                         case R.id.ROpc2: opcionEscogida = (String) rd2.getText(); break;
@@ -84,6 +85,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     @Override
     public void onQuizReadSucced(QuizModelo quiz) { //Cuando el Listener escuche la info, cambio las vistas.
 
+        //Hago que la vista tenga los datos del Quiza dado.
         tVPregunta.setText(quiz.getPregunta());
 
         //Creo un array y desordeno las opciones para colocarlas aleatoriamente.
