@@ -33,11 +33,12 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
     Spinner textoTeoria;
     List<String> listaTextos;
     private String titulo;
+    private String msg; //Mensaje a mostrar
 
 
 
     //Boolean que sabe si se ha podido añadir o no.
-    Boolean escrituraCorrecta;
+    Boolean escrituraCorrecta = false;
     //TODO QuizBll
 
 
@@ -70,27 +71,19 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                String msg; //Mensaje a mostrar
+
                 btnSolucion = (RadioButton) findViewById(opciones.getCheckedRadioButtonId());//Solución de entre las posibles opciones
                 QuizModelo quiz = new QuizModelo(txtPreg.getText().toString(), txtOp1.getText().toString(), txtOp2.getText().toString(), txtOp3.getText().toString(),
                         txtOp4.getText().toString(),btnSolucion.getText().toString(), titulo.split(":")[0]);//Nos quedamos con la primera parte del Item (ej. En T-0:TextoPrueba nos quedamos con T-0)
                 if(QuizBll.comprobarSintaxis(quiz)) {
                     QuizBll.crearQuiz(quiz, CrearQuizVista.this);
-                    if(escrituraCorrecta) {
-                        msg = "Quiz creado con éxito";
-                        txtPreg.setText("");
-                        txtOp1.setText("");
-                        txtOp2.setText("");
-                        txtOp3.setText("");
-                        txtOp4.setText("");
-                    }
-                    else
-                        msg = "Ha habido algún fallo a la hora de crear el quiz";
-                }
-                else
-                    msg = "Todos los campos deben ser rellenados y tener menos de 50 caracteres";
 
-                Toast.makeText(CrearQuizVista.this, msg, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    msg = "Los campos deben ser rellenados y tener menos de 50 caracteres";
+                    Toast.makeText(CrearQuizVista.this, msg , Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
     }
@@ -114,6 +107,18 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
     @Override
     public void onQuizWriteSucced(Boolean bool) {
         escrituraCorrecta = bool;
+        if(escrituraCorrecta) {
+            msg = "Quiz creado con éxito";
+            txtPreg.setText("");
+            txtOp1.setText("");
+            txtOp2.setText("");
+            txtOp3.setText("");
+            txtOp4.setText("");
+        }
+        else
+            msg = "Ha habido algún fallo a la hora de crear el quiz";
+        Toast.makeText(CrearQuizVista.this, msg, Toast.LENGTH_SHORT).show();
+
     }
 
     @Override

@@ -36,6 +36,9 @@ public class QuizBll {
         if (modelo.getTextId().isEmpty()) {
             return false;
         }
+        if(modelo.getPregunta().trim().isEmpty() || modelo.getOpcionA().trim().isEmpty() || modelo.getOpcionB().trim().isEmpty() || modelo.getOpcionC().trim().isEmpty() ||
+        modelo.getOpcionD().trim().isEmpty())
+            return false;
         if (!modelo.getSolucion().equals(modelo.getOpcionA()) && !modelo.getSolucion().equals(modelo.getOpcionB()) && !modelo.getSolucion().equals(modelo.getOpcionC()) && !modelo.getSolucion().equals(modelo.getOpcionD())){
             return false;
         }
