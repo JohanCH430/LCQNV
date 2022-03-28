@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
+
 public class AdminVista extends AppCompatActivity {
     Intent iTexto;
     Intent iQuiz;
@@ -15,6 +17,7 @@ public class AdminVista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_vista);
 
+        FirebaseDAL.getInstance(getApplicationContext());
         //Inicializar elementos de la vista
         Button botonCrearTexto = findViewById(R.id.btnCrearTexto);
         Button botonCrearQuiz = findViewById(R.id.btnCrearQuiz);
