@@ -15,7 +15,7 @@ public class FirebaseDAL {
     public FirebaseDAL(Context context){
         //Se obtiene la instancia de la base de datos con el link de firebase
         FirebaseDatabase DataBaseInstance = FirebaseDatabase.getInstance(context.getString(R.string.firebase_realtime_database_URL));
-        DataBaseInstance.setPersistenceEnabled(false);
+        DataBaseInstance.setPersistenceEnabled(true);
 
         dataBase = DataBaseInstance.getReference();
     }

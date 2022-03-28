@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".TextoVista">
 
-
     <TextView
         android:id="@+id/Titulo_del_texto"
         android:layout_width="500dp"
@@ -38,36 +37,34 @@
         android:id="@+id/buttonInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="550dp"
         android:text="Inicio" />
 
     <Button
         android:id="@+id/buttonCrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
         android:layout_marginLeft="300dp"
+        android:layout_marginTop="550dp"
         android:text="Crear" />
 
     <TextView
         android:id="@+id/textTexto"
         android:layout_width="500dp"
         android:layout_height="26dp"
-        android:text="Texto"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
-        android:layout_marginLeft="20dp" />
+        android:text="Texto" />
 
     <Spinner
         android:id="@+id/list"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
         android:layout_marginLeft="30dp"
-        android:spinnerMode="dropdown"
+        android:layout_marginTop="450dp"
+        android:spinnerMode="dropdown" />
 
-
-        />
     <TextView
         android:id="@+id/Error"
         android:layout_width="500dp"
@@ -75,6 +72,13 @@
         android:layout_marginTop="500dp"
         android:layout_marginLeft="20dp"
         android:text="" />
+
+    <TextView
+        android:id="@+id/testViewTestError"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Fallo"/>
+
 
 
 </RelativeLayout>
