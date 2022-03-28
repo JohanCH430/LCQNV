@@ -14,22 +14,23 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:text="Pregunta:"/>
+
     <EditText
         android:id="@+id/InpPreguntaQuiz"
         android:layout_width="400dp"
         android:layout_height="42dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:hint="Pregunta"
-        android:inputType="text"/>
+        android:inputType="text" />
     <TextView
         android:id="@+id/Opcion1_quiz"
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
-        android:text="Opcion 1:"/>
+        android:text="Opción 1:"/>
 
     <EditText
         android:id="@+id/InpOpc1Quiz"
@@ -153,9 +154,15 @@
         android:id="@+id/buttonCrearQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="630dp"
         android:layout_marginLeft="280dp"
+        android:layout_marginTop="630dp"
         android:text="Crear" />
+
+    <TextView
+        android:id="@+id/testViewTestError"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Fallo"/>
 
 
 </RelativeLayout>

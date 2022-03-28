@@ -124,10 +124,15 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
             txtOp2.setText("");
             txtOp3.setText("");
             txtOp4.setText("");
+            ((TextView)findViewById(R.id.testViewTestError)).setText("No Fallo");
         }
-        else
+        else{
             msg = "Ha habido algún fallo a la hora de crear el quiz";
+            ((TextView)findViewById(R.id.testViewTestError)).setText("Fallo");
+        }
+
         Toast.makeText(CrearQuizVista.this, msg, Toast.LENGTH_SHORT).show();
+
 
     }
 
