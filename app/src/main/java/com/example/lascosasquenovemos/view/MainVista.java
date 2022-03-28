@@ -19,8 +19,8 @@ public class MainVista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_vista);
 
-        //Inicializar la referencia a la base da datos através de la variable static dataBase.
-        new FirebaseDAL(getApplicationContext());
+        //Inicializar la referencia a la base da datos através de la variable static dataBase, en caso de que ya exista no la vuelvo a crear.
+        FirebaseDAL.getInstance(getApplicationContext());
 
         //PRUEBAS
         //startActivity(new Intent(MainVista.this, CrearQuizVista.class));
@@ -50,7 +50,7 @@ public class MainVista extends AppCompatActivity {
         });
 
         //Pongo la versión en base a la que tiene el build.
-        txtVersion.setText("Versión" + BuildConfig.VERSION_NAME);
+        txtVersion.setText("Versión " + 1.0);
     }
 
     //Método que comienza la actividad con la vista de administrador.

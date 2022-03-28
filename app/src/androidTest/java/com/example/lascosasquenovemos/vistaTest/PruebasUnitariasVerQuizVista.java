@@ -3,43 +3,32 @@ package com.example.lascosasquenovemos.vistaTest;
 
 
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom;
-import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.not;
 
-import static java.util.EnumSet.allOf;
-
-import android.view.View;
-import android.widget.TextView;
-
-import androidx.test.espresso.UiController;
-import androidx.test.espresso.ViewAction;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
-import com.example.lascosasquenovemos.bll.QuizBll;
-import com.example.lascosasquenovemos.dal.QuizDAL;
-import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
-import com.example.lascosasquenovemos.view.CrearQuizVista;
+import com.example.lascosasquenovemos.view.MainVista;
 import com.example.lascosasquenovemos.view.R;
 import com.example.lascosasquenovemos.view.VerQuizVista;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.Matcher;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.mockito.Mockito;
+
+import java.time.temporal.ValueRange;
 
 
 public class PruebasUnitariasVerQuizVista /*implements QuizListener*/ {
 
-    /*@Rule
-    public ActivityScenarioRule<VerQuizVista> crearQuizRule = new ActivityScenarioRule<>(VerQuizVista.class);
+    @Rule
+    public ActivityScenarioRule<MainVista> crearQuizRule = new ActivityScenarioRule<>(MainVista.class);
     public QuizModelo quiz = new QuizModelo("¿?", "op1", "op2", "op3", "op4","","");
+
 
     /*set text view in textView
 
@@ -107,5 +96,10 @@ public class PruebasUnitariasVerQuizVista /*implements QuizListener*/ {
     public void onQuizWriteSucced(Boolean bool) {
         //No se usa porque solo se hace una lectura
     }*/
+
+
+
+
+
 }
 

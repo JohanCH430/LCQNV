@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import java.util.ArrayList;
@@ -29,6 +30,8 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto_vista);
+        FirebaseDAL.getInstance(getApplicationContext());
+
         txtTitulo = findViewById(R.id.txtInpTitulo);
         txttexto = findViewById(R.id.txtTexto);
         btnCrear = findViewById(R.id.buttonCrear);
@@ -36,7 +39,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         list = findViewById(R.id.list);
         Error = findViewById(R.id.Error);
         lista = new ArrayList<String>();
-        lista.add("Tipo");
+        lista.add("Temática");
         lista.add("Visual");
         lista.add("Auditiva");
         lista.add("Fisica");
@@ -60,10 +63,15 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
                 TextoModelo texto = new TextoModelo("0",txtTitulo.getText().toString(), txttexto.getText().toString(), tema);
 
                 //Compruebo que el texto sea correcto, si no lo es doy mensaje de error.
-                if(TextoBll.comprobarSintaxis(texto)){
+                int error = TextoBll.comprobarSintaxis(texto);
+                if(error == 0){
                     TextoBll.crearTexto(texto, TextoVista.this);
                 } else{
-                    Error.setText("Error al crear texto, o esta vacio o supera los 2000 caracteres");
+                    switch(error){
+                        case -1:  Error.setText("Error al crear texto, o esta vacio o supera los 2000 caracteres"); break;
+                        case -2:  Error.setText("Error al crear texo, no se ha introducido un título"); break;
+                        case -3:  Error.setText("Error al crear texto, tienes que asociar el texto a una temática"); break;
+                    }
                 }
 
             }

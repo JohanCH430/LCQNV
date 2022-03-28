@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".ComprobarResultadoVista"
+            android:exported="false" />
+        <activity
             android:name=".MainVista"
             android:exported="true">
             <intent-filter>
@@ -21,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".VerQuizVista"
             android:exported="false" />
@@ -37,7 +39,6 @@
         <activity
             android:name=".AdminVista"
             android:exported="false" />
-
     </application>
 
 </manifest>

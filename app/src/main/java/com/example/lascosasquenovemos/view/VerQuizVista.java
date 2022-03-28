@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.example.lascosasquenovemos.bll.QuizBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import java.util.ArrayList;
@@ -28,7 +29,8 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_quiz_vista);
-
+        
+        FirebaseDAL.getInstance(getApplicationContext());
         //Obtengo el extra que me han enviado, que es el Id del Quiz que tenog que buscar.
         intentActual = getIntent();
         String idQuiz = intentActual.getStringExtra("idQuiz");
@@ -52,15 +54,12 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
                 if(solucion != null){
 
-                    //TODO no puedo terminarlo aún
-                    //Le añado al Intent el resultado para que la activity pueda cambiar según sea o no correcto.
-                   /* iComprobacion=new Intent(this, .class);
-                    iComprobacion.putExtra("resul", resultado);
-                    startActivity(iComprobacion);*/
+                    iComprobacion=new Intent(VerQuizVista.this, ComprobarResultadoVista.class);
 
                     String opcionEscogida = null;
                     int id = rG.getCheckedRadioButtonId();
 
+                    //Según el ID que obtenga del RB seleccionado, cojo la opción seleccionada.
                     switch (id){
                         case R.id.ROpc1: opcionEscogida = (String) rd1.getText(); break;
                         case R.id.ROpc2: opcionEscogida = (String) rd2.getText(); break;
@@ -68,13 +67,18 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                         case R.id.ROpc4: opcionEscogida = (String) rd4.getText(); break;
                         default: opcionEscogida = ""; break;
                     }
-
-                    if(opcionEscogida.equals(solucion)){
-                        comprobacion.setText("Correcto");
-                    } else{
-                        comprobacion.setText("Respuesta incorrecta o no has seleccionado nada");
+                    if (opcionEscogida == "") {
+                        comprobacion.setText("Se debe seleccionar una respuesta");
                     }
+                    else if(QuizBll.respuestaCorrecta(opcionEscogida, solucion)) {
+                        iComprobacion.putExtra("Comprobacion", "correcto");
+                        startActivity(iComprobacion);
 
+                    }
+                    else {
+                        iComprobacion.putExtra("Comprobacion", "incorrecto");
+                        startActivity(iComprobacion);
+                    }
                 }
             }
         });
@@ -83,6 +87,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     @Override
     public void onQuizReadSucced(QuizModelo quiz) { //Cuando el Listener escuche la info, cambio las vistas.
 
+        //Hago que la vista tenga los datos del Quiza dado.
         tVPregunta.setText(quiz.getPregunta());
 
         //Creo un array y desordeno las opciones para colocarlas aleatoriamente.

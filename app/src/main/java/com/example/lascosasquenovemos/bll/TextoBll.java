@@ -12,10 +12,11 @@ public class TextoBll {
 
     public static void leerTodoTexto(TextListener tl){TextoDAL.leerTodoTexto(tl);}
 
-    public static boolean comprobarSintaxis(TextoModelo texto){
-        if(!texto.getTexto().equals("") && texto.getTexto().length() <= 2000)
-            return true;
-        return false;
+    public static int comprobarSintaxis(TextoModelo texto){
+        if(texto.getTexto().equals("") || texto.getTexto().length() > 2000 || texto.getTexto().trim().isEmpty()) return -1;
+        if (texto.getTítulo().equals("") || texto.getTítulo().trim().isEmpty()) return -2;
+        if (texto.getTemática().equals("") || texto.getTemática().equals("Temática")) return -3;
+        return 0;
     }
 
 }
