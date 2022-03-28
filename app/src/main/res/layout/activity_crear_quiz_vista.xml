@@ -29,7 +29,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
-        android:text="Opcion 1:"/>
+        android:text="Opción 1:"/>
 
     <EditText
         android:id="@+id/InpOpc1Quiz"
