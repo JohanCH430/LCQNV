@@ -9,13 +9,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27ea7854-2b76-43bb-a36d-01101dc733ef" name="Default Changelist" comment="" />
+    <list default="true" id="27ea7854-2b76-43bb-a36d-01101dc733ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/AdminVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/AdminVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/ComprobarResultadoVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/ComprobarResultadoVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/CrearQuizVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/CrearQuizVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/InfoVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/InfoVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/TextoVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/TextoVista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/VerQuizVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/VerQuizVista.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\David\.android\avd\Nexus_5X_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/inirolga/.android/avd/Pixel_2_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -295,12 +302,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/CrearQuizVista.java</url>
-          <line>82</line>
+          <line>84</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/lascosasquenovemos/view/CrearQuizVista.java</url>
-          <line>81</line>
+          <line>83</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

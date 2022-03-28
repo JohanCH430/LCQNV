@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.lascosasquenovemos.bll.QuizBll;
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
@@ -44,6 +45,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_quiz_vista);
 
+        FirebaseDAL.getInstance(getApplicationContext());
         txtPreg = findViewById(R.id.InpPreguntaQuiz);txtPreg.setText("");
         opciones = findViewById(R.id.Opc_correcta_quiz);
         txtOp1 = findViewById(R.id.InpOpc1Quiz); txtOp1.setText("");
