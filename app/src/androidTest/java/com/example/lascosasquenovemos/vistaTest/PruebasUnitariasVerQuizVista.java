@@ -97,42 +97,7 @@ public class PruebasUnitariasVerQuizVista /*implements QuizListener*/ {
         //No se usa porque solo se hace una lectura
     }*/
 
-    @Test //Test de comprobar si pasa a siguiente pantalla
-    public void TestWithOpc(){
-        onView(withId(R.id.btnJugar)).perform(click());
-        onView(withId(R.id.btnContinuar)).perform(click());
-        onView(withId(R.id.ROpc4)).perform(click());
-        onView(withId(R.id.btnComprobar)).perform(click());
-        onView(withId(R.id.btnReintentar)).check(matches(isDisplayed()));
-    }
-    @Test//Test sin dar una opcion queda en la pantalla adecuada
-    public void TestWithoutOpc(){
-        onView(withId(R.id.btnJugar)).perform(click());
-        onView(withId(R.id.btnContinuar)).perform(click());
-        onView(withId(R.id.btnComprobar)).perform(click());
-        onView(withId(R.id.btnComprobar)).check(matches(isDisplayed()));
-    }
 
-    @Test//Test dar mas de una opcion queda en la pantalla adecuada
-    public void TestWithMoreOpc(){
-        onView(withId(R.id.btnJugar)).perform(click());
-        onView(withId(R.id.btnContinuar)).perform(click());
-        onView(withId(R.id.ROpc4)).perform(click());
-        onView(withId(R.id.ROpc1)).perform(click());
-        onView(withId(R.id.btnComprobar)).perform(click());
-        onView(withId(R.id.btnReintentar)).check(matches(isDisplayed()));
-    }
-
-    @Test//Test probar las funciones de btones
-    public void TestDisplayBtn(){
-        onView(withId(R.id.btnJugar)).perform(click());
-        onView(withId(R.id.btnContinuar)).perform(click());
-        onView(withId(R.id.ROpc1)).check(matches(isDisplayed()));
-        onView(withId(R.id.ROpc2)).check(matches(isDisplayed()));
-        onView(withId(R.id.ROpc3)).check(matches(isDisplayed()));
-        onView(withId(R.id.ROpc4)).check(matches(isDisplayed()));
-        onView(withId(R.id.btnComprobar)).check(matches(isDisplayed()));
-    }
 
 
 
