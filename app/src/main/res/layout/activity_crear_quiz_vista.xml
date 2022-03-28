@@ -30,15 +30,16 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
         android:text="Opción 1:"/>
+
     <EditText
         android:id="@+id/InpOpc1Quiz"
         android:layout_width="400dp"
         android:layout_height="42dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="110dp"
         android:hint="Opción 1"
-        android:inputType="text"/>
+        android:inputType="text" />
     <TextView
         android:id="@+id/Opcion2_quiz"
         android:layout_width="500dp"

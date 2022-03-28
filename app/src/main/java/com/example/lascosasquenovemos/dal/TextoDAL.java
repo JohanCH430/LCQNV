@@ -158,14 +158,12 @@ public class TextoDAL extends FirebaseDAL {
                         List<String> listaTextos = new ArrayList<>();
                         //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
                         HashMap<String, Object> result = (HashMap<String, Object>) task.getResult().getValue();
-                        Integer i = 0;
-                        for (HashMap.Entry<String, Object> entry : result.entrySet()){
 
-                            //Get user map
-                            HashMap singleUser = (HashMap) entry.getValue();
-                            //Get phone field and append to list
-                            listaTextos.add( "T-" + i.toString() + ":" + (String) singleUser.get("Titulo"));
+                        for (String key: result.keySet()){
+                            HashMap<String, Object> resultadoInterior = (HashMap<String, Object>) result.get(key);
+                            listaTextos.add( key + ": " + (String) resultadoInterior.get("Titulo"));
                         }
+
                         tL.onTextReadAllSucced(listaTextos);
 
                     }
