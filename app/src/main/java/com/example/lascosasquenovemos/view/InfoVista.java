@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.lascosasquenovemos.bll.TextoBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
@@ -23,6 +24,8 @@ public class InfoVista extends AppCompatActivity implements TextListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_vista);
+
+        FirebaseDAL.getInstance(getApplicationContext());
         next = new Intent(InfoVista.this, VerQuizVista.class);
         bd = new TextoBll();
         //TODO el id se debería de obtener de un parámetro que se obtiene de la función de creación de pantalla que se llama desde la vista anterior

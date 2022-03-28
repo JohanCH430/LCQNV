@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
+
 public class ComprobarResultadoVista extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,7 @@ public class ComprobarResultadoVista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comprobar_resultado_vista);
 
+        FirebaseDAL.getInstance(getApplicationContext());
         Intent intentActual = getIntent();
         String respuesta = intentActual.getStringExtra("Comprobacion");
         TextView comprobacion = findViewById(R.id.tVComprobacion);

@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.example.lascosasquenovemos.bll.QuizBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import java.util.ArrayList;
@@ -28,7 +29,8 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_quiz_vista);
-
+        
+        FirebaseDAL.getInstance(getApplicationContext());
         //Obtengo el extra que me han enviado, que es el Id del Quiz que tenog que buscar.
         intentActual = getIntent();
         String idQuiz = intentActual.getStringExtra("idQuiz");
