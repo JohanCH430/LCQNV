@@ -27,21 +27,18 @@ import java.util.List;
 public class CrearQuizVista extends AppCompatActivity implements QuizListener, TextListener, AdapterView.OnItemSelectedListener {
 
     TextView txtPreg, txtOp1, txtOp2, txtOp3, txtOp4;
-    RadioButton btnSolucion;
+    RadioButton btnSolucion, radioButton1, radioButton2, radioButton3, radioButton4;
     Button btnInicio, btnCrear;
     RadioGroup opciones;
     Spinner textoTeoria;
     List<String> listaTextos;
     private String titulo;
     private String msg; //Mensaje a mostrar
-
-
+    String opcionEscogida;
 
     //Boolean que sabe si se ha podido añadir o no.
     Boolean escrituraCorrecta = false;
-    //TODO QuizBll
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,12 +69,23 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
             @Override
             public void onClick(View view){
 
-                btnSolucion = (RadioButton) findViewById(opciones.getCheckedRadioButtonId());//Solución de entre las posibles opciones
+                //btnSolucion = (RadioButton) findViewById(opciones.getCheckedRadioButtonId());//Solución de entre las posibles opciones
+
+               // String escogido = (String) btnSolucion.getText();
+                int id = opciones.getCheckedRadioButtonId();
+
+                switch (id){
+                    case R.id.Radio_opc1: opcionEscogida = txtOp1.getText().toString(); break;
+                    case R.id.Radio_opc2: opcionEscogida = txtOp2.getText().toString(); break;
+                    case R.id.Radio_opc3: opcionEscogida = txtOp3.getText().toString(); break;
+                    case R.id.Radio_opc4: opcionEscogida = txtOp4.getText().toString(); break;
+                }
+
                 QuizModelo quiz = new QuizModelo(txtPreg.getText().toString(), txtOp1.getText().toString(), txtOp2.getText().toString(), txtOp3.getText().toString(),
-                        txtOp4.getText().toString(),btnSolucion.getText().toString(), titulo.split(":")[0]);//Nos quedamos con la primera parte del Item (ej. En T-0:TextoPrueba nos quedamos con T-0)
+                        txtOp4.getText().toString(), opcionEscogida, titulo.split(":")[0]);//Nos quedamos con la primera parte del Item (ej. En T-0:TextoPrueba nos quedamos con T-0)
+
                 if(QuizBll.comprobarSintaxis(quiz)) {
                     QuizBll.crearQuiz(quiz, CrearQuizVista.this);
-
                 }
                 else {
                     msg = "Los campos deben ser rellenados y tener menos de 50 caracteres";
