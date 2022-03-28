@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ea7854-2b76-43bb-a36d-01101dc733ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/lascosasquenovemos/modeloTest/PruebasUnitariasTextoTeoriaModelo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/lascosasquenovemos/sintaxisTest/PruebasUnitariasTextoTeoriaSintaxis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/lascosasquenovemos/sintaxisTest/PruebasUnitariasTextoTeoriaSintaxis.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/lascosasquenovemos/sintaxisTest/PruebasUnitariasTextoTeoriaSintaxis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

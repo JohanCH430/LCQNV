@@ -29,25 +29,12 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
         //assertTrue(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(true, textoBll.comprobarSintaxis(textoModelo));
-    }
-
-    //Test que comprueba si se usa un texto vacía devuelve false
-    @Test
-    public void testSintaxisTextoVacio1(){
-        String IDTexto = "";
-        String título = "titulo";
-        String texto = "texto";
-        String temática = "tematica";
-
-        TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
-       // assertFalse(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(false, textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(0, textoBll.comprobarSintaxis(textoModelo));
     }
 
     //Test que comprueba si se usa un título vacía devuelve false
     @Test
-    public void testSintaxisTextoVacio2(){
+    public void testSintaxisTextoVacio1(){
         String IDTexto = "idTexto";
         String título = "";
         String texto = "texto";
@@ -55,12 +42,12 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
         //assertFalse(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(false, textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(-2, textoBll.comprobarSintaxis(textoModelo));
     }
 
     //Test que comprueba si se usa un texto vacía devuelve false
     @Test
-    public void testSintaxisTextoVacio3(){
+    public void testSintaxisTextoVacio2(){
         String IDTexto = "idTexto";
         String título = "titulo";
         String texto = "";
@@ -68,7 +55,7 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
        // assertFalse(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(false, textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(-1, textoBll.comprobarSintaxis(textoModelo));
     }
 
     //Test que comprueba si se usa un temática vacía devuelve false
@@ -81,7 +68,7 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
         //assertFalse(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(false, textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(-3, textoBll.comprobarSintaxis(textoModelo));
     }
 
     //Test que comprueba si el texto tiene más de 2000 caracteres devuelve false
@@ -97,6 +84,18 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
        // assertFalse(textoBll.comprobarSintaxis(textoModelo));
-        assertEquals(false, textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(-1, textoBll.comprobarSintaxis(textoModelo));
+    }
+
+    @Test
+    public void testSintaxisTematica(){
+        String IDTexto = "idTexto";
+        String título = "título";
+        String texto = "texto";
+        String temática = "Temática";
+
+        TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
+        // assertFalse(textoBll.comprobarSintaxis(textoModelo));
+        assertEquals(-3, textoBll.comprobarSintaxis(textoModelo));
     }
 }
