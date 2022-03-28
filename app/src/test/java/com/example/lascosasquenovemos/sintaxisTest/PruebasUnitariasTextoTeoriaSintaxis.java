@@ -10,6 +10,8 @@ import com.example.lascosasquenovemos.model.TextoModelo;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 
+import java.util.Arrays;
+
 public class PruebasUnitariasTextoTeoriaSintaxis {
     private static TextoBll textoBll;
 
@@ -76,10 +78,10 @@ public class PruebasUnitariasTextoTeoriaSintaxis {
     public void testSintaxisTextoLimite(){
         String IDTexto = "idTexto";
         String título = "titulo";
-        String texto = "abcdefghijklmnopqrstuvwxyz";
-        for (int i = 0; i <= 100; i++) {
-            texto += texto;
-        }
+        char[] chars = new char[2001];
+        Arrays.fill(chars, 'a');
+        String texto = new String(chars);
+
         String temática = "tematica";
 
         TextoModelo textoModelo = new TextoModelo(IDTexto, título, texto, temática);
