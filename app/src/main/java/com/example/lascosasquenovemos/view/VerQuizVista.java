@@ -44,7 +44,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
         rd3 = findViewById(R.id.ROpc3);
         rd4 = findViewById(R.id.ROpc4);
         btnComprobar = findViewById(R.id.btnComprobar);
-
+        iComprobacion=new Intent(VerQuizVista.this, ComprobarResultadoVista.class);
         //TODO Borrar
         comprobacion = findViewById(R.id.TextoComprobacionPorAhora);
 
@@ -53,8 +53,6 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
             public void onClick(View view) {
 
                 if(solucion != null){
-
-                    iComprobacion=new Intent(VerQuizVista.this, ComprobarResultadoVista.class);
 
                     String opcionEscogida = null;
                     int id = rG.getCheckedRadioButtonId();
