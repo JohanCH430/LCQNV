@@ -58,7 +58,7 @@
         android:layout_below="@id/QuizOpcionSeleccionada"
         android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
-        android:text="Comprobacion (hasta que creemos pantalla)"
+        android:text=""
         />
 
     <Button

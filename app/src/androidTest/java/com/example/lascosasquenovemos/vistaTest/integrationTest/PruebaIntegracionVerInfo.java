@@ -27,7 +27,7 @@ import org.junit.Test;
 public class PruebaIntegracionVerInfo {
 
     @Rule
-    public ActivityScenarioRule<InfoVista> crearQuizRule =  new ActivityScenarioRule<>(InfoVista.class);;
+    public ActivityScenarioRule<InfoVista> crearQuizRule =  new ActivityScenarioRule<>(InfoVista.class);
     String texto;
 
     @Before
@@ -36,6 +36,7 @@ public class PruebaIntegracionVerInfo {
     }
 
     //TODO A dia de hoy no esta la funcionalidad de creacion de pantalla por lo que la pantalla que se prueba solo hace una llamada al texto de prueba
+    //https://stackoverflow.com/questions/45597008/espresso-get-text-of-element
     @Test
     public void LecturaTest(){
         try {
