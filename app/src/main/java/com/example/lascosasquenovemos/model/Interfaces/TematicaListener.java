@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TematicaListener {
 
-    void onTematicaReadSucced(TematicaModelo quiz);
+    void onTematicaReadSucced(TematicaModelo tematica);
     void onTematicaWriteSucced(Boolean bool);
     void onTematicaReadAllSucced(List<String> tematicas);
 

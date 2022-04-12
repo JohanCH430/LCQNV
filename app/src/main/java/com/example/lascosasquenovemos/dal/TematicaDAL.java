@@ -86,7 +86,7 @@ public class TematicaDAL {
 
         DatabaseReference refTexto = FirebaseDAL.dataBase.child("Tematica");
 
-        FirebaseDAL.dataBase.child("Tematica").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        refTexto.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
 
@@ -96,7 +96,7 @@ public class TematicaDAL {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
 
                     if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún texto con esa id, te devuelve un null.
-                        tL.onTematicaReadSucced(null);
+                        tL.onTematicaReadAllSucced(null);
                     } else {
                         List<String> listaTematicas = new ArrayList<>();
 

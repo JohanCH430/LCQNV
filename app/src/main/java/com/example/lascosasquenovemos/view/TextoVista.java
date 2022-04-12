@@ -10,39 +10,38 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lascosasquenovemos.bll.TematicaBll;
 import com.example.lascosasquenovemos.bll.TextoBll;
 import com.example.lascosasquenovemos.dal.FirebaseDAL;
+import com.example.lascosasquenovemos.model.Interfaces.TematicaListener;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
+import com.example.lascosasquenovemos.model.TematicaModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener {
+public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener, TematicaListener {
 
     TextView txtTitulo, txttexto;
     Button btnInicio, btnCrear;
     Spinner list;
-    private ArrayList<String> lista;
+    private ArrayList<String> lista = new ArrayList<String>();
     private String tema;
     TextView Error;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto_vista);
         FirebaseDAL.getInstance(getApplicationContext());
-
+        TematicaBll.leerTematica(this);
         txtTitulo = findViewById(R.id.txtInpTitulo);
         txttexto = findViewById(R.id.txtTexto);
         btnCrear = findViewById(R.id.buttonCrear);
         btnInicio = findViewById(R.id.buttonInicio);
         list = findViewById(R.id.list);
         Error = findViewById(R.id.Error);
-        lista = new ArrayList<String>();
-        lista.add("Temática");
-        lista.add("Visual");
-        lista.add("Auditiva");
-        lista.add("Fisica");
+
         list.setOnItemSelectedListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -125,4 +124,18 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
 
     }
 
+    @Override
+    public void onTematicaReadSucced(TematicaModelo tematica) {
+
+    }
+
+    @Override
+    public void onTematicaWriteSucced(Boolean bool) {
+
+    }
+
+    @Override
+    public void onTematicaReadAllSucced(List<String> tematicas) {
+    lista = (ArrayList<String>) tematicas;
+    }
 }
