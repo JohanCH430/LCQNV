@@ -14,6 +14,7 @@ import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
@@ -109,6 +110,11 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
 
     @Override
     public void onQuizWriteSucced(Boolean bool) {
+
+    }
+
+    @Override
+    public void onQuizReadQuizByTextId(List<String> quizs) {
 
     }
 }

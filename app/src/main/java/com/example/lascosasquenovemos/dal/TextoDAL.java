@@ -87,7 +87,7 @@ public class TextoDAL extends FirebaseDAL {
                                     refTematicaTexto.child(texto.getTemática()).setValue(nuevoID);
                                 }else{
                                     String suma = resultTextoPregunta.get(texto.getTemática());
-                                    suma += ", " + nuevoID;
+                                    suma += "," + nuevoID;
                                     refTematicaTexto.child(texto.getTemática()).setValue(suma);
                                 }
                             }

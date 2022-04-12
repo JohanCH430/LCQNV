@@ -21,6 +21,8 @@ import org.junit.Test;
 import com.example.lascosasquenovemos.view.CrearQuizVista;
 import com.example.lascosasquenovemos.view.R;
 
+import java.util.List;
+
 public class PruebasUnitariasCrearQuizVista implements QuizListener {
 
     @Rule
@@ -106,5 +108,10 @@ public class PruebasUnitariasCrearQuizVista implements QuizListener {
         else
             onView(withId(R.id.ErrorQuiz)).perform(setTextInTextView("ERROR AL CREAR"));
         */
+    }
+
+    @Override
+    public void onQuizReadQuizByTextId(List<String> quizs) {
+
     }
 }

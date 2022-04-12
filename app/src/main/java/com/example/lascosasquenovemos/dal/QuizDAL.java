@@ -9,7 +9,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class QuizDAL extends FirebaseDAL {
 
@@ -122,7 +126,7 @@ public class QuizDAL extends FirebaseDAL {
                                     refTextoQuiz.child(quiz.getTextId()).setValue(nuevoID);
                                 }else{
                                     String suma = resultTextoPregunta.get(quiz.getTextId());
-                                    suma += ", " + nuevoID;
+                                    suma += "," + nuevoID;
                                     refTextoQuiz.child(quiz.getTextId()).setValue(suma);
                                 }
                             }
@@ -136,4 +140,35 @@ public class QuizDAL extends FirebaseDAL {
 
     }
 
+    public static void readAllQuizByText(String idTexto, QuizListener qL){
+
+        DatabaseReference refQuiz = FirebaseDAL.dataBase.child("TextoPregunta");
+
+        refQuiz.child(idTexto).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+
+                if (!task.isSuccessful()) {
+                    Log.e("firebase error", "Error getting data", task.getException());
+                } else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                    if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún Quiz con esa id, te devuelve un null.
+                        qL.onQuizReadQuizByTextId(null);
+                    } else {
+
+                        //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
+                        String result = (String) task.getResult().getValue();
+
+                        List<String> resultArray = Arrays.asList(result.split(","));
+
+                        qL.onQuizReadQuizByTextId(resultArray);
+
+                    }
+
+                }
+            }
+        });
+
+    }
 }

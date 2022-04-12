@@ -14,6 +14,8 @@ public class QuizBll {
         QuizDAL.leerQuiz(id, qL);
     }
 
+    public static void leerQuizsPorTexto(String id, QuizListener qL) { QuizDAL.readAllQuizByText(id, qL);}
+
     public static boolean comprobarSintaxis(QuizModelo modelo) {
         if(modelo.getPregunta().equals("") || modelo.getOpcionA().length() > 50) {
             return false;

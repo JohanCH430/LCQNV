@@ -6,13 +6,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.lascosasquenovemos.dal.FirebaseDAL;
 
-public class MainVista extends AppCompatActivity {
+import com.example.lascosasquenovemos.bll.PantallaBll;
+import com.example.lascosasquenovemos.bll.QuizBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
+import com.example.lascosasquenovemos.model.Interfaces.PantallaListener;
+import com.example.lascosasquenovemos.model.QuizModelo;
+import com.example.lascosasquenovemos.model.TextoModelo;
+
+import java.util.Collections;
+import java.util.List;
+
+public class MainVista extends AppCompatActivity implements PantallaListener {
 
     TextView txtVersion;
     Button btnAdminMode, btnJugar;
     Intent iAdminMode, iJugar;
+    Boolean pantallaCreada = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +44,9 @@ public class MainVista extends AppCompatActivity {
         btnAdminMode = findViewById(R.id.btnModoAdmin);
         btnJugar = findViewById(R.id.btnJugar);
 
+        //Inizializamos la creación de una pantalla
+        PantallaBll.crearPantalla(this);
+
         //Creo los diferentes OnClick de los botones.
         btnAdminMode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +58,9 @@ public class MainVista extends AppCompatActivity {
         btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                modoJugar();
+                if(pantallaCreada){
+                    modoJugar();
+                }
             }
         });
 
@@ -60,4 +75,42 @@ public class MainVista extends AppCompatActivity {
 
     //Método que comienza la actividad con la vista de jugar.
     private void modoJugar(){startActivity(iJugar);}
+
+    @Override
+    public void onQuizReadSucced(QuizModelo quiz) {
+
+    }
+
+    @Override
+    public void onQuizWriteSucced(Boolean bool) {
+
+    }
+
+    @Override
+    public void onQuizReadQuizByTextId(List<String> quizs) {
+        if(quizs != null){
+            Collections.shuffle(quizs);
+            iJugar.putExtra("idQuiz", quizs.get(0));
+            pantallaCreada = true;
+        } else {
+            PantallaBll.crearPantalla(this);
+        }
+    }
+
+    @Override
+    public void onTextReadSucced(TextoModelo texto) {
+
+    }
+
+    @Override
+    public void onTextWriteSucced(Boolean bool) {
+
+    }
+
+    @Override
+    public void onTextReadAllSucced(List<String> textos) {
+        Collections.shuffle(textos);
+        QuizBll.leerQuizsPorTexto(textos.get(0).split(":")[0], this);
+        iJugar.putExtra("idTexto", textos.get(0).split(":")[0]);
+    }
 }

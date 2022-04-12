@@ -137,6 +137,11 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
     }
 
     @Override
+    public void onQuizReadQuizByTextId(List<String> quizs) {
+
+    }
+
+    @Override
     public void onTextReadSucced(TextoModelo texto) {
 
     }

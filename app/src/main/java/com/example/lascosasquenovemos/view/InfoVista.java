@@ -28,8 +28,10 @@ public class InfoVista extends AppCompatActivity implements TextListener {
         FirebaseDAL.getInstance(getApplicationContext());
         next = new Intent(InfoVista.this, VerQuizVista.class);
         bd = new TextoBll();
-        //TODO el id se debería de obtener de un parámetro que se obtiene de la función de creación de pantalla que se llama desde la vista anterior
         idTexto = "PRUEBA";
+
+        //TODO el id se debería de obtener de un parámetro que se obtiene de la función de creación de pantalla que se llama desde la vista anterior
+        idTexto = getIntent().getStringExtra("idTexto");
 
         Button continuar = findViewById(R.id.btnContinuar);
         texto = findViewById(R.id.txtViewTexto);
@@ -38,7 +40,7 @@ public class InfoVista extends AppCompatActivity implements TextListener {
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                next.putExtra("idQuiz", "prueba");
+                next.putExtra("idQuiz", getIntent().getStringExtra("idQuiz"));
                 startActivity(next);
             }
         });
