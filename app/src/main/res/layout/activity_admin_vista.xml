@@ -61,6 +61,19 @@
     </Space>
 
     <Button
+        android:id="@+id/btnCrearTematica"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="CREAR TEMÁTICA" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="10dp">
+
+    </Space>
+
+    <Button
         android:id="@+id/btnInicio"
         android:layout_width="200dp"
         android:layout_height="wrap_content"

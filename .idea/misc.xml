@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/David/Documents/GitHub/LCQNV/LCQNV/app/src/main/res/layout/activity_main_vista.xml" value="0.2821557971014493" />
+        <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_admin_vista.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_comprobar_resultado_vista.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_crear_quiz_vista.xml" value="0.10714285714285714" />
+        <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_crear_tematica_vista.xml" value="0.33" />
+        <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_texto_vista.xml" value="0.1" />
         <entry key="..\:/Users/David/Documents/GitHub/LCQNV/app/src/main/res/layout/activity_ver_quiz_vista.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/Johan Cruz Huertas/Documents/GitHub/LCQNV/LCQNV/app/src/main/res/layout/activity_admin_vista.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/Johan Cruz Huertas/Documents/GitHub/LCQNV/LCQNV/app/src/main/res/layout/activity_crear_quiz_vista.xml" value="0.358695652173913" />

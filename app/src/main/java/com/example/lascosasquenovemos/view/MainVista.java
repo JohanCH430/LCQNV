@@ -74,7 +74,12 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
     }
 
     //Método que comienza la actividad con la vista de jugar.
-    private void modoJugar(){startActivity(iJugar);}
+    private void modoJugar(){
+        //Si aun no se ha terminado de crear la pantalla no puedes continuar
+        if(pantallaCreada){
+            startActivity(iJugar);
+        }
+    }
 
     @Override
     public void onQuizReadSucced(QuizModelo quiz) {
@@ -88,6 +93,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
 
     @Override
     public void onQuizReadQuizByTextId(List<String> quizs) {
+        //Comprobamos que no devuelva null, porque eso es un texto sin preguntas, si devuelve null se repite el proceso.
         if(quizs != null){
             Collections.shuffle(quizs);
             iJugar.putExtra("idQuiz", quizs.get(0));
@@ -109,6 +115,8 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
 
     @Override
     public void onTextReadAllSucced(List<String> textos) {
+
+        //Descolocamos los textos y se coge el primero siempre.
         Collections.shuffle(textos);
         QuizBll.leerQuizsPorTexto(textos.get(0).split(":")[0], this);
         iJugar.putExtra("idTexto", textos.get(0).split(":")[0]);

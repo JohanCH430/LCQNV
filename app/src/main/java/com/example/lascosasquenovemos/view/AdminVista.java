@@ -11,6 +11,7 @@ import com.example.lascosasquenovemos.dal.FirebaseDAL;
 public class AdminVista extends AppCompatActivity {
     Intent iTexto;
     Intent iQuiz;
+    Intent iTematica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +19,11 @@ public class AdminVista extends AppCompatActivity {
         setContentView(R.layout.activity_admin_vista);
 
         FirebaseDAL.getInstance(getApplicationContext());
+
         //Inicializar elementos de la vista
         Button botonCrearTexto = findViewById(R.id.btnCrearTexto);
         Button botonCrearQuiz = findViewById(R.id.btnCrearQuiz);
+        Button botonCrearTematica = findViewById(R.id.btnCrearTematica);
         Button botonInicio = findViewById(R.id.btnInicio);
 
         //Funcion para las acciones que hace el botón de crear texto
@@ -38,6 +41,15 @@ public class AdminVista extends AppCompatActivity {
             public void onClick(View view) {
                 iQuiz = new Intent(AdminVista.this, CrearQuizVista.class);
                 startActivity(iQuiz);
+            }
+        });
+
+        //Funcion para las acciones que hace el botón de ir a crear temática
+        botonCrearTematica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iTematica = new Intent(AdminVista.this, CrearTematicaVista.class);
+                startActivity(iTematica);
             }
         });
 
