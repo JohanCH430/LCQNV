@@ -2,7 +2,6 @@ package com.example.lascosasquenovemos.bll;
 
 import com.example.lascosasquenovemos.dal.TematicaDAL;
 import com.example.lascosasquenovemos.model.Interfaces.TematicaListener;
-import com.example.lascosasquenovemos.model.QuizModelo;
 import com.example.lascosasquenovemos.model.TematicaModelo;
 
 public class TematicaBll {

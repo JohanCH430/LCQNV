@@ -5,10 +5,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.example.lascosasquenovemos.model.Interfaces.TematicaListener;
-import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TematicaModelo;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
@@ -58,8 +56,9 @@ public class TematicaDAL {
                                         }
                                     }
 
+                                    //En el for compruebo que no existe ya el nombre de la temática.
                                     if(!encontrado){
-                                        //Añado el mapa a la bd
+                                        //Añado la temática a la bd
                                         refTematica.child(tematica.getIDTematica()).setValue(tematica.getDescripcion()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {

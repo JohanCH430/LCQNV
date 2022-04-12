@@ -1,6 +1,5 @@
 package com.example.lascosasquenovemos.model.Interfaces;
 
-import com.example.lascosasquenovemos.model.QuizModelo;
 import com.example.lascosasquenovemos.model.TematicaModelo;
 
 import java.util.List;

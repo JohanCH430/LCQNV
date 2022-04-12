@@ -1,14 +1,13 @@
 package com.example.lascosasquenovemos.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.lascosasquenovemos.bll.QuizBll;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.lascosasquenovemos.bll.TematicaBll;
 import com.example.lascosasquenovemos.model.Interfaces.TematicaListener;
 import com.example.lascosasquenovemos.model.TematicaModelo;
