@@ -53,6 +53,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="Crear" />
+    <Button
+        android:id="@+id/buttonReturnTematica"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCrearTematica"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Atrás" />
+    <TextView
+        android:id="@+id/testViewTestError"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Fallo"/>
 
 
 </RelativeLayout>
