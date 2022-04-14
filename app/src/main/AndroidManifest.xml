@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".CrearPartidaVista"
+            android:exported="false" />
+        <activity
             android:name=".CrearTematicaVista"
             android:exported="false" />
         <activity
