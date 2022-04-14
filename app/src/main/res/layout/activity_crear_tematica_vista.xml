@@ -32,7 +32,7 @@
         android:layout_below="@id/editTextCrearTematica"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:hint="Descrión de la temática (opcional)"
+        android:hint="Descripción de la temática (opcional)"
         android:maxLength="500" />
 
 

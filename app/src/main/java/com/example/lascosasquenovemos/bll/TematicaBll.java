@@ -10,9 +10,16 @@ public class TematicaBll {
 
         if(tematica.getIDTematica().trim().isEmpty()){
             return false;
-        } else{
-            return true;
         }
+        if(tematica.getIDTematica().length() > 50){
+            return false;
+        }
+        else{
+            if(tematica.getDescripcion().length() > 500){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void crearTematica(TematicaModelo tematica, TematicaListener tL) {
