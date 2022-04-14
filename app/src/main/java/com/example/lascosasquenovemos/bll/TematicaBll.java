@@ -25,4 +25,7 @@ public class TematicaBll {
     public static void crearTematica(TematicaModelo tematica, TematicaListener tL) {
         TematicaDAL.crearTematica(tematica, tL);
     }
+    public static void leerTematica(TematicaListener tL) {
+        TematicaDAL.leerTodoTematica(tL);
+    }
 }
