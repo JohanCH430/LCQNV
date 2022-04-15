@@ -126,12 +126,12 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
 
     @Override
     public void onTematicaReadSucced(TematicaModelo tematica) {
-
+//No se va a leer una única temática
     }
 
     @Override
     public void onTematicaWriteSucced(Boolean bool) {
-
+//No se escriben tematicas en la BBDD
     }
 
     @Override
