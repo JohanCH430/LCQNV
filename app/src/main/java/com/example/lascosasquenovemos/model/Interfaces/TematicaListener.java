@@ -8,6 +8,6 @@ public interface TematicaListener {
 
     void onTematicaReadSucced(TematicaModelo tematica);
     void onTematicaWriteSucced(Boolean bool);
-    void onTematicaReadAllSucced(List<String> tematicas);
+    void onTematicaReadAllSucced(String[] tematicas);
 
 }

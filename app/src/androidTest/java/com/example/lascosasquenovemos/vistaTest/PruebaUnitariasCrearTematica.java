@@ -57,7 +57,7 @@ public class PruebaUnitariasCrearTematica implements TematicaListener {
     }
 
     @Override
-    public void onTematicaReadAllSucced(List<String> tematicas) {
+    public void onTematicaReadAllSucced(String[]tematicas) {
 
     }
 }

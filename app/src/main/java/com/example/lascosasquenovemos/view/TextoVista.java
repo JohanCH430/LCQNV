@@ -26,26 +26,25 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     TextView txtTitulo, txttexto;
     Button btnInicio, btnCrear;
     Spinner list;
-    private ArrayList<String> lista = new ArrayList<String>();
+    private String[] lista;
     private String tema;
     TextView Error;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto_vista);
         FirebaseDAL.getInstance(getApplicationContext());
+
+        //Se llama a un método de Temática Bll que se encargará de leer las temáticas que haya en la BD.
         TematicaBll.leerTematica(this);
+
         txtTitulo = findViewById(R.id.txtInpTitulo);
         txttexto = findViewById(R.id.txtTexto);
         btnCrear = findViewById(R.id.buttonCrear);
         btnInicio = findViewById(R.id.buttonInicio);
         list = findViewById(R.id.list);
         Error = findViewById(R.id.Error);
-
-        list.setOnItemSelectedListener(this);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        list.setAdapter(adapter);
 
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,7 +110,7 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         {
             case R.id.list:
                 Toast.makeText(this,adapterView.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
-                tema = lista.get(i).toString();
+                tema = lista[i].toString();
                 break;
 
             default:
@@ -126,16 +125,22 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
 
     @Override
     public void onTematicaReadSucced(TematicaModelo tematica) {
-//No se va a leer una única temática
+        //No se va a leer una única temática
     }
 
     @Override
     public void onTematicaWriteSucced(Boolean bool) {
-//No se escriben tematicas en la BBDD
+        //No se escriben tematicas en la BBDD
     }
 
     @Override
-    public void onTematicaReadAllSucced(List<String> tematicas) {
-    lista = (ArrayList<String>) tematicas;
+    public void onTematicaReadAllSucced(String[] tematicas) {
+
+        lista = tematicas;
+
+        list.setOnItemSelectedListener(this);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        list.setAdapter(adapter);
     }
 }

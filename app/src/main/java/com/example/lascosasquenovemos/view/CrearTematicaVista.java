@@ -79,7 +79,7 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
     }
 
     @Override
-    public void onTematicaReadAllSucced(List<String> tematicas) {
+    public void onTematicaReadAllSucced(String[] tematicas) {
 
     }
 }

@@ -44,7 +44,6 @@ public class TematicaDAL {
                                 if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún texto con esa id, te devuelve un null.
                                     tL.onTematicaReadSucced(null);
                                 } else {
-                                    List<String> listaTematicas = new ArrayList<>();
 
                                     //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
                                     HashMap<String, String> result = (HashMap<String, String>) task.getResult().getValue();
@@ -103,7 +102,8 @@ public class TematicaDAL {
                         //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
                         HashMap<String, String> result = (HashMap<String, String>) task.getResult().getValue();
                         listaTematicas = result.keySet().toArray(new String[result.size()]);
-                        tL.onTematicaReadAllSucced(Arrays.asList(listaTematicas));
+
+                        tL.onTematicaReadAllSucced(listaTematicas);
                     }
 
                 }
