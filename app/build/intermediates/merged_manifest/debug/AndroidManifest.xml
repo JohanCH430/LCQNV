@@ -25,6 +25,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
+            android:name="com.example.lascosasquenovemos.view.CrearPartidaVista"
+            android:exported="false" />
+        <activity
+            android:name="com.example.lascosasquenovemos.view.CrearTematicaVista"
+            android:exported="false" />
+        <activity
             android:name="com.example.lascosasquenovemos.view.ComprobarResultadoVista"
             android:exported="false" />
         <activity

@@ -2580,6 +2580,9 @@ drawable tooltip_frame_light
 id ALT
 id BOTTOM_END
 id BOTTOM_START
+id BtnAtrasCrearPtll
+id BtnCrearPtll
+id BtnVerPtll
 id CTRL
 id Error
 id FUNCTION
@@ -2588,6 +2591,7 @@ id InpOpc2Quiz
 id InpOpc3Quiz
 id InpOpc4Quiz
 id InpPreguntaQuiz
+id InputNumPtlls
 id META
 id NO_DEBUG
 id Opc_correcta_quiz
@@ -2612,7 +2616,9 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TextoComprobacionCrearTematica
 id TextoComprobacionPorAhora
+id TextoCrearPtll
 id Texto_quiz
 id Titulo_del_texto
 id VistaCrearQuiz
@@ -2705,6 +2711,7 @@ id bounceStart
 id btnComprobar
 id btnContinuar
 id btnCrearQuiz
+id btnCrearTematica
 id btnCrearTexto
 id btnInicio
 id btnJugar
@@ -2713,9 +2720,11 @@ id btnReintentar
 id btnTerminar
 id buttonCrear
 id buttonCrearQuiz
+id buttonCrearTematica
 id buttonInicio
 id buttonInicioQuiz
 id buttonPanel
+id buttonReturnTematica
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2794,6 +2803,8 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextCrearTematica
+id editTextCrearTematicaDesacripcion
 id edit_query
 id elastic
 id email
@@ -3086,6 +3097,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textoTituloCrearTematica
 id thing_proto
 id time
 id title
@@ -3219,7 +3231,9 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_admin_vista
 layout activity_comprobar_resultado_vista
+layout activity_crear_partida_vista
 layout activity_crear_quiz_vista
+layout activity_crear_tematica_vista
 layout activity_info_vista
 layout activity_main_vista
 layout activity_texto_vista
