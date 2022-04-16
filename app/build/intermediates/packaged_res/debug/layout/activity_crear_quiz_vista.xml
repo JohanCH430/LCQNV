@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/VistaCrearQuiz"
+    tools:context=".CrearQuizVista">
+
+    <TextView
+        android:id="@+id/Pregunta_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="Pregunta:"/>
+
+    <EditText
+        android:id="@+id/InpPreguntaQuiz"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:hint="Pregunta"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/Opcion1_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:text="Opción 1:"/>
+
+    <EditText
+        android:id="@+id/InpOpc1Quiz"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="110dp"
+        android:hint="Opción 1"
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/Opcion2_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:text="Opción 2:"/>
+    <EditText
+        android:id="@+id/InpOpc2Quiz"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="16dp"
+        android:hint="Opción 2"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/Opcion3_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:text="Opción 3:"/>
+    <EditText
+        android:id="@+id/InpOpc3Quiz"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="16dp"
+        android:hint="Opción 3"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/Opcion4_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:text="Opción 4:"/>
+    <EditText
+        android:id="@+id/InpOpc4Quiz"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="16dp"
+        android:hint="Opción 4"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/Texto_quiz"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="20dp"
+        android:text="Nombre del texto asociado:"/>
+
+    <Spinner
+        android:id="@+id/listaTextos"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="30dp"
+        android:spinnerMode="dropdown"
+
+
+        />
+    <RadioGroup
+        android:id="@+id/Opc_correcta_quiz"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="20dp">
+        <RadioButton
+            android:id="@+id/Radio_opc1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="true"
+            android:text="Opción 1"
+            />
+        <RadioButton
+            android:id="@+id/Radio_opc2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 2"
+            />
+        <RadioButton
+            android:id="@+id/Radio_opc3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 3"
+            />
+        <RadioButton
+            android:id="@+id/Radio_opc4"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 4"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonInicioQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="630dp"
+        android:text="Inicio" />
+
+    <Button
+        android:id="@+id/buttonCrearQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="630dp"
+        android:text="Crear" />
+
+    <TextView
+        android:id="@+id/testViewTestError"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Fallo"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+03-29 09:20:20.698 26681 26707 I TestRunner: started: checkRespuesta2(com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionResponderQuiz)
+03-29 09:20:20.703 26681 26707 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-29 09:20:20.708   517   535 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.716   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.725 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: PRE_ON_CREATE
+03-29 09:20:20.726 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.727 26681 26704 V FA      : onActivityCreated
+03-29 09:20:20.730   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f3486000 0x3f3c6f000]
+03-29 09:20:20.734 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: CREATED
+03-29 09:20:20.734 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.736 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: STARTED
+03-29 09:20:20.736 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.738 26681 26712 V FA      : Activity resumed, time: 11613312
+03-29 09:20:20.743 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: RESUMED
+03-29 09:20:20.744 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.746 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: PAUSED
+03-29 09:20:20.746 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.748   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.756 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: PRE_ON_CREATE
+03-29 09:20:20.757 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+03-29 09:20:20.759 26681 26704 V FA      : onActivityCreated
+03-29 09:20:20.783 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: CREATED
+03-29 09:20:20.783 26681 26681 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.lascosasquenovemos.view.InfoVista@72dc82c
+03-29 09:20:20.785 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: STARTED
+03-29 09:20:20.785 26681 26681 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.lascosasquenovemos.view.InfoVista@72dc82c
+03-29 09:20:20.786 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: RESUMED
+03-29 09:20:20.786 26681 26681 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.lascosasquenovemos.view.InfoVista@72dc82c
+03-29 09:20:20.796   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f07e9000 0x3f0fd2000]
+03-29 09:20:20.802  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=ComprobarResultadoVista, ga_previous_id(_pi)=2524076883230826621, ga_screen_class(_sc)=BootstrapActivity, ga_screen_id(_si)=2524076883230826624}]
+03-29 09:20:20.808   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f0fd2000 0x3f17bb000]
+03-29 09:20:20.812 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 9
+03-29 09:20:20.814   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f1ccb000 0x3f24b4000]
+03-29 09:20:20.815 26681 26712 V FA      : Activity paused, time: 11613321
+03-29 09:20:20.815 26681 26712 V FA      : Activity resumed, time: 11613362
+03-29 09:20:20.815   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f5fd0000 0x3f67b9000]
+03-29 09:20:20.819  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3372243
+03-29 09:20:20.819  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:20.820 26681 26681 D firebase: {Contenido=Este es un texto de prueba que reside en la BD, sirve como prueba de lectura hasta que se haga la funcionalidad de crear pantalla, Titulo=TituloEjemplo, Tematica=NoTiene}
+03-29 09:20:20.821  1606 26722 V FA-SVC  : Scheduling upload, millis: 3372243
+03-29 09:20:20.823  1174 26340 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-235s,latest=148s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-618s last_run=-228s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:20.824  1606 26722 V FA-SVC  : Background event processing time, ms: 22
+03-29 09:20:20.828 26681 26681 D RootViewPicker: Root not ready - waiting: 10ms for one to appear.
+03-29 09:20:20.831 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: STOPPED
+03-29 09:20:20.831 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:20.837  1678 26499 I PBSessionCacheImpl: Deleted sessionId[7381570343308376] from persistence.
+03-29 09:20:20.843   517   542 D ArtManagerInternalImpl: /data/misc/iorapd/com.example.lascosasquenovemos/1/com.example.lascosasquenovemos.view.InfoVista/compiled_traces/compiled_trace.pb doesn't exist
+03-29 09:20:20.844   517   542 I ActivityTaskManager: Displayed com.example.lascosasquenovemos/.view.InfoVista: +132ms
+03-29 09:20:20.845  1678  1988 W SearchServiceCore: Abort, client detached.
+03-29 09:20:20.848   517   535 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+03-29 09:20:20.852 26681 26681 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230846/com.example.lascosasquenovemos:id/btnContinuar>
+03-29 09:20:20.853  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3210
+03-29 09:20:20.854  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = false, unlocked = true
+03-29 09:20:20.854  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1907 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lascosasquenovemos fieldId=-1 fieldName=null extras=null}, false)
+03-29 09:20:20.854  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = true, unlocked = true
+03-29 09:20:20.871  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=BootstrapActivity, ga_previous_id(_pi)=2524076883230826624, ga_screen_class(_sc)=InfoVista, ga_screen_id(_si)=2524076883230826625}]
+03-29 09:20:20.875  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3372187
+03-29 09:20:20.877  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:20.879  1606 26722 V FA-SVC  : Scheduling upload, millis: 3372187
+03-29 09:20:20.880  1606 26722 V FA-SVC  : Background event processing time, ms: 8
+03-29 09:20:20.881  1174 25087 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-235s,latest=148s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-618s last_run=-228s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:20.899   517   535 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+03-29 09:20:20.901   517   535 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+03-29 09:20:20.903 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: PAUSED
+03-29 09:20:20.903 26681 26681 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.lascosasquenovemos.view.InfoVista@72dc82c
+03-29 09:20:20.904 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 116
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.904   517  3051 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:20.905 26681 26712 V FA      : Activity paused, time: 11613478
+03-29 09:20:20.910   517  3051 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:20.918 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e in: PRE_ON_CREATE
+03-29 09:20:20.918 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.VerQuizVista (has extras) }, activity=com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e
+03-29 09:20:20.920 26681 26704 V FA      : onActivityCreated
+03-29 09:20:20.950 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e in: CREATED
+03-29 09:20:20.950 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.VerQuizVista (has extras) }, activity=com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e
+03-29 09:20:20.952 26681 26694 I cosasquenovemo: JIT allocated 74KB for compiled code of void android.view.View.<init>(android.content.Context, android.util.AttributeSet, int, int)
+03-29 09:20:20.953 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e in: STARTED
+03-29 09:20:20.953 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.VerQuizVista (has extras) }, activity=com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e
+03-29 09:20:20.954 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e in: RESUMED
+03-29 09:20:20.954 26681 26712 V FA      : Activity resumed, time: 11613529
+03-29 09:20:20.954 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.VerQuizVista (has extras) }, activity=com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e
+03-29 09:20:20.973   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f07e9000]
+03-29 09:20:20.979   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f6fc7000 0x3f77b0000]
+03-29 09:20:20.981   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f77b0000 0x3f7f99000]
+03-29 09:20:20.984  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=InfoVista, ga_previous_id(_pi)=2524076883230826625, ga_screen_class(_sc)=VerQuizVista, ga_screen_id(_si)=2524076883230826626}]
+03-29 09:20:20.987  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3372075
+03-29 09:20:20.987  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:20.989  1606 26722 V FA-SVC  : Scheduling upload, millis: 3372075
+03-29 09:20:20.990  1606 26722 V FA-SVC  : Background event processing time, ms: 6
+03-29 09:20:20.991 26681 26681 D firebase: {Solucion=Opcion Prueba a correcta, Opciones={a=Opcion Prueba a correcta, b=Opcion Prueba b, c=Opcion Prueba c, d=Opcion Prueba d}, TextId=PRUEBA, Pregunta=Pregunta de prueba}
+03-29 09:20:20.991  1174 26340 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-235s,latest=148s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-618s last_run=-228s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:20.995   517   542 I ActivityTaskManager: Displayed com.example.lascosasquenovemos/.view.VerQuizVista: +95ms
+03-29 09:20:21.016  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3210
+03-29 09:20:21.016  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = false, unlocked = true
+03-29 09:20:21.016  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1907 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lascosasquenovemos fieldId=-1 fieldName=null extras=null}, false)
+03-29 09:20:21.016  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = true, unlocked = true
+03-29 09:20:21.044   517  2784 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:21.216 26681 26681 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230741/com.example.lascosasquenovemos:id/ROpc2>
+03-29 09:20:21.264   517  4927 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:21.397   517  4927 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:21.434 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: STOPPED
+03-29 09:20:21.434 26681 26681 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.lascosasquenovemos.view.InfoVista@72dc82c
+03-29 09:20:21.513 26681 26681 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230845/com.example.lascosasquenovemos:id/btnComprobar>
+03-29 09:20:21.560   517   535 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+03-29 09:20:21.562   517  4927 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:21.565   517   535 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+03-29 09:20:21.568 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e in: PAUSED
+03-29 09:20:21.568 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.VerQuizVista (has extras) }, activity=com.example.lascosasquenovemos.view.VerQuizVista@d2d3d3e
+03-29 09:20:21.568 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 613
+03-29 09:20:21.568   517  2784 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569   517  2784 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.569 26681 26712 V FA      : Activity paused, time: 11614142
+03-29 09:20:21.579 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: PRE_ON_CREATE
+03-29 09:20:21.579 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.582 26681 26704 V FA      : onActivityCreated
+03-29 09:20:21.603 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: CREATED
+03-29 09:20:21.603 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.606 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: STARTED
+03-29 09:20:21.606 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.607 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: RESUMED
+03-29 09:20:21.607 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.607 26681 26712 V FA      : Activity resumed, time: 11614182
+03-29 09:20:21.622   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f3486000 0x3f3c6f000]
+03-29 09:20:21.628   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f1ccb000 0x3f24b4000]
+03-29 09:20:21.629   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f07e9000 0x3f0fd2000]
+03-29 09:20:21.640   517   542 I ActivityTaskManager: Displayed com.example.lascosasquenovemos/.view.ComprobarResultadoVista: +80ms
+03-29 09:20:21.645  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=VerQuizVista, ga_previous_id(_pi)=2524076883230826626, ga_screen_class(_sc)=ComprobarResultadoVista, ga_screen_id(_si)=2524076883230826627}]
+03-29 09:20:21.649  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3371413
+03-29 09:20:21.649  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:21.651  1606 26722 V FA-SVC  : Scheduling upload, millis: 3371413
+03-29 09:20:21.652  1174 26644 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-236s,latest=147s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-619s last_run=-229s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:21.652  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3210
+03-29 09:20:21.653  1606 26722 V FA-SVC  : Background event processing time, ms: 7
+03-29 09:20:21.653  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = false, unlocked = true
+03-29 09:20:21.653  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1907 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lascosasquenovemos fieldId=-1 fieldName=null extras=null}, false)
+03-29 09:20:21.653  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = true, unlocked = true
+03-29 09:20:21.685   517  4927 I system_server: oneway function results will be dropped but finished with status OK and parcel size 4
+03-29 09:20:21.799 26681 26681 I ViewInteraction: Checking 'androidx.test.espresso.intent.Intents$2@9219534' assertion on view view.getRootView() to equal view
+03-29 09:20:21.802   517   535 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+03-29 09:20:21.806   517   535 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+03-29 09:20:21.807 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: PAUSED
+03-29 09:20:21.807 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 199
+03-29 09:20:21.807 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808   517   846 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.808 26681 26712 V FA      : Activity paused, time: 11614381
+03-29 09:20:21.816 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: PRE_ON_CREATE
+03-29 09:20:21.817 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.817 26681 26704 V FA      : onActivityCreated
+03-29 09:20:21.823 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: CREATED
+03-29 09:20:21.824 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.827 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: STARTED
+03-29 09:20:21.827 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.829 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: RESUMED
+03-29 09:20:21.829 26681 26712 V FA      : Activity resumed, time: 11614403
+03-29 09:20:21.829 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.842   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f0fd2000 0x3f17bb000]
+03-29 09:20:21.847   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f5fd0000 0x3f67b9000]
+03-29 09:20:21.849   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f67b9000 0x3f6fa2000]
+03-29 09:20:21.858   517   542 I ActivityTaskManager: Displayed com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +55ms
+03-29 09:20:21.869 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.InfoVista@72dc82c in: DESTROYED
+03-29 09:20:21.869 26681 26681 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+03-29 09:20:21.870   517   535 D EventSequenceValidator: inc AccIntentStartedEvents to 2
+03-29 09:20:21.874  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=ComprobarResultadoVista, ga_previous_id(_pi)=2524076883230826627, ga_screen_class(_sc)=EmptyActivity, ga_screen_id(_si)=2524076883230826628}]
+03-29 09:20:21.878  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3371184
+03-29 09:20:21.878  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:21.879  1606 26722 V FA-SVC  : Scheduling upload, millis: 3371184
+03-29 09:20:21.880  1606 26722 V FA-SVC  : Background event processing time, ms: 6
+03-29 09:20:21.882   517   535 D EventSequenceValidator: dec AccIntentStartedEvents to 1
+03-29 09:20:21.883  1174 26644 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-236s,latest=147s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-619s last_run=-229s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:21.885 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: PAUSED
+03-29 09:20:21.885 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.885 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 57
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.886   517  3051 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.887 26681 26712 V FA      : Activity paused, time: 11614460
+03-29 09:20:21.890 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532 in: DESTROYED
+03-29 09:20:21.890 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@262a532
+03-29 09:20:21.898  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3210
+03-29 09:20:21.898  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = false, unlocked = true
+03-29 09:20:21.898  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1907 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lascosasquenovemos fieldId=-1 fieldName=null extras=null}, false)
+03-29 09:20:21.899  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = true, unlocked = true
+03-29 09:20:21.900 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9 in: PRE_ON_CREATE
+03-29 09:20:21.900 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9
+03-29 09:20:21.900 26681 26704 V FA      : onActivityCreated
+03-29 09:20:21.905 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9 in: CREATED
+03-29 09:20:21.905 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9
+03-29 09:20:21.906 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9 in: STARTED
+03-29 09:20:21.906 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9
+03-29 09:20:21.908 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9 in: RESUMED
+03-29 09:20:21.908 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9
+03-29 09:20:21.912 26681 26712 V FA      : Activity resumed, time: 11614486
+03-29 09:20:21.922   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f54e2000 0x3f5ccb000]
+03-29 09:20:21.924   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f4000000 0x3f47e9000]
+03-29 09:20:21.930   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f47e9000 0x3f4fd2000]
+03-29 09:20:21.933   517   542 I ActivityTaskManager: Displayed com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +62ms
+03-29 09:20:21.945  1606 26722 V FA-SVC  : Logging event: origin=auto,name=screen_view(_vs),params=Bundle[{ga_event_origin(_o)=auto, ga_previous_class(_pc)=EmptyActivity, ga_previous_id(_pi)=2524076883230826628, ga_screen_class(_sc)=EmptyActivity, ga_screen_id(_si)=2524076883230826629}]
+03-29 09:20:21.949  1606 26722 V FA-SVC  : Upload scheduled in approximately ms: 3371113
+03-29 09:20:21.949  1606 26722 V FA-SVC  : Unscheduling upload
+03-29 09:20:21.949   306  6279 D goldfish-address-space: claimShared: Ask to claim region [0x3f5fd0000 0x3f64e0000]
+03-29 09:20:21.950  1606 26722 V FA-SVC  : Scheduling upload, millis: 3371113
+03-29 09:20:21.951  1606 26722 V FA-SVC  : Background event processing time, ms: 6
+03-29 09:20:21.951  1174 25087 E NetworkScheduler.ATC: Called cancelTask for already completed task com.google.android.gms/.measurement.PackageMeasurementTaskService{u=0 tag="Measurement.PackageMeasurementTaskService.UPLOAD_TASK_TAG" trigger=window{start=383s,end=767s,earliest=-236s,latest=147s} requirements=[NET_CONNECTED] attributes=[PERSISTED] scheduled=-619s last_run=-229s exec_window_multiplier=1.0000 jid=N/A status=ACTIVE retries=0 client_lib=GMS_TASK_SCHEDULER-220920000} :1 [CONTEXT service_id=218 ]
+03-29 09:20:21.958 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: STOPPED
+03-29 09:20:21.958  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3210
+03-29 09:20:21.958 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.960  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = false, unlocked = true
+03-29 09:20:21.960  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1907 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lascosasquenovemos fieldId=-1 fieldName=null extras=null}, false)
+03-29 09:20:21.961  1241  1241 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2099 checkRepeatedly = true, unlocked = true
+03-29 09:20:21.964 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459 in: DESTROYED
+03-29 09:20:21.965 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e55c459
+03-29 09:20:21.968 26681 26681 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9 in: PAUSED
+03-29 09:20:21.969 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.lascosasquenovemos/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5e375c9
+03-29 09:20:21.970 26681 26712 V FA      : Screen exposed for less than 1000 ms. Event not sent. time: 57
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971   517  4927 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+03-29 09:20:21.971 26681 26712 V FA      : Activity paused, time: 11614543
+03-29 09:20:21.977 26681 26681 D LifecycleMonitor: Lifecycle status change: com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c in: RESUMED
+03-29 09:20:21.977 26681 26681 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lascosasquenovemos/.view.InfoVista }, activity.getIntent()=Intent { cmp=com.example.lascosasquenovemos/.view.ComprobarResultadoVista (has extras) }, activity=com.example.lascosasquenovemos.view.ComprobarResultadoVista@925be0c
+03-29 09:20:21.977 26681 26712 V FA      : Activity resumed, time: 11614552
+03-29 09:20:21.986 26681 26707 I TestRunner: finished: checkRespuesta2(com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionResponderQuiz)
