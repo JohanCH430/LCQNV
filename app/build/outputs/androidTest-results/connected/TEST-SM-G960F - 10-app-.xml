@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionCrearTematica" tests="3" failures="0" errors="0" skipped="0" time="13.556" timestamp="2022-04-13T17:01:34" hostname="localhost">
+  <properties>
+    <property name="device" value="SM-G960F - 10" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testIntegracionCrearTematicaNoFunciona" classname="com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionCrearTematica" time="4.707" />
+  <testcase name="testIntegracionCrearTematicaFunciona" classname="com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionCrearTematica" time="4.138" />
+  <testcase name="botonInicio" classname="com.example.lascosasquenovemos.vistaTest.integrationTest.PruebaIntegracionCrearTematica" time="3.774" />
+</testsuite>
