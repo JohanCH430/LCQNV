@@ -23,6 +23,7 @@ public class CrearPartidaVista extends AppCompatActivity {
         //inicializamos componentes de la vista
         btnCrear = findViewById(R.id.BtnCrearPtll);
         btnVer = findViewById(R.id.BtnVerPtll);
+        btnVer.setEnabled(false);
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
@@ -39,9 +40,8 @@ public class CrearPartidaVista extends AppCompatActivity {
         btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
-                //  Preview = new Intent(CrearPartidaVista.this, VerPartidaVista.class);
-                //  startActivity(Preview);
+                Preview = new Intent(CrearPartidaVista.this, VerPartidaVista.class);
+                startActivity(Preview);
 
             }
         });
