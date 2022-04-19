@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\javig\\Documents\\GitHub\\LCQNV\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\javig\\.gradle\\caches\\transforms-3\\399c739a4b008d64adec4c3c8600495b\\transformed\\appcompat-1.4.1\\res\\values-v25\\values-v25.xml",
+                    "source": "/home/inirolga/.gradle/caches/transforms-3/399c739a4b008d64adec4c3c8600495b/transformed/appcompat-1.4.1/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

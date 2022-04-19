@@ -23,7 +23,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/lcqnv_logo_sin_fondo"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity
+            android:name="com.example.lascosasquenovemos.view.UsuarioVista"
+            android:exported="false" />
+        <activity
+            android:name="com.example.lascosasquenovemos.view.EntrarEnPartidaVista"
+            android:exported="false" />
+        <activity
+            android:name="com.example.lascosasquenovemos.view.VerPartidaVista"
+            android:exported="false" />
         <activity
             android:name="com.example.lascosasquenovemos.view.CrearPartidaVista"
             android:exported="false" />
