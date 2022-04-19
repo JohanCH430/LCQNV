@@ -21,7 +21,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
 
     TextView txtVersion;
     Button btnAdminMode, btnJugar;
-    Intent iAdminMode, iJugar;
+    Intent iAdminMode, iJugar, iUsuario;
     Boolean pantallaCreada = false;
 
     @Override
@@ -38,6 +38,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         //Creo los Intents de las activities a las que tiene que redireccionar.
         iAdminMode = new Intent(MainVista.this, AdminVista.class);
         iJugar = new Intent(MainVista.this, InfoVista.class);
+        iUsuario = new Intent(MainVista.this, UsuarioVista.class);
 
         //Inicializado las variables con los diferentes elementos de la vista.
         txtVersion = findViewById(R.id.txtVersion);
@@ -76,9 +77,13 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
     //Método que comienza la actividad con la vista de jugar.
     private void modoJugar(){
         //Si aun no se ha terminado de crear la pantalla no puedes continuar
-        if(pantallaCreada){
+        //TODO se ha comentado este trozo para que llame al main de usuario
+        /*if(pantallaCreada){
             startActivity(iJugar);
-        }
+        }*/
+        //TODO cuando se tenga el login de usuario habra que redirigir ahi 
+        startActivity(iUsuario);
+
     }
 
     @Override
