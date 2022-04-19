@@ -44,252 +44,251 @@
 24-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:12:9-57
 25        android:supportsRtl="true"
 25-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:13:9-35
-26        android:testOnly="true"
-27        android:theme="@style/Theme.AppCompat.NoActionBar" >
-27-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:14:9-59
-28        <activity
-28-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:15:9-17:40
-29            android:name="com.example.lascosasquenovemos.view.UsuarioVista"
-29-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:16:13-41
-30            android:exported="false" />
-30-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:17:13-37
-31        <activity
-31-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:18:9-20:40
-32            android:name="com.example.lascosasquenovemos.view.EntrarEnPartidaVista"
-32-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:19:13-49
-33            android:exported="false" />
-33-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:20:13-37
-34        <activity
-34-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:21:9-23:40
-35            android:name="com.example.lascosasquenovemos.view.VerPartidaVista"
-35-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:22:13-44
-36            android:exported="false" />
-36-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:23:13-37
-37        <activity
-37-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:24:9-26:40
-38            android:name="com.example.lascosasquenovemos.view.CrearPartidaVista"
-38-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:25:13-46
-39            android:exported="false" />
-39-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:26:13-37
-40        <activity
-40-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:27:9-29:40
-41            android:name="com.example.lascosasquenovemos.view.CrearTematicaVista"
-41-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:28:13-47
-42            android:exported="false" />
-42-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:29:13-37
-43        <activity
-43-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:30:9-32:40
-44            android:name="com.example.lascosasquenovemos.view.ComprobarResultadoVista"
-44-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:31:13-52
-45            android:exported="false" />
-45-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:32:13-37
-46        <activity
-46-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:33:9-41:20
-47            android:name="com.example.lascosasquenovemos.view.MainVista"
-47-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:34:13-38
-48            android:exported="true" >
-48-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:35:13-36
-49            <intent-filter>
-49-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:36:13-40:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
-50-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:39:17-77
-52-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:39:27-74
-53            </intent-filter>
-54        </activity>
-55        <activity
-55-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:42:9-44:40
-56            android:name="com.example.lascosasquenovemos.view.VerQuizVista"
-56-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:43:13-41
-57            android:exported="false" />
-57-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:44:13-37
-58        <activity
-58-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:45:9-47:40
-59            android:name="com.example.lascosasquenovemos.view.InfoVista"
-59-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:46:13-38
-60            android:exported="false" />
-60-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:47:13-37
-61        <activity
-61-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:48:9-50:40
-62            android:name="com.example.lascosasquenovemos.view.CrearQuizVista"
-62-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:49:13-43
-63            android:exported="false" />
-63-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:50:13-37
-64        <activity
-64-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:51:9-53:40
-65            android:name="com.example.lascosasquenovemos.view.TextoVista"
-65-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:52:13-39
-66            android:exported="false" />
-66-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:53:13-37
-67        <activity
-67-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:54:9-56:40
-68            android:name="com.example.lascosasquenovemos.view.AdminVista"
-68-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:55:13-39
-69            android:exported="false" />
-69-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:56:13-37
-70
-71        <service
-71-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:29:9-35:19
-72            android:name="com.google.firebase.components.ComponentDiscoveryService"
-72-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:30:13-84
-73            android:directBootAware="true"
-73-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-74            android:exported="false" >
-74-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:31:13-37
-75            <meta-data
-75-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:32:13-34:85
-76                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-76-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:33:17-109
-77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:34:17-82
-78            <meta-data
-78-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:28:13-30:85
-79                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
-79-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:29:17-117
-80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:30:17-82
-81            <meta-data
-81-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:30:13-32:85
-82                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-82-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:31:17-139
-83                android:value="com.google.firebase.components.ComponentRegistrar" />
-83-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:32:17-82
-84            <meta-data
-84-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
-85                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-85-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
-86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
-87        </service>
-88
-89        <provider
-89-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-90            android:name="com.google.firebase.provider.FirebaseInitProvider"
-90-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-91            android:authorities="com.example.lascosasquenovemos.firebaseinitprovider"
-91-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-92            android:directBootAware="true"
-92-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-93            android:exported="false"
-93-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-94            android:initOrder="100" />
-94-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-95
-96        <activity
-96-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
-97            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-97-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:24:13-79
-98            android:exported="false"
-98-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:25:13-37
-99            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-99-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:26:13-72
-100
-101        <receiver
-101-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:29:9-33:20
-102            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-102-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:30:13-85
-103            android:enabled="true"
-103-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:31:13-35
-104            android:exported="false" >
-104-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:32:13-37
-105        </receiver>
-106
-107        <service
-107-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:35:9-38:40
-108            android:name="com.google.android.gms.measurement.AppMeasurementService"
-108-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:36:13-84
-109            android:enabled="true"
-109-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:37:13-35
-110            android:exported="false" />
-110-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:38:13-37
-111        <service
-111-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:39:9-43:72
-112            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-112-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:40:13-87
-113            android:enabled="true"
-113-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:41:13-35
-114            android:exported="false"
-114-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:42:13-37
-115            android:permission="android.permission.BIND_JOB_SERVICE" />
-115-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:43:13-69
-116
-117        <meta-data
-117-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-118            android:name="com.google.android.gms.version"
-118-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
-119            android:value="@integer/google_play_services_version" />
-119-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-120
-121        <provider
-121-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-122            android:name="androidx.startup.InitializationProvider"
-122-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-123            android:authorities="com.example.lascosasquenovemos.androidx-startup"
-123-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-124            android:exported="false" >
-124-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-125            <meta-data
-125-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-126                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-126-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-127                android:value="androidx.startup" />
-127-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-128            <meta-data
-128-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-129                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-129-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-130                android:value="androidx.startup" />
-130-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-131        </provider>
-132
-133        <activity
-133-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:27:9-34:20
-134            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
-134-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:28:13-99
-135            android:exported="true"
-135-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:29:13-36
-136            android:theme="@android:style/Theme" >
-136-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:30:13-49
-137            <intent-filter>
-137-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
-138                <action android:name="android.intent.action.MAIN" />
-138-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
-138-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
-139            </intent-filter>
-140        </activity>
-141        <activity
-141-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:35:9-42:20
-142            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-142-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:36:13-95
-143            android:exported="true"
-143-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:37:13-36
-144            android:theme="@android:style/Theme" >
-144-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:38:13-49
-145            <intent-filter>
-145-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
-146                <action android:name="android.intent.action.MAIN" />
-146-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
-146-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
-147            </intent-filter>
-148        </activity>
-149        <activity
-149-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:43:9-50:20
-150            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-150-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:44:13-103
-151            android:exported="true"
-151-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:45:13-36
-152            android:theme="@android:style/Theme.Dialog" >
-152-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:46:13-56
-153            <intent-filter>
-153-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
-154                <action android:name="android.intent.action.MAIN" />
-154-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
-154-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
-155            </intent-filter>
-156        </activity>
-157    </application>
-158
-159</manifest>
+26        android:theme="@style/Theme.AppCompat.NoActionBar" >
+26-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:14:9-59
+27        <activity
+27-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:15:9-17:40
+28            android:name="com.example.lascosasquenovemos.view.UsuarioVista"
+28-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:16:13-41
+29            android:exported="false" />
+29-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:17:13-37
+30        <activity
+30-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:18:9-20:40
+31            android:name="com.example.lascosasquenovemos.view.EntrarEnPartidaVista"
+31-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:19:13-49
+32            android:exported="false" />
+32-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:20:13-37
+33        <activity
+33-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:21:9-23:40
+34            android:name="com.example.lascosasquenovemos.view.VerPartidaVista"
+34-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:22:13-44
+35            android:exported="false" />
+35-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:23:13-37
+36        <activity
+36-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:24:9-26:40
+37            android:name="com.example.lascosasquenovemos.view.CrearPartidaVista"
+37-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:25:13-46
+38            android:exported="false" />
+38-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:26:13-37
+39        <activity
+39-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:27:9-29:40
+40            android:name="com.example.lascosasquenovemos.view.CrearTematicaVista"
+40-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:28:13-47
+41            android:exported="false" />
+41-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:29:13-37
+42        <activity
+42-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:30:9-32:40
+43            android:name="com.example.lascosasquenovemos.view.ComprobarResultadoVista"
+43-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:31:13-52
+44            android:exported="false" />
+44-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:32:13-37
+45        <activity
+45-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:33:9-41:20
+46            android:name="com.example.lascosasquenovemos.view.MainVista"
+46-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:34:13-38
+47            android:exported="true" >
+47-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:35:13-36
+48            <intent-filter>
+48-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:36:13-40:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
+49-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:39:17-77
+51-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:39:27-74
+52            </intent-filter>
+53        </activity>
+54        <activity
+54-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:42:9-44:40
+55            android:name="com.example.lascosasquenovemos.view.VerQuizVista"
+55-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:43:13-41
+56            android:exported="false" />
+56-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:44:13-37
+57        <activity
+57-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:45:9-47:40
+58            android:name="com.example.lascosasquenovemos.view.InfoVista"
+58-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:46:13-38
+59            android:exported="false" />
+59-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:47:13-37
+60        <activity
+60-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:48:9-50:40
+61            android:name="com.example.lascosasquenovemos.view.CrearQuizVista"
+61-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:49:13-43
+62            android:exported="false" />
+62-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:50:13-37
+63        <activity
+63-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:51:9-53:40
+64            android:name="com.example.lascosasquenovemos.view.TextoVista"
+64-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:52:13-39
+65            android:exported="false" />
+65-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:53:13-37
+66        <activity
+66-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:54:9-56:40
+67            android:name="com.example.lascosasquenovemos.view.AdminVista"
+67-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:55:13-39
+68            android:exported="false" />
+68-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:56:13-37
+69
+70        <service
+70-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:29:9-35:19
+71            android:name="com.google.firebase.components.ComponentDiscoveryService"
+71-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:30:13-84
+72            android:directBootAware="true"
+72-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+73            android:exported="false" >
+73-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:31:13-37
+74            <meta-data
+74-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:32:13-34:85
+75                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+75-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:33:17-109
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-database:20.0.3] /home/inirolga/.gradle/caches/transforms-3/66068a6565369ce62da93569b36ce01a/transformed/firebase-database-20.0.3/AndroidManifest.xml:34:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:28:13-30:85
+78                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+78-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:29:17-117
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-appcheck:16.0.0-beta04] /home/inirolga/.gradle/caches/transforms-3/2bf609818d2c070ba57309ba133cd1f2/transformed/firebase-appcheck-16.0.0-beta04/AndroidManifest.xml:30:17-82
+80            <meta-data
+80-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:30:13-32:85
+81                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+81-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:31:17-139
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.android.gms:play-services-measurement-api:20.1.0] /home/inirolga/.gradle/caches/transforms-3/e5a00c90299a69ac134f739016ee4334/transformed/play-services-measurement-api-20.1.0/AndroidManifest.xml:32:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+84                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+84-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-installations:17.0.0] /home/inirolga/.gradle/caches/transforms-3/026991e83bc26460e2a4daa72b389ac9/transformed/firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+86        </service>
+87
+88        <provider
+88-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+89            android:name="com.google.firebase.provider.FirebaseInitProvider"
+89-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+90            android:authorities="com.example.lascosasquenovemos.firebaseinitprovider"
+90-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+91            android:directBootAware="true"
+91-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+92            android:exported="false"
+92-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+93            android:initOrder="100" />
+93-->[com.google.firebase:firebase-common:20.0.0] /home/inirolga/.gradle/caches/transforms-3/548ebdbb6a97a4b5b23744714bfd0924/transformed/firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+94
+95        <activity
+95-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+96            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+96-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+97            android:exported="false"
+97-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+98            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+98-->[com.google.android.gms:play-services-base:17.5.0] /home/inirolga/.gradle/caches/transforms-3/5e7376beba70d9ac024e4566bbf43e9f/transformed/play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+99
+100        <receiver
+100-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:29:9-33:20
+101            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+101-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:30:13-85
+102            android:enabled="true"
+102-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:31:13-35
+103            android:exported="false" >
+103-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:32:13-37
+104        </receiver>
+105
+106        <service
+106-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:35:9-38:40
+107            android:name="com.google.android.gms.measurement.AppMeasurementService"
+107-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:36:13-84
+108            android:enabled="true"
+108-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:37:13-35
+109            android:exported="false" />
+109-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:38:13-37
+110        <service
+110-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:39:9-43:72
+111            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+111-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:40:13-87
+112            android:enabled="true"
+112-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:41:13-35
+113            android:exported="false"
+113-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:42:13-37
+114            android:permission="android.permission.BIND_JOB_SERVICE" />
+114-->[com.google.android.gms:play-services-measurement:20.1.0] /home/inirolga/.gradle/caches/transforms-3/531d167b44376033f9e1ffd7af43a588/transformed/play-services-measurement-20.1.0/AndroidManifest.xml:43:13-69
+115
+116        <meta-data
+116-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+117            android:name="com.google.android.gms.version"
+117-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+118            android:value="@integer/google_play_services_version" />
+118-->[com.google.android.gms:play-services-basement:18.0.0] /home/inirolga/.gradle/caches/transforms-3/23347a92f8a9aaf2e3812b9cf502a80b/transformed/play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+119
+120        <provider
+120-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+122            android:authorities="com.example.lascosasquenovemos.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.0.0] /home/inirolga/.gradle/caches/transforms-3/8946449368c0d6ef9f56e85526946b81/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/inirolga/.gradle/caches/transforms-3/7ee5d704b41d4a2fa6d4983b4e6c581c/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+130        </provider>
+131
+132        <activity
+132-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:27:9-34:20
+133            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+133-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:28:13-99
+134            android:exported="true"
+134-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:29:13-36
+135            android:theme="@android:style/Theme" >
+135-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:30:13-49
+136            <intent-filter>
+136-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
+137                <action android:name="android.intent.action.MAIN" />
+137-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
+137-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
+138            </intent-filter>
+139        </activity>
+140        <activity
+140-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:35:9-42:20
+141            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+141-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:36:13-95
+142            android:exported="true"
+142-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:37:13-36
+143            android:theme="@android:style/Theme" >
+143-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:38:13-49
+144            <intent-filter>
+144-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
+145                <action android:name="android.intent.action.MAIN" />
+145-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
+145-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
+146            </intent-filter>
+147        </activity>
+148        <activity
+148-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:43:9-50:20
+149            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+149-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:44:13-103
+150            android:exported="true"
+150-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:45:13-36
+151            android:theme="@android:style/Theme.Dialog" >
+151-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:46:13-56
+152            <intent-filter>
+152-->[androidx.test:core:1.4.0] /home/inirolga/.gradle/caches/transforms-3/5e38812427bebfa6a8b95a039ae50063/transformed/core-1.4.0/AndroidManifest.xml:31:13-33:29
+153                <action android:name="android.intent.action.MAIN" />
+153-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:17-69
+153-->/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/AndroidManifest.xml:37:25-66
+154            </intent-filter>
+155        </activity>
+156    </application>
+157
+158</manifest>
