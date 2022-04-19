@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerQuizVista">
+
+    <TextView
+        android:id="@+id/tVPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="PREGUNTA"/>
+
+    <RadioGroup
+        android:id="@+id/QuizOpcionSeleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tVPregunta">
+
+        <RadioButton
+            android:id="@+id/ROpc1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 1" />
+
+        <RadioButton
+            android:id="@+id/ROpc2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 2" />
+
+        <RadioButton
+            android:id="@+id/ROpc3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 3" />
+
+        <RadioButton
+            android:id="@+id/ROpc4"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Opción 4" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TextoComprobacionPorAhora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/QuizOpcionSeleccionada"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        />
+
+    <Button
+        android:id="@+id/btnComprobar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:text="Comprobar"/>
+
+
+</RelativeLayout>

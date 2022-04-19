@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_ver_quiz_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_ver_quiz_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_crear_partida_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_crear_partida_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_ver_partida_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_ver_partida_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_usuario_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_usuario_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_comprobar_resultado_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_comprobar_resultado_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_main_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_main_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_admin_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_admin_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_crear_tematica_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_crear_tematica_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_crear_quiz_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_crear_quiz_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_info_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_info_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_lqnv_logo.png.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxxhdpi/lqnv_logo.png"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_entrar_en_partida_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_entrar_en_partida_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_texto_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_texto_vista.xml"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_lcqnv_logo_sin_fondo.png.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/mipmap-xxxhdpi/lcqnv_logo_sin_fondo.png"
+    }
+]
