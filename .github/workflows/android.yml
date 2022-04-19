@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ Dev ]
+    branches: [ Inigo ]
   pull_request:
-    branches: [ Dev ]
+    branches: [ Inigo ]
 
 jobs:
   codesmell:
