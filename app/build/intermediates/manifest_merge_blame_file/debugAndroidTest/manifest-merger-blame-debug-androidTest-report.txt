@@ -3,24 +3,24 @@
 3    package="com.example.lascosasquenovemos.test" >
 4
 5    <uses-sdk
-5-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:5:5-74
+5-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:5:15-41
+6-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:5:15-41
 7        android:targetSdkVersion="32" />
-7-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:5:42-71
+7-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:11:5-15:80
+9-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:11:5-15:80
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:11:22-76
+10-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:11:22-76
 11        android:functionalTest="false"
-11-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:14:22-52
+11-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:13:22-53
+12-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:13:22-53
 13        android:label="Tests for com.example.lascosasquenovemos"
-13-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:15:22-78
+13-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:15:22-78
 14        android:targetPackage="com.example.lascosasquenovemos" />
-14-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:12:22-76
+14-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:12:22-76
 15
 16    <queries>
 16-->[androidx.test:runner:1.4.0] /home/inirolga/.gradle/caches/transforms-3/561097d8ef65e67a43d14f040c57aa8b/transformed/runner-1.4.0/AndroidManifest.xml:24:5-28:15
@@ -36,10 +36,10 @@
 20    </queries>
 21
 22    <application android:debuggable="true" >
-22-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:7:5-9:19
+22-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:7:5-9:19
 23        <uses-library android:name="android.test.runner" />
-23-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:8:9-60
-23-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14019933260785767340.xml:8:23-57
+23-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:8:9-60
+23-->/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12118442398180344112.xml:8:23-57
 24    </application>
 25
 26</manifest>

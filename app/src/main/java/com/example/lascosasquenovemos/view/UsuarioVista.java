@@ -37,6 +37,7 @@ public class UsuarioVista extends AppCompatActivity {
 
         btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Se vuelve al anteriro activity
             public void onClick(View view) {
                 finish();
             }
