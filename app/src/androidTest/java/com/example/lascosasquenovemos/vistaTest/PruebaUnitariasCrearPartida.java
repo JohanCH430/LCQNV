@@ -8,6 +8,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
+import com.example.lascosasquenovemos.model.Interfaces.PartidaListener;
+import com.example.lascosasquenovemos.model.PartidaModelo;
 import com.example.lascosasquenovemos.view.CrearPartidaVista;
 import com.example.lascosasquenovemos.view.CrearTematicaVista;
 import com.example.lascosasquenovemos.view.R;
@@ -15,7 +17,7 @@ import com.example.lascosasquenovemos.view.R;
 import org.junit.Rule;
 import org.junit.Test;
 
-public class PruebaUnitariasCrearPartida {
+public class PruebaUnitariasCrearPartida implements PartidaListener {
     @Rule
     public ActivityScenarioRule<CrearPartidaVista> crearTematicaRule = new ActivityScenarioRule<>(CrearPartidaVista.class);
 
@@ -33,5 +35,21 @@ public class PruebaUnitariasCrearPartida {
         onView(withId(R.id.BtnCrearPtll)).check(matches(isClickable()));
         onView(withId(R.id.BtnVerPtll)).check(matches(isClickable()));
         onView(withId(R.id.BtnAtrasCrearPtll)).check(matches(isClickable()));
+    }
+
+    @Test
+    public void testCrearError(){
+        onPartidaWriteSuccess(true);
+        onPartidaWriteSuccess(false);
+    }
+
+    @Override
+    public void onPartidaReadSuccess(PartidaModelo pM) {
+
+    }
+
+    @Override
+    public void onPartidaWriteSuccess(Boolean correct) {
+
     }
 }
