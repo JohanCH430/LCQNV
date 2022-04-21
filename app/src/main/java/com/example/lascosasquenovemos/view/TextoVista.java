@@ -19,6 +19,7 @@ import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TematicaModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener, TematicaListener {
@@ -101,6 +102,11 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
 
     @Override
     public void onTextReadAllSucced(List<String> textos) {
+
+    }
+
+    @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
 
     }
 

@@ -1,8 +1,5 @@
 package com.example.lascosasquenovemos.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.lascosasquenovemos.bll.QuizBll;
 import com.example.lascosasquenovemos.bll.TextoBll;
 import com.example.lascosasquenovemos.dal.FirebaseDAL;
@@ -22,7 +21,7 @@ import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class CrearQuizVista extends AppCompatActivity implements QuizListener, TextListener, AdapterView.OnItemSelectedListener {
@@ -141,6 +140,7 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
 
     }
 
+
     @Override
     public void onTextReadSucced(TextoModelo texto) {
 
@@ -157,6 +157,11 @@ public class CrearQuizVista extends AppCompatActivity implements QuizListener, T
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaTextos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         textoTeoria.setAdapter(adapter);
+
+    }
+
+    @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
 
     }
 

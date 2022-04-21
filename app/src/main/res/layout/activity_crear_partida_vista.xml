@@ -52,5 +52,12 @@
         android:layout_marginTop="10dp"
         android:text="ATRÁS"
         />
+    <TextView
+        android:id="@+id/MuestraNumP"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text=""
+
+        />
 
 </RelativeLayout>

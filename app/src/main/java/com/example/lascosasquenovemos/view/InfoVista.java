@@ -11,6 +11,7 @@ import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class InfoVista extends AppCompatActivity implements TextListener {
@@ -58,6 +59,11 @@ public class InfoVista extends AppCompatActivity implements TextListener {
 
     @Override
     public void onTextReadAllSucced(List<String> textos) {
+
+    }
+
+    @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
 
     }
 }

@@ -2,6 +2,7 @@ package com.example.lascosasquenovemos.model.Interfaces;
 
 import com.example.lascosasquenovemos.model.QuizModelo;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface QuizListener{

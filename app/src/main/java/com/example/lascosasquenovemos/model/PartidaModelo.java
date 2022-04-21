@@ -1,8 +1,9 @@
 package com.example.lascosasquenovemos.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class PartidaModelo {
+public class PartidaModelo implements Serializable {
 
     private String idPartida;
     private HashMap<Integer, PantallaModelo> pantallasPartida;
@@ -26,6 +27,10 @@ public class PartidaModelo {
 
     public void setPantallasPartida(HashMap<Integer, PantallaModelo> pantallasPartida) {
         this.pantallasPartida = pantallasPartida;
+    }
+
+    public int getNumPantallas(){
+        return pantallasPartida.size();
     }
 
     public void addPantalla(PantallaModelo nuevaPantalla){
