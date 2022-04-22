@@ -2,6 +2,7 @@ package com.example.lascosasquenovemos.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +39,9 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
     @Override
     public void onPartidaReadSuccess(PartidaModelo pM) {
         if (pM != null){
-            //TODO pasar a la siguiente pantalla
+            //TODO añadir parametros al intent
+            Intent iInfoVista = new Intent(EntrarEnPartidaVista.this, InfoVista.class);
+            startActivity(iInfoVista);
         }
         else {
             Toast.makeText(getApplicationContext(), "Error al leer la partida, no se ha encontrado ninguna partida con el código introducido", Toast.LENGTH_LONG).show();
