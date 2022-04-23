@@ -93,8 +93,12 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
     @Override
     public void onTextReadSucced(TextoModelo texto) {
-        textos.put(texto.getIDTexto(), texto);
-        QuizBll.leerQuizsPorTexto(texto.getIDTexto(), this);
+        if(texto != null){
+            textos.put(texto.getIDTexto(), texto);
+            QuizBll.leerQuizsPorTexto(texto.getIDTexto(), this);
+        }
+
+
     }
 
     @Override
@@ -118,7 +122,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
             for (String k : textos.keySet()) {
                 List l = textos.get(k);
                 List<String> aux = new ArrayList<String>(l);
-                if (n++ >= N) break;
+                if (n++>=N) break;
                 TextoBll.leerTexto((String) l.get(0), this);
                 //IDTextos.add(l.get(0));
                 aux.remove(0);
@@ -145,8 +149,11 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
     @Override
     public void onQuizReadQuizByTextId(List<String> quizs) {
-        Collections.shuffle(quizs);
-        QuizBll.leerQuiz(quizs.get(0), this);
+        if(quizs != null){
+            Collections.shuffle(quizs);
+            QuizBll.leerQuiz(quizs.get(0), this);
+        }
+
     }
 
 
