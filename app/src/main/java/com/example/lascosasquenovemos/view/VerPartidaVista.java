@@ -65,7 +65,7 @@ public class VerPartidaVista extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (indice[0] >= maxPant[0]) {
+                if (indice[0] < maxPant[0]) {
                     indice[0]++;
                     PantallaModelo pantalla = (PantallaModelo) partidaModelo.getPantallasPartida().values().toArray()[indice[0]];
                     textInfo.setText(pantalla.getTexto().getTexto());
