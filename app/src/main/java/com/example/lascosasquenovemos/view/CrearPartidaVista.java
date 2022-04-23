@@ -28,8 +28,8 @@ import java.util.List;
 import java.util.Map;
 
 public class CrearPartidaVista extends AppCompatActivity implements TextListener, QuizListener, PartidaListener {
-    Button btnCrear, btnReturn, btnVer;
-    TextView numPantallas, numpantallas;
+    Button btnCrear, btnReturn, btnVer, btnFinalizar;
+    TextView numPantallas, numpantallas, tVcodigo;
     Intent Preview;
     int N;
     HashMap<String, TextoModelo> textos = new HashMap<>();
@@ -42,11 +42,14 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
         FirebaseDAL.getInstance(getApplicationContext());
         //inicializamos componentes de la vista
+        btnFinalizar = findViewById(R.id.BtnFinalizarCrearPtll);
         btnCrear = findViewById(R.id.BtnCrearPtll);
         btnVer = findViewById(R.id.BtnVerPtll);
         btnVer.setEnabled(false);
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
         numpantallas = findViewById(R.id.MuestraNumP);
+
+        tVcodigo = findViewById(R.id.MuestraCodP);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
         //Inicializamos partida vacía
@@ -80,7 +83,12 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
             }
         });
 
-
+        btnFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PartidaBll.crearPartida(partida, CrearPartidaVista.this);
+            }
+        });
     }
 
     @Override
@@ -149,6 +157,11 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
     @Override
     public void onPartidaWriteSuccess(Boolean correct) {
-
+        //TODO devolver el codigo de partida para mostrarselo al usuario
+        String codigo = "CODIGOPRUEBA";
+        //Una vez finalizada la partida no se puede volver a dar al boton de creacion ni de finalizacion
+        btnCrear.setEnabled(false);
+        btnFinalizar.setEnabled(false);
+        tVcodigo.setText("Partida generada con código: " + codigo);
     }
 }

@@ -44,11 +44,20 @@
         android:text="VER"
         />
     <Button
-        android:id="@+id/BtnAtrasCrearPtll"
+        android:id="@+id/BtnFinalizarCrearPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/BtnVerPtll"
+        android:layout_marginTop="10dp"
+        android:text="FINALIZAR"
+        />
+    <Button
+        android:id="@+id/BtnAtrasCrearPtll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/BtnFinalizarCrearPtll"
         android:layout_marginTop="10dp"
         android:text="ATRÁS"
         />
@@ -57,6 +66,17 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:text=""
+
+        />
+
+    <TextView
+        android:id="@+id/MuestraCodP"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@id/BtnAtrasCrearPtll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Partida generada con código:"
 
         />
 
