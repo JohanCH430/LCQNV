@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lascosasquenovemos.bll.PartidaBll;
 import com.example.lascosasquenovemos.bll.QuizBll;
@@ -48,10 +49,10 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
         btnVer.setEnabled(false);
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
         numpantallas = findViewById(R.id.MuestraNumP);
-
         tVcodigo = findViewById(R.id.MuestraCodP);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
+        numPantallas.setText("");
         //Inicializamos partida vacía
         partida = new PartidaModelo("", new HashMap<Integer, PantallaModelo>());
 
@@ -78,8 +79,19 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                N = Integer.parseInt(numPantallas.getText().toString());
-                TextoBll.leerTextoTematica(CrearPartidaVista.this);
+                String num = numPantallas.getText().toString();
+                if(!num.trim().equals("")){
+                    N = Integer.parseInt(num);
+                    if(N > 0){
+                        TextoBll.leerTextoTematica(CrearPartidaVista.this);
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Debe haber al menos una pantalla por partida", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Debes introducir un número", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
 
@@ -123,10 +135,12 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
                 List l = textos.get(k);
                 List<String> aux = new ArrayList<String>(l);
                 if (n++>=N) break;
-                TextoBll.leerTexto((String) l.get(0), this);
-                //IDTextos.add(l.get(0));
-                aux.remove(0);
-                textos.put(k, aux);
+                if(! l.isEmpty()){
+                   TextoBll.leerTexto((String) l.get(0), this);
+                   //IDTextos.add(l.get(0));
+                   aux.remove(0);
+                   textos.put(k, aux);
+               }
             }
         }
 
@@ -135,10 +149,13 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     @Override
     public void onQuizReadSucced(QuizModelo quiz) {
         partida.addPantalla(new PantallaModelo(textos.get(quiz.getTextId()), quiz));
-        if (partida.getNumPantallas() == N) {
+        if(partida.getNumPantallas()< N){
+            //numPantallas.setText("");
+            Toast.makeText(getApplicationContext(), "Demasiadas pantallas", Toast.LENGTH_SHORT).show();
+        }
+        else if (partida.getNumPantallas() == N) {
             btnVer.setEnabled(true);
             numpantallas.setText(Integer.toString(partida.getNumPantallas()));
-
         }
     }
 
