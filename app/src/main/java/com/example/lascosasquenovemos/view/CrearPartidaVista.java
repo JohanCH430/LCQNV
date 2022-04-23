@@ -34,6 +34,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     int N;
     HashMap<String, TextoModelo> textos = new HashMap<>();
     PartidaModelo partida;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
         numPantallas = findViewById(R.id.InputNumPtlls);
         //Inicializamos partida vacía
-        partida = new PartidaModelo("",new HashMap<Integer, PantallaModelo>());
+        partida = new PartidaModelo("", new HashMap<Integer, PantallaModelo>());
 
         //btnReturn vuelve a mainUsuario
         btnReturn.setOnClickListener(new View.OnClickListener() {
@@ -101,16 +102,16 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     @Override
     public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
         int n = 0;
-        for(Map.Entry<String, List<String>> e : textos.entrySet()){
+        for (Map.Entry<String, List<String>> e : textos.entrySet()) {
             Collections.shuffle(e.getValue());
-            textos.put(e.getKey(),e.getValue());
+            textos.put(e.getKey(), e.getValue());
         }
-        while(n<N){
-            for(String k : textos.keySet()){
+        while (n < N) {
+            for (String k : textos.keySet()) {
                 List l = textos.get(k);
                 List<String> aux = new ArrayList<String>(l);
-                if(n++>=N)break;
-                TextoBll.leerTexto((String)l.get(0), this);
+                if (n++ >= N) break;
+                TextoBll.leerTexto((String) l.get(0), this);
                 //IDTextos.add(l.get(0));
                 aux.remove(0);
                 textos.put(k, aux);
@@ -122,7 +123,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     @Override
     public void onQuizReadSucced(QuizModelo quiz) {
         partida.addPantalla(new PantallaModelo(textos.get(quiz.getTextId()), quiz));
-        if(partida.getNumPantallas()==N){
+        if (partida.getNumPantallas() == N) {
             btnVer.setEnabled(true);
             numpantallas.setText(Integer.toString(partida.getNumPantallas()));
 
