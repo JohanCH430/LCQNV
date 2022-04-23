@@ -26,6 +26,7 @@ public class ComprobarResultadoVista extends AppCompatActivity {
         PartidaModelo partidaModelo = (PartidaModelo) getIntent().getSerializableExtra("PARTIDA");
         //TODO gestionar indices para que se pueda jugar la partida completa
         int indice = getIntent().getIntExtra("INDICE", 0);
+        final int[] maxPant = {partidaModelo.getNumPantallas() - 1};
         indice++;
 
         TextView comprobacion = findViewById(R.id.tVComprobacion);
@@ -70,12 +71,14 @@ public class ComprobarResultadoVista extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(ComprobarResultadoVista.this, InfoVista.class);
-                //Se añaden estas flags para que se limpie la pila de pantallas y se vuelta a la pantalla principal sin problemas
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.putExtra("PARTIDA", partidaModelo);
-                i.putExtra("INDICE", finalIndice);
-                startActivity(i);
+                if (finalIndice >= maxPant[0]) {
+                    Intent i = new Intent(ComprobarResultadoVista.this, InfoVista.class);
+                    //Se añaden estas flags para que se limpie la pila de pantallas y se vuelta a la pantalla principal sin problemas
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    i.putExtra("PARTIDA", partidaModelo);
+                    i.putExtra("INDICE", finalIndice);
+                    startActivity(i);
+                }
             }
         });
     }
