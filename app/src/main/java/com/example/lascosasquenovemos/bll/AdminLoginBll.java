@@ -11,7 +11,7 @@ public class AdminLoginBll {
     }
 
     public static boolean comprobarSintaxis(String pw){
-        if(pw == null) return false;
+        if(pw == null || pw == "") return false;
         if(pw.length() > 25) return false;
         return true;
     }
