@@ -10,6 +10,7 @@ import com.example.lascosasquenovemos.model.PartidaModelo;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
@@ -20,89 +21,116 @@ public class PartidaDAL {
     public static void crearPartida(PartidaModelo partida, PartidaListener pL) {
 
         DatabaseReference refPartida = FirebaseDAL.dataBase.child("Partida");
+        DatabaseReference refiDPartida = FirebaseDAL.dataBase.child("IDPartida");
 
-        //Declaración de mapas
-        HashMap<String, Object> partidaMap = new HashMap<String, Object>();
-        HashMap<String, Object> pantallaMap = new HashMap<String, Object>();
-        HashMap<String, Object> textoMap = new HashMap<String, Object>();
-        HashMap<String, Object> preguntaMap = new HashMap<String, Object>();
-        HashMap<String, String> opt = new HashMap<String, String>();
-
-        //Crear mapa de texto
-        textoMap.put("Contenido", partida.getPantallasPartida().get(0).getTexto().getTexto());
-        textoMap.put("Titulo", partida.getPantallasPartida().get(0).getTexto().getTítulo());
-        textoMap.put("Tematica", partida.getPantallasPartida().get(0).getTexto().getTemática());
-
-        //Crear mapa de pregunta
-        //Opciones de pregunta
-        opt.put("a", partida.getPantallasPartida().get(0).getQuiz().getOpcionA());
-        opt.put("b", partida.getPantallasPartida().get(0).getQuiz().getOpcionB());
-        opt.put("c", partida.getPantallasPartida().get(0).getQuiz().getOpcionC());
-        opt.put("d", partida.getPantallasPartida().get(0).getQuiz().getOpcionD());
-
-        //Valores generales de pregunta
-        preguntaMap.put("Opciones", opt);
-        preguntaMap.put("Pregunta", partida.getPantallasPartida().get(0).getQuiz().getPregunta());
-        preguntaMap.put("Solucion", partida.getPantallasPartida().get(0).getQuiz().getSolucion());
-        preguntaMap.put("TextId", partida.getPantallasPartida().get(0).getQuiz().getTextId());
-
-        //Guardamos texto y pregunta dentro de pantalla
-        pantallaMap.put("Texto", textoMap);
-        pantallaMap.put("Pregunta", preguntaMap);
-
-        //Guardamos pantalla dentro de partida
-        partidaMap.put("P0", pantallaMap);
-
-        refPartida.child(partida.getIdPartida()).setValue(partidaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+        refiDPartida.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<Void> task) {
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (!task.isSuccessful()) {
                     Log.e("firebase error", "Error getting data", task.getException());
-                    pL.onPartidaWriteSuccess(false);
                 } else {
-                    int i=1;
-                    DatabaseReference refPartidaActual = FirebaseDAL.dataBase.child(partida.getIdPartida());
+                    //Creo un nuevo ID que es el siguiente al que hay guardado.
+                    String[] datos = String.valueOf(task.getResult().getValue()).split("-");
+                    int aux = Integer.parseInt(datos[1]) + 1;
+                    String nuevoID = datos[0] + "-" + String.valueOf(aux);
 
-                    while(i<partida.getPantallasPartida().size()){
-                        //Crear mapa de texto
-                        textoMap.put("Contenido", partida.getPantallasPartida().get(i).getTexto().getTexto());
-                        textoMap.put("Titulo", partida.getPantallasPartida().get(i).getTexto().getTítulo());
-                        textoMap.put("Tematica", partida.getPantallasPartida().get(i).getTexto().getTemática());
+                    //Se guarda el nuevo Id en la BD
+                    refiDPartida.setValue(nuevoID).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d("firebase", e.getLocalizedMessage());
+                        }
+                    });
 
-                        //Crear mapa de pregunta
-                        //Opciones de pregunta
-                        opt.put("a", partida.getPantallasPartida().get(i).getQuiz().getOpcionA());
-                        opt.put("b", partida.getPantallasPartida().get(i).getQuiz().getOpcionB());
-                        opt.put("c", partida.getPantallasPartida().get(i).getQuiz().getOpcionC());
-                        opt.put("d", partida.getPantallasPartida().get(i).getQuiz().getOpcionD());
+                    //Declaración de mapas
+                    HashMap<String, Object> partidaMap = new HashMap<String, Object>();
+                    HashMap<String, Object> pantallaMap = new HashMap<String, Object>();
+                    HashMap<String, Object> textoMap = new HashMap<String, Object>();
+                    HashMap<String, Object> preguntaMap = new HashMap<String, Object>();
+                    HashMap<String, String> opt = new HashMap<String, String>();
 
-                        //Valores generales de pregunta
-                        preguntaMap.put("Opciones", opt);
-                        preguntaMap.put("Pregunta", partida.getPantallasPartida().get(i).getQuiz().getPregunta());
-                        preguntaMap.put("Solucion", partida.getPantallasPartida().get(i).getQuiz().getSolucion());
-                        preguntaMap.put("TextId", partida.getPantallasPartida().get(i).getQuiz().getTextId());
+                    //Crear mapa de texto
+                    textoMap.put("Contenido", partida.getPantallasPartida().get(0).getTexto().getTexto());
+                    textoMap.put("Titulo", partida.getPantallasPartida().get(0).getTexto().getTítulo());
+                    textoMap.put("Tematica", partida.getPantallasPartida().get(0).getTexto().getTemática());
 
-                        //Guardamos texto y pregunta dentro de pantalla
-                        pantallaMap.put("Texto", textoMap);
-                        pantallaMap.put("Pregunta", preguntaMap);
+                    //Crear mapa de pregunta
+                    //Opciones de pregunta
+                    opt.put("a", partida.getPantallasPartida().get(0).getQuiz().getOpcionA());
+                    opt.put("b", partida.getPantallasPartida().get(0).getQuiz().getOpcionB());
+                    opt.put("c", partida.getPantallasPartida().get(0).getQuiz().getOpcionC());
+                    opt.put("d", partida.getPantallasPartida().get(0).getQuiz().getOpcionD());
 
-                        refPartidaActual.child("P" + i).setValue(partidaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (!task.isSuccessful()) {
-                                    Log.e("firebase error", "Error getting data", task.getException());
-                                    pL.onPartidaWriteSuccess(false);
+                    //Valores generales de pregunta
+                    preguntaMap.put("Opciones", opt);
+                    preguntaMap.put("Pregunta", partida.getPantallasPartida().get(0).getQuiz().getPregunta());
+                    preguntaMap.put("Solucion", partida.getPantallasPartida().get(0).getQuiz().getSolucion());
+                    preguntaMap.put("TextId", partida.getPantallasPartida().get(0).getQuiz().getTextId());
+
+                    //Guardamos texto y pregunta dentro de pantalla
+                    pantallaMap.put("Texto", textoMap);
+                    pantallaMap.put("Pregunta", preguntaMap);
+
+                    //Guardamos pantalla dentro de partida
+                    partidaMap.put("P0", pantallaMap);
+
+                    refPartida.child(nuevoID).setValue(partidaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (!task.isSuccessful()) {
+                                Log.e("firebase error", "Error getting data", task.getException());
+                                pL.onPartidaWriteSuccess(null, false);
+                            } else {
+                                int i=1;
+                                DatabaseReference refPartidaActual = FirebaseDAL.dataBase.child(partida.getIdPartida());
+
+                                while(i<partida.getPantallasPartida().size()){
+                                    //Crear mapa de texto
+                                    textoMap.put("Contenido", partida.getPantallasPartida().get(i).getTexto().getTexto());
+                                    textoMap.put("Titulo", partida.getPantallasPartida().get(i).getTexto().getTítulo());
+                                    textoMap.put("Tematica", partida.getPantallasPartida().get(i).getTexto().getTemática());
+
+                                    //Crear mapa de pregunta
+                                    //Opciones de pregunta
+                                    opt.put("a", partida.getPantallasPartida().get(i).getQuiz().getOpcionA());
+                                    opt.put("b", partida.getPantallasPartida().get(i).getQuiz().getOpcionB());
+                                    opt.put("c", partida.getPantallasPartida().get(i).getQuiz().getOpcionC());
+                                    opt.put("d", partida.getPantallasPartida().get(i).getQuiz().getOpcionD());
+
+                                    //Valores generales de pregunta
+                                    preguntaMap.put("Opciones", opt);
+                                    preguntaMap.put("Pregunta", partida.getPantallasPartida().get(i).getQuiz().getPregunta());
+                                    preguntaMap.put("Solucion", partida.getPantallasPartida().get(i).getQuiz().getSolucion());
+                                    preguntaMap.put("TextId", partida.getPantallasPartida().get(i).getQuiz().getTextId());
+
+                                    //Guardamos texto y pregunta dentro de pantalla
+                                    pantallaMap.put("Texto", textoMap);
+                                    pantallaMap.put("Pregunta", preguntaMap);
+
+                                    refPartidaActual.child("P" + i).setValue(partidaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (!task.isSuccessful()) {
+                                                Log.e("firebase error", "Error getting data", task.getException());
+                                                pL.onPartidaWriteSuccess(null, false);
+                                            }
+                                        }
+                                    });
+
+                                    i++;
                                 }
+
+                                pL.onPartidaWriteSuccess(nuevoID, true);
                             }
-                        });
-
-                        i++;
-                    }
-
-                    pL.onPartidaWriteSuccess(true);
+                        }
+                    });
                 }
             }
         });
+
+
+
+
     }
 
     public static void leerPartida(String idPartida, PartidaListener pL) {

@@ -20,7 +20,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 public class PruebasIntegracionCrearQuiz {
-
+/*
     @Rule
     public ActivityScenarioRule<CrearQuizVista> crearQuizRule = new ActivityScenarioRule<>(CrearQuizVista.class);
 
@@ -100,5 +100,5 @@ public class PruebasIntegracionCrearQuiz {
         assertEquals(Lifecycle.State.DESTROYED, pp);
     }
 
-
+*/
 }
