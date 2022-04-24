@@ -39,8 +39,8 @@ public class PruebaUnitariasCrearPartida implements PartidaListener {
 
     @Test
     public void testCrearError(){
-        onPartidaWriteSuccess(true);
-        onPartidaWriteSuccess(false);
+        onPartidaWriteSuccess("prueba",true);
+        onPartidaWriteSuccess("prueba", false);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class PruebaUnitariasCrearPartida implements PartidaListener {
     }
 
     @Override
-    public void onPartidaWriteSuccess(Boolean correct) {
+    public void onPartidaWriteSuccess(String codigo, Boolean correct) {
 
     }
 }

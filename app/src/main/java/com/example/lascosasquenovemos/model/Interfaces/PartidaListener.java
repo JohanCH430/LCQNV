@@ -5,5 +5,5 @@ import com.example.lascosasquenovemos.model.PartidaModelo;
 public interface PartidaListener {
 
     void onPartidaReadSuccess(PartidaModelo pM);
-    void onPartidaWriteSuccess(Boolean correct);
+    void onPartidaWriteSuccess(String codigo, Boolean correct);
 }

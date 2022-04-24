@@ -180,9 +180,9 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     }
 
     @Override
-    public void onPartidaWriteSuccess(Boolean correct) {
+    public void onPartidaWriteSuccess(String codigo, Boolean correct) {
         //TODO devolver el codigo de partida para mostrarselo al usuario
-        String codigo = "CODIGOPRUEBA";
+        codigo = "CODIGOPRUEBA";
         //Una vez finalizada la partida no se puede volver a dar al boton de creacion ni de finalizacion
         btnCrear.setEnabled(false);
         btnFinalizar.setEnabled(false);

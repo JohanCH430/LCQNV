@@ -49,7 +49,7 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
     }
 
     @Override
-    public void onPartidaWriteSuccess(Boolean correct) {
+    public void onPartidaWriteSuccess(String codigo, Boolean correct) {
 
     }
 }
