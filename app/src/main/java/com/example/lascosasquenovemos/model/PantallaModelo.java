@@ -1,6 +1,8 @@
 package com.example.lascosasquenovemos.model;
 
-public class PantallaModelo {
+import java.io.Serializable;
+
+public class PantallaModelo implements Serializable {
 
     private TextoModelo texto;
     private QuizModelo quiz;

@@ -1,6 +1,8 @@
 package com.example.lascosasquenovemos.model;
 
-public class QuizModelo {
+import java.io.Serializable;
+
+public class QuizModelo implements Serializable {
 
     String pregunta, opcionA, opcionB, opcionC, opcionD, solucion, textId;
 

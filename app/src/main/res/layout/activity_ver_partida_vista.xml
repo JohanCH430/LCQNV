@@ -56,10 +56,37 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/TextOpcVerPartida"
+        android:id="@+id/TextOpc1VerPartida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/OpcionesVerPartida"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc2VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc1VerPartida"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc3VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc2VerPartida"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc4VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc3VerPartida"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text=""
@@ -70,17 +97,26 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/TextOpcVerPartida"
+        android:layout_below="@id/TextOpc4VerPartida"
         android:layout_marginTop="40dp"
         android:text="SIGUIENTE"
         />
 
     <Button
-        android:id="@+id/BtnTerminarVerPtll"
+        android:id="@+id/BtnAnteriorVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/BtnSiguienteVerPtll"
+        android:layout_marginTop="10dp"
+        android:text="ANTERIOR"
+        />
+    <Button
+        android:id="@+id/BtnTerminarVerPtll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/BtnAnteriorVerPtll"
         android:layout_marginTop="10dp"
         android:text="TERMINAR"
         />

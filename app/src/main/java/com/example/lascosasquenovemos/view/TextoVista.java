@@ -19,6 +19,7 @@ import com.example.lascosasquenovemos.model.Interfaces.TextListener;
 import com.example.lascosasquenovemos.model.TematicaModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class TextoVista extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextListener, TematicaListener {
@@ -105,11 +106,15 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
     }
 
     @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
+
+    }
+
+    @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         switch (adapterView.getId())
         {
             case R.id.list:
-                Toast.makeText(this,adapterView.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
                 tema = lista[i].toString();
                 break;
 

@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btnModoAdmin"
         android:layout_marginTop="20dp"
-        android:text="JUGAR (WIP)" />
+        android:text="JUGAR" />
 
     <TextView
         android:id="@+id/txtVersion"

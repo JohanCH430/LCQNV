@@ -57,8 +57,10 @@ public class AdminVista extends AppCompatActivity {
         botonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Finish termina esta actividad y lleva a la actividad anterior que debería ser el mainVista
-                finish();
+                Intent i=new Intent(AdminVista.this, MainVista.class);
+                //Se añaden estas flags para que se limpie la pila de pantallas y se vuelta a la pantalla principal sin problemas
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
             }
         });
 

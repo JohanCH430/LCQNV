@@ -2580,12 +2580,17 @@ drawable tooltip_frame_light
 id ALT
 id BOTTOM_END
 id BOTTOM_START
+id BtnAnteriorVerPtll
 id BtnAtrasCrearPtll
+id BtnAtrasLogin
 id BtnCrearPtll
+id BtnFinalizarCrearPtll
+id BtnLogin
 id BtnSiguienteVerPtll
 id BtnTerminarVerPtll
 id BtnVerPtll
 id CTRL
+id Contraseña
 id EditTextCodigo
 id Error
 id FUNCTION
@@ -2597,6 +2602,8 @@ id InpOpc4Quiz
 id InpPreguntaQuiz
 id InputNumPtlls
 id META
+id MuestraCodP
+id MuestraNumP
 id NO_DEBUG
 id NombreUsuario
 id Opc_correcta_quiz
@@ -2623,9 +2630,15 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TextConstraseña
+id TextErrorLogin
 id TextInfoVerPartida
-id TextOpcVerPartida
+id TextOpc1VerPartida
+id TextOpc2VerPartida
+id TextOpc3VerPartida
+id TextOpc4VerPartida
 id TextPregVerPartida
+id TextViewFedBackIntroducirCodigo
 id TextViewIntroducirCodigo
 id TextoComprobacionCrearTematica
 id TextoComprobacionPorAhora
@@ -2720,6 +2733,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAtrasEntrarEnPartida
 id btnAtrasUsuario
 id btnComprobar
 id btnContinuar
@@ -2733,6 +2747,7 @@ id btnJugar
 id btnJugarPartida
 id btnModoAdmin
 id btnReintentar
+id btnSiguiente
 id btnTerminar
 id buttonCrear
 id buttonCrearQuiz
@@ -3245,6 +3260,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_admin_login_vista
 layout activity_admin_vista
 layout activity_comprobar_resultado_vista
 layout activity_crear_partida_vista

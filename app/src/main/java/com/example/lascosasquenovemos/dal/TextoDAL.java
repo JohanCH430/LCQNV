@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -165,6 +166,41 @@ public class TextoDAL extends FirebaseDAL {
                         }
 
                         tL.onTextReadAllSucced(listaTextos);
+
+                    }
+
+                }
+            }
+        });
+
+    }
+
+    public static void leerTodoTextoTematica(TextListener tL) {
+
+        DatabaseReference refTexto = FirebaseDAL.dataBase.child("TematicaTexto");
+
+        FirebaseDAL.dataBase.child("TematicaTexto").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+
+                if (!task.isSuccessful()) {
+                    Log.e("firebase error", "Error getting data", task.getException());
+                } else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+
+                    if (String.valueOf(task.getResult().getValue()) == "null") { //Cuando falla la busqueda en la BD, porque no existe ningún texto con esa id, te devuelve un null.
+                        tL.onTextReadSucced(null);
+                    } else {
+                        HashMap<String, List<String>> listaTextos = new HashMap<>();
+                        //Java interpreta lo recibido como un HashMap, unicamente hay que parsearlo por claves.
+                        HashMap<String, Object> result = (HashMap<String, Object>) task.getResult().getValue();
+
+                        for (String key: result.keySet()){
+                            String textos = (String) result.get(key);
+                            listaTextos.put(key,Arrays.asList(textos.split(",")));
+                        }
+
+                        tL.onTextosTematicasReadAllSucceed(listaTextos);
 
                     }
 

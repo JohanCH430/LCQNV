@@ -9,14 +9,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.lascosasquenovemos.bll.TextoBll;
 import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.TextListener;
+import com.example.lascosasquenovemos.model.PantallaModelo;
+import com.example.lascosasquenovemos.model.PartidaModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
+import java.util.HashMap;
 import java.util.List;
 
-public class InfoVista extends AppCompatActivity implements TextListener {
-    private String idTexto;
-    private TextoBll bd;
-    private String text;
+public class InfoVista extends AppCompatActivity{
+    private PartidaModelo partidaModelo;
+    private int indice;
+    private PantallaModelo pantalla;
     TextView texto;
     Intent next;
 
@@ -25,28 +28,34 @@ public class InfoVista extends AppCompatActivity implements TextListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_vista);
 
-        FirebaseDAL.getInstance(getApplicationContext());
+        //FirebaseDAL.getInstance(getApplicationContext());
         next = new Intent(InfoVista.this, VerQuizVista.class);
-        bd = new TextoBll();
+        //bd = new TextoBll();
 
-        //Se obtiene el idTexto de la función de creación de pantalla que se llama desde la vista anterior
-        idTexto = getIntent().getStringExtra("idTexto");
+        //Se obtiene la partida
+        partidaModelo = (PartidaModelo) getIntent().getSerializableExtra("PARTIDA");
+        //TODO gestionar indices para que se pueda jugar la partida completa
+        //indice = getIntent().getIntExtra("INDICE", 0);
+
+        //Se obtiene la pantalla que corresponde a esto
+        pantalla = (PantallaModelo) partidaModelo.getPantallasPartida().values().toArray()[indice];
 
         Button continuar = findViewById(R.id.btnContinuar);
         texto = findViewById(R.id.txtViewTexto);
-        //Se actualiza el textView con el valor obtenido en la lectura de la Base de Datos
-        bd.leerTexto(idTexto, this);
+
+        texto.setText(pantalla.getTexto().getTexto());
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                next.putExtra("idQuiz", getIntent().getStringExtra("idQuiz"));
+                next.putExtra("PARTIDA", partidaModelo);
+                next.putExtra("INDICE", indice);
                 startActivity(next);
             }
         });
     }
 
 
-    @Override
+    /*@Override
     public void onTextReadSucced(TextoModelo texto) {
         this.texto.setText(texto.getTexto());
     }
@@ -60,4 +69,9 @@ public class InfoVista extends AppCompatActivity implements TextListener {
     public void onTextReadAllSucced(List<String> textos) {
 
     }
+
+    @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
+
+    }*/
 }

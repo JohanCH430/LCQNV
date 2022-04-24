@@ -11,12 +11,14 @@ import android.widget.TextView;
 import com.example.lascosasquenovemos.bll.QuizBll;
 import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.QuizListener;
+import com.example.lascosasquenovemos.model.PantallaModelo;
+import com.example.lascosasquenovemos.model.PartidaModelo;
 import com.example.lascosasquenovemos.model.QuizModelo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class VerQuizVista extends AppCompatActivity implements QuizListener {
+public class VerQuizVista extends AppCompatActivity{
 
     TextView tVPregunta, comprobacion;
     RadioButton rd1, rd2, rd3, rd4, rdSeleccionado;
@@ -35,7 +37,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
         //Obtengo el extra que me han enviado, que es el Id del Quiz que tenog que buscar.
         intentActual = getIntent();
         String idQuiz = intentActual.getStringExtra("idQuiz");
-        QuizBll.leerQuiz(idQuiz, this);
+
 
         //Inicializo vistas.
         tVPregunta = findViewById(R.id.tVPregunta);
@@ -46,6 +48,39 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
         rd4 = findViewById(R.id.ROpc4);
         btnComprobar = findViewById(R.id.btnComprobar);
         iComprobacion=new Intent(VerQuizVista.this, ComprobarResultadoVista.class);
+
+        //Se obtiene la partida
+        PartidaModelo partidaModelo = (PartidaModelo) getIntent().getSerializableExtra("PARTIDA");
+        //TODO gestionar indices para que se pueda jugar la partida completa
+        int indice = getIntent().getIntExtra("INDICE", 0);
+
+        //Se obtiene la pantalla que corresponde a esto
+        PantallaModelo pantalla = (PantallaModelo) partidaModelo.getPantallasPartida().values().toArray()[indice];
+
+        QuizModelo quiz = pantalla.getQuiz();
+
+        //Hago que la vista tenga los datos del Quiza dado.
+        tVPregunta.setText(quiz.getPregunta());
+
+        //Creo un array y desordeno las opciones para colocarlas aleatoriamente.
+        ArrayList<String> arrayOpciones = new ArrayList<String>();
+
+        arrayOpciones.add(quiz.getOpcionA());
+        arrayOpciones.add(quiz.getOpcionB());
+        arrayOpciones.add(quiz.getOpcionC());
+        arrayOpciones.add(quiz.getOpcionD());
+
+        Collections.shuffle(arrayOpciones);
+
+        rd1.setText(arrayOpciones.get(0));
+        rd2.setText(arrayOpciones.get(1));
+        rd3.setText(arrayOpciones.get(2));
+        rd4.setText(arrayOpciones.get(3));
+
+        //Me guardo la solución en la clase, para poder comprobar.
+        solucion = quiz.getSolucion();
+
+
         //TODO Borrar
         comprobacion = findViewById(R.id.TextoComprobacionPorAhora);
 
@@ -71,11 +106,15 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
                     }
                     else if(QuizBll.respuestaCorrecta(opcionEscogida, solucion)) {
                         iComprobacion.putExtra("Comprobacion", "correcto");
+                        iComprobacion.putExtra("PARTIDA", partidaModelo);
+                        iComprobacion.putExtra("INDICE", indice);
                         startActivity(iComprobacion);
 
                     }
                     else {
                         iComprobacion.putExtra("Comprobacion", "incorrecto");
+                        iComprobacion.putExtra("PARTIDA", partidaModelo);
+                        iComprobacion.putExtra("INDICE", indice);
                         startActivity(iComprobacion);
                     }
                 }
@@ -83,7 +122,7 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
         });
     }
 
-    @Override
+    /*@Override
     public void onQuizReadSucced(QuizModelo quiz) { //Cuando el Listener escuche la info, cambio las vistas.
 
         //Hago que la vista tenga los datos del Quiza dado.
@@ -116,5 +155,5 @@ public class VerQuizVista extends AppCompatActivity implements QuizListener {
     @Override
     public void onQuizReadQuizByTextId(List<String> quizs) {
 
-    }
+    }*/
 }

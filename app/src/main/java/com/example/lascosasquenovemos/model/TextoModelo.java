@@ -1,6 +1,8 @@
 package com.example.lascosasquenovemos.model;
 
-public class TextoModelo {
+import java.io.Serializable;
+
+public class TextoModelo implements Serializable {
     String IDTexto;
     String título;
     String texto;

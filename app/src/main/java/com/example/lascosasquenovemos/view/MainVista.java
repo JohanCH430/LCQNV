@@ -15,6 +15,7 @@ import com.example.lascosasquenovemos.model.QuizModelo;
 import com.example.lascosasquenovemos.model.TextoModelo;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainVista extends AppCompatActivity implements PantallaListener {
@@ -36,7 +37,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         //startActivity(new Intent(MainVista.this, CrearQuizVista.class));
 
         //Creo los Intents de las activities a las que tiene que redireccionar.
-        iAdminMode = new Intent(MainVista.this, AdminVista.class);
+        iAdminMode = new Intent(MainVista.this, AdminLoginVista.class);
         iJugar = new Intent(MainVista.this, InfoVista.class);
         iUsuario = new Intent(MainVista.this, UsuarioVista.class);
 
@@ -108,6 +109,8 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         }
     }
 
+
+
     @Override
     public void onTextReadSucced(TextoModelo texto) {
 
@@ -125,5 +128,10 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         Collections.shuffle(textos);
         QuizBll.leerQuizsPorTexto(textos.get(0).split(":")[0], this);
         iJugar.putExtra("idTexto", textos.get(0).split(":")[0]);
+    }
+
+    @Override
+    public void onTextosTematicasReadAllSucceed(HashMap<String, List<String>> textos) {
+
     }
 }

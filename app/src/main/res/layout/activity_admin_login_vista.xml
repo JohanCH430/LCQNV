@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".AdminLoginVista">
+
+    <TextView
+        android:id="@+id/TextConstraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Introducir contraseña: "
+        android:textSize="25sp"></TextView>
+
+    <EditText
+        android:id="@+id/Contraseña"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Constraseña"></EditText>
+
+    <Button
+        android:id="@+id/BtnLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Contraseña"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/BtnAtrasLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnLogin"
+        android:layout_centerHorizontal="true"
+        android:text="Atras" />
+
+    <TextView
+        android:id="@+id/TextErrorLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textSize="25sp"></TextView>
+
+
+</LinearLayout>
