@@ -27,6 +27,7 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
         FirebaseDAL.getInstance(getApplicationContext());
 
         Button bContinuar = findViewById(R.id.botonJugar);
+        Button bAtras = findViewById(R.id.btnAtrasEntrarEnPartida);
         EditText editText = findViewById(R.id.EditTextCodigo);
         fedback = findViewById(R.id.TextViewFedBackIntroducirCodigo);
 
@@ -38,6 +39,13 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
                     fedback.setText("Error, el código introducido es vacío");
                 }
                 else PartidaBll.leerPartida(codigo, EntrarEnPartidaVista.this);
+            }
+        });
+
+        bAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

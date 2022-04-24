@@ -26,6 +26,7 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_tematica_vista);
         FirebaseDAL.getInstance(getApplicationContext());
+
         //Inicializamos componentes vista
         botonCrear = findViewById(R.id.buttonCrearTematica);
         etNombreTematica = findViewById(R.id.editTextCrearTematica);
@@ -61,6 +62,11 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
         }
     }
 
+    private void vaciarElementosView() {
+        etNombreTematica.setText("");
+        etDescripcion.setText("");
+    }
+
     @Override
     public void onTematicaReadSucced(TematicaModelo quiz) {
 
@@ -72,6 +78,7 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
         if(bool){
             ((TextView)findViewById(R.id.testViewTestError)).setText("No Fallo");
             comprobracion.setText("Tematica creada con éxito.");
+            vaciarElementosView();
         } else {
             ((TextView)findViewById(R.id.testViewTestError)).setText("Fallo");
             comprobracion.setText("No se ha podido crear la temática. Nombre repetido.");
