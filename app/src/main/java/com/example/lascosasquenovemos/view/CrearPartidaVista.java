@@ -32,7 +32,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     Button btnCrear, btnReturn, btnVer, btnFinalizar;
     TextView numPantallas, numpantallas, tVcodigo;
     Intent Preview;
-    int N;
+    int N, i = 0;
     HashMap<String, TextoModelo> textos = new HashMap<>();
     PartidaModelo partida;
 
@@ -48,7 +48,6 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
         btnVer = findViewById(R.id.BtnVerPtll);
         btnVer.setEnabled(false);
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
-        numpantallas = findViewById(R.id.MuestraNumP);
         tVcodigo = findViewById(R.id.MuestraCodP);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
@@ -83,7 +82,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
                 if(!num.trim().equals("")){
                     N = Integer.parseInt(num);
                     if(N > 0){
-                        TextoBll.leerTextoTematica(CrearPartidaVista.this);
+                        TextoBll.leerTodoTexto(CrearPartidaVista.this);
                     }else{
                         Toast.makeText(getApplicationContext(), "Debe haber al menos una pantalla por partida", Toast.LENGTH_SHORT).show();
                     }
@@ -120,6 +119,11 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
     @Override
     public void onTextReadAllSucced(List<String> textos) {
+        if(N> textos.size())
+            Toast.makeText(getApplicationContext(), "Demasiadas pantallas", Toast.LENGTH_SHORT).show();
+        else
+            TextoBll.leerTextoTematica(CrearPartidaVista.this);
+
 
     }
 
@@ -135,7 +139,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
                 List l = textos.get(k);
                 List<String> aux = new ArrayList<String>(l);
                 if (n++>=N) break;
-                if(! l.isEmpty()){
+                if(! aux.isEmpty()){
                    TextoBll.leerTexto((String) l.get(0), this);
                    //IDTextos.add(l.get(0));
                    aux.remove(0);
@@ -149,14 +153,12 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
     @Override
     public void onQuizReadSucced(QuizModelo quiz) {
         partida.addPantalla(new PantallaModelo(textos.get(quiz.getTextId()), quiz));
-        if(partida.getNumPantallas()< N){
-            //numPantallas.setText("");
-            Toast.makeText(getApplicationContext(), "Demasiadas pantallas", Toast.LENGTH_SHORT).show();
-        }
-        else if (partida.getNumPantallas() == N) {
+
+        if (partida.getNumPantallas() == N) {
             btnVer.setEnabled(true);
-            numpantallas.setText(Integer.toString(partida.getNumPantallas()));
+           
         }
+
     }
 
     @Override
