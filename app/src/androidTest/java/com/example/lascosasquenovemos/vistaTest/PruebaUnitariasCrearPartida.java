@@ -11,7 +11,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import com.example.lascosasquenovemos.model.Interfaces.PartidaListener;
 import com.example.lascosasquenovemos.model.PartidaModelo;
 import com.example.lascosasquenovemos.view.CrearPartidaVista;
-import com.example.lascosasquenovemos.view.CrearTematicaVista;
 import com.example.lascosasquenovemos.view.R;
 
 import org.junit.Rule;
@@ -19,14 +18,13 @@ import org.junit.Test;
 
 public class PruebaUnitariasCrearPartida implements PartidaListener {
     @Rule
-    public ActivityScenarioRule<CrearPartidaVista> crearTematicaRule = new ActivityScenarioRule<>(CrearPartidaVista.class);
+    public ActivityScenarioRule<CrearPartidaVista> crearPartidaRule = new ActivityScenarioRule<>(CrearPartidaVista.class);
 
     //Test de si los campos de TextView tienen el texto correspondiente
     @Test
     public void testEmptyEditText(){
-        onView(withId(R.id.editTextCrearTematica)).check(matches(withText("")));
-        onView(withId(R.id.editTextCrearTematicaDesacripcion)).check(matches(withText("")));
-        onView(withId(R.id.TextoComprobacionCrearTematica)).check(matches(withText("")));
+        onView(withId(R.id.InputNumPtlls)).check(matches(withText("")));
+        onView(withId(R.id.MuestraNumP)).check(matches(withText("")));
     }
 
     //Test de si se puede hacer click en todos los botones
@@ -35,6 +33,7 @@ public class PruebaUnitariasCrearPartida implements PartidaListener {
         onView(withId(R.id.BtnCrearPtll)).check(matches(isClickable()));
         onView(withId(R.id.BtnVerPtll)).check(matches(isClickable()));
         onView(withId(R.id.BtnAtrasCrearPtll)).check(matches(isClickable()));
+        onView(withId(R.id.BtnFinalizarCrearPtll)).check(matches(isClickable()));
     }
 
     @Test
