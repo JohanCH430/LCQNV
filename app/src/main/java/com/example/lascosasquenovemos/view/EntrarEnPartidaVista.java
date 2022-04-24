@@ -27,10 +27,9 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
             @Override
             public void onClick(View view) {
                 String codigo = editText.getText().toString();
-                if (codigo.equals(null) || codigo.trim().isEmpty()){
+                if (!PartidaBll.comprobarSintaxisCodigoParitda(codigo)){
                     Toast.makeText(getApplicationContext(), "El código introducido es vacío", Toast.LENGTH_LONG).show();
                 }
-
                 else PartidaBll.leerPartida(codigo, EntrarEnPartidaVista.this);
             }
         });
