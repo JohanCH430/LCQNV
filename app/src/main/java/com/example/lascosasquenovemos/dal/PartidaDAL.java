@@ -18,10 +18,12 @@ import com.google.firebase.database.DatabaseReference;
 import java.util.HashMap;
 
 public class PartidaDAL {
+
     public static void crearPartida(PartidaModelo partida, PartidaListener pL) {
 
         DatabaseReference refPartida = FirebaseDAL.dataBase.child("Partida");
         DatabaseReference refiDPartida = FirebaseDAL.dataBase.child("IDPartida");
+
 
         refiDPartida.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -33,6 +35,8 @@ public class PartidaDAL {
                     String[] datos = String.valueOf(task.getResult().getValue()).split("-");
                     int aux = Integer.parseInt(datos[1]) + 1;
                     String nuevoID = datos[0] + "-" + String.valueOf(aux);
+
+                    DatabaseReference refPartidaActual = refPartida.child(nuevoID);
 
                     //Se guarda el nuevo Id en la BD
                     refiDPartida.setValue(nuevoID).addOnFailureListener(new OnFailureListener() {
@@ -82,7 +86,6 @@ public class PartidaDAL {
                                 pL.onPartidaWriteSuccess(null, false);
                             } else {
                                 int i=1;
-                                DatabaseReference refPartidaActual = FirebaseDAL.dataBase.child(partida.getIdPartida());
 
                                 while(i<partida.getPantallasPartida().size()){
                                     //Crear mapa de texto
@@ -107,7 +110,7 @@ public class PartidaDAL {
                                     pantallaMap.put("Texto", textoMap);
                                     pantallaMap.put("Pregunta", preguntaMap);
 
-                                    refPartidaActual.child("P" + i).setValue(partidaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    refPartidaActual.child("P" + i).setValue(pantallaMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (!task.isSuccessful()) {

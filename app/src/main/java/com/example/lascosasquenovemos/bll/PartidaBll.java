@@ -2,13 +2,15 @@ package com.example.lascosasquenovemos.bll;
 
 import android.widget.Toast;
 
+import com.example.lascosasquenovemos.dal.PartidaDAL;
 import com.example.lascosasquenovemos.model.Interfaces.PartidaListener;
 import com.example.lascosasquenovemos.model.PartidaModelo;
 
 public class PartidaBll {
 
-    public static void crearPartida(PartidaModelo pM, PartidaListener pL){/*TODO llamar a partida DAL*/};
-    public static void leerPartida(String id, PartidaListener pL){/*TODO llamar a partida DAL*/}
+    public static void crearPartida(PartidaModelo pM, PartidaListener pL){PartidaDAL.crearPartida(pM, pL);}
+
+    public static void leerPartida(String id, PartidaListener pL){PartidaDAL.leerPartida(id, pL);}
 
     public static boolean comprobarSintaxisCodigoParitda(String codigo){
 
