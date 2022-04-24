@@ -25,13 +25,23 @@
         android:hint="Número de pantallas"
         android:inputType="number"
         />
+
+    <TextView
+        android:id="@+id/TextoFedBackCrearPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InputNumPtlls"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="" />
+
     <Button
         android:id="@+id/BtnCrearPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/InputNumPtlls"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/TextoFedBackCrearPartida"
+        android:layout_marginTop="20dp"
         android:text="CREAR"
         />
     <Button
@@ -76,8 +86,8 @@
         android:layout_height="100dp"
         android:layout_below="@id/BtnAtrasCrearPtll"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Partida generada con código:"
+        android:layout_marginTop="20dp"
+        android:text=""
 
         />
 

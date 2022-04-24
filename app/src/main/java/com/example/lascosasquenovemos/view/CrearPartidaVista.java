@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class CrearPartidaVista extends AppCompatActivity implements TextListener, QuizListener, PartidaListener {
     Button btnCrear, btnReturn, btnVer, btnFinalizar;
-    TextView numPantallas, numpantallas, tVcodigo;
+    TextView numPantallas, numpantallas, tVcodigo, fedBackCreacion;
     Intent Preview;
     int N, i = 0;
     HashMap<String, TextoModelo> textos = new HashMap<>();
@@ -42,13 +42,16 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
         setContentView(R.layout.activity_crear_partida_vista);
 
         FirebaseDAL.getInstance(getApplicationContext());
+
         //inicializamos componentes de la vista
         btnFinalizar = findViewById(R.id.BtnFinalizarCrearPtll);
         btnCrear = findViewById(R.id.BtnCrearPtll);
         btnVer = findViewById(R.id.BtnVerPtll);
         btnVer.setEnabled(false);
+        btnFinalizar.setEnabled(false);
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
         tVcodigo = findViewById(R.id.MuestraCodP);
+        fedBackCreacion = findViewById(R.id.TextoFedBackCrearPartida);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
         numPantallas.setText("");
@@ -70,7 +73,6 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
                 Preview = new Intent(CrearPartidaVista.this, VerPartidaVista.class);
                 Preview.putExtra("PARTIDA", partida);
                 startActivity(Preview);
-
             }
         });
 
@@ -156,7 +158,8 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
         if (partida.getNumPantallas() == N) {
             btnVer.setEnabled(true);
-           
+            btnFinalizar.setEnabled(true);
+            fedBackCreacion.setText("Partida creada correctamente, pulse finalizar para guardarla.");
         }
 
     }
