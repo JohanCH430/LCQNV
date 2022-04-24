@@ -29,7 +29,7 @@ public class AdminLoginVista extends AppCompatActivity implements AdminLoginList
             public void onClick(View view) {
                 //Comprobar que la contraseña no es nula
                 if(!AdminLoginBll.comprobarSintaxis(contr.getText().toString())){
-                    comprobacion.setText("La contraseña es nula o mayor de 25 caracteres");
+                    comprobacion.setText("ERROR: La contraseña es nula o mayor de 25 caracteres");
                 }
                 else{
                     //Comprobar que existe dicho contraseña

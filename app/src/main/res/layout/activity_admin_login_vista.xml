@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".AdminLoginVista">
 
     <TextView
@@ -12,16 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
-        android:text="Introduccir contraseña: "
+        android:text="Introducir contraseña: "
         android:textSize="25sp"></TextView>
 
     <EditText
         android:id="@+id/Contraseña"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
         android:inputType="textPassword"
         android:hint="Constraseña"></EditText>
 
@@ -31,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Contraseña"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
         android:text="LOGIN" />
 
@@ -41,15 +39,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/BtnLogin"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
         android:text="Atras" />
 
     <TextView
         android:id="@+id/TextErrorLogin"
-        android:layout_width="350dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
         android:text=""
         android:textSize="25sp"></TextView>
