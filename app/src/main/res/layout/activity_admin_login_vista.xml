@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:inputType="textPassword"
-        android:hint="Constraseña"></EditText>
+        android:hint="Contraseña"></EditText>
 
     <Button
         android:id="@+id/BtnLogin"
@@ -42,7 +42,7 @@
         android:layout_below="@id/BtnLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
-        android:text="Atras" />
+        android:text="Atrás" />
 
     <TextView
         android:id="@+id/TextErrorLogin"
