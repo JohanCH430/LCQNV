@@ -115,7 +115,6 @@ public class TextoVista extends AppCompatActivity implements AdapterView.OnItemS
         switch (adapterView.getId())
         {
             case R.id.list:
-                Toast.makeText(this,adapterView.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
                 tema = lista[i].toString();
                 break;
 
