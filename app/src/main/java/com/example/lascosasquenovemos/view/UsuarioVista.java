@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.lascosasquenovemos.dal.FirebaseDAL;
 
 public class UsuarioVista extends AppCompatActivity {
+    private String nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +19,14 @@ public class UsuarioVista extends AppCompatActivity {
         setContentView(R.layout.activity_usuario_vista);
         FirebaseDAL.getInstance(getApplicationContext());
 
+        nombre = getIntent().getStringExtra("NOMBRE");
+        TextView tvNombre = findViewById(R.id.NombreUsuario);
         Button btnCrear = findViewById(R.id.btnCrearPartida);
         Button btnJugar = findViewById(R.id.btnJugarPartida);
-        Button btnAtras = findViewById(R.id.btnAtrasUsuario);
+        //Button btnAtras = findViewById(R.id.btnAtrasUsuario);
         Button btnInicio = findViewById(R.id.btnInicioUsuario);
 
+        tvNombre.setText("Se encuentra identificado como: " + nombre);
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,13 +43,13 @@ public class UsuarioVista extends AppCompatActivity {
             }
         });
 
-        btnAtras.setOnClickListener(new View.OnClickListener() {
+        /*btnAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             //Se vuelve al anteriro activity
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
 
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
