@@ -30,12 +30,10 @@ public class InfoVista extends AppCompatActivity{
 
         FirebaseDAL.getInstance(getApplicationContext());
         next = new Intent(InfoVista.this, VerQuizVista.class);
-        //bd = new TextoBll();
 
         //Se obtiene la partida
         partidaModelo = (PartidaModelo) getIntent().getSerializableExtra("PARTIDA");
-        //TODO gestionar indices para que se pueda jugar la partida completa
-        //indice = getIntent().getIntExtra("INDICE", 0);
+        indice = getIntent().getIntExtra("INDICE", 0);
 
         //Se obtiene la pantalla que corresponde a esto
         pantalla = (PantallaModelo) partidaModelo.getPantallasPartida().values().toArray()[indice];

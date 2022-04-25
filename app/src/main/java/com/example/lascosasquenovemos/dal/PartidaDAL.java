@@ -166,7 +166,7 @@ public class PartidaDAL {
                             String solucion = (String) preguntaAux.get("Solucion");
                             String textId = (String) preguntaAux.get("TextId");
 
-                            HashMap<String, String> opciones = (HashMap<String, String>) result.get("Opciones");
+                            HashMap<String, String> opciones = (HashMap<String, String>) preguntaAux.get("Opciones");
 
                             String oA = opciones.get("a");
                             String oB = opciones.get("b");
@@ -179,7 +179,7 @@ public class PartidaDAL {
                             String titulo = (String) textoAux.get("Titulo");
                             String contenido = (String) textoAux.get("Contenido");
 
-                            TextoModelo tmAux = new TextoModelo(null, titulo, contenido, "");
+                            TextoModelo tmAux = new TextoModelo(textId, titulo, contenido, "");
 
                             //Añade texto modelo y pregunta modelo al mapa de pantallas auxiliar
                             PantallaModelo pm = new PantallaModelo(tmAux, qmAux);

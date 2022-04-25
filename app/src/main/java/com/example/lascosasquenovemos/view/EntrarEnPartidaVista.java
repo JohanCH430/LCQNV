@@ -53,8 +53,9 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
     @Override
     public void onPartidaReadSuccess(PartidaModelo pM) {
         if (pM != null){
-            //TODO añadir parametros al intent
             Intent iInfoVista = new Intent(EntrarEnPartidaVista.this, InfoVista.class);
+            iInfoVista.putExtra("PARTIDA", pM);
+            iInfoVista.putExtra("INDICE", 0);
             startActivity(iInfoVista);
         }
         else {
