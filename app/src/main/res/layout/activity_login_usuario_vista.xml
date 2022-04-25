@@ -21,7 +21,8 @@
         android:id="@+id/Nombre"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre"></EditText>
+        android:hint="Nombre"
+        android:maxLength="30"></EditText>
 
     <Button
         android:id="@+id/BtnLoginUsuario"
