@@ -67,7 +67,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         });
 
         //Pongo la versión en base a la que tiene el build.
-        txtVersion.setText("Versión " + 1.0);
+        txtVersion.setText("Versión " + 1.1);
     }
 
     //Método que comienza la actividad con la vista de administrador.
