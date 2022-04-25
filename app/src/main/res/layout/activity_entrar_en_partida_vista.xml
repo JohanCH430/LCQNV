@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width= "match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_centerHorizontal="true">
 
     <TextView
         android:id="@+id/TextViewIntroducirCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Introduce un código de partida: ">
+        android:textSize="20sp"
+        android:text="Introduce un código de partida: "
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true">
 
     </TextView>
 
@@ -24,9 +26,25 @@
     <EditText
         android:id="@+id/EditTextCodigo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:layout_below="@id/TextViewIntroducirCodigo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
 
     </EditText>
+
+    <TextView
+        android:id="@+id/TextViewP"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/EditTextCodigo"
+        android:layout_below="@+id/TextViewIntroducirCodigo"
+        android:text="P-"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+    </TextView>
 
     <Space
         android:layout_width="wrap_content"
@@ -38,7 +56,9 @@
         android:id="@+id/TextViewFedBackIntroducirCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="">
+        android:layout_below="@id/EditTextCodigo"
+        android:text=""
+        android:layout_centerHorizontal="true">
 
     </TextView>
 
@@ -52,7 +72,9 @@
         android:id="@+id/botonJugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="JUGAR">
+        android:layout_below="@id/TextViewFedBackIntroducirCodigo"
+        android:text="JUGAR"
+        android:layout_centerHorizontal="true">
 
     </Button>
 
@@ -66,8 +88,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnAtrasEntrarEnPartida"
-        android:text="ATRÁS">
+        android:layout_below="@id/botonJugar"
+        android:text="ATRÁS"
+        android:layout_centerHorizontal="true">
 
     </Button>
 
-</LinearLayout>
+</RelativeLayout>

@@ -34,7 +34,7 @@ public class EntrarEnPartidaVista extends AppCompatActivity implements PartidaLi
         bContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String codigo = editText.getText().toString();
+                String codigo = "P-" + editText.getText().toString() ;
                 if (!PartidaBll.comprobarSintaxisCodigoParitda(codigo)){
                     fedback.setText("Error, el código introducido es vacío");
                 }
