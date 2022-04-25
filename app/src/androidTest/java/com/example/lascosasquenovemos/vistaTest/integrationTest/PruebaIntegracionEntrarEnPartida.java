@@ -5,13 +5,18 @@ import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.intent.Intents.intended;
+import static androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import androidx.test.espresso.intent.Intents;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
 import com.example.lascosasquenovemos.view.EntrarEnPartidaVista;
+import com.example.lascosasquenovemos.view.InfoVista;
 import com.example.lascosasquenovemos.view.R;
+import com.example.lascosasquenovemos.view.VerQuizVista;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -25,13 +30,29 @@ public class PruebaIntegracionEntrarEnPartida {
 
     @Before
     public void initTest() {
-        codigo1 = "PartidaPrueba";
+        codigo1 = "P-1";
         codigo2 = "    ";
         codigo3 = "asdasdasdasdasd";
     }
 
     @Test
     public void testIntegracionEntrarEnPartidaFunciona() {
+
+        //Hago que en este test el código esté vacio/tenga espacios.
+        onView(withId(R.id.EditTextCodigo)).perform(clearText(), replaceText(codigo1));
+
+        Intents.init();
+        //Hago click en el botón para que comience la partida.
+        onView(withId(R.id.botonJugar)).perform(click());
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Compruebo que la siguiente pantalla es un InfoVista y que por tanto la partida se ha leido correctamente.
+        intended(hasComponent(InfoVista.class.getName()));
     }
 
     @Test
@@ -65,8 +86,6 @@ public class PruebaIntegracionEntrarEnPartida {
     @Test
     public void testIntegracionEntrarEnPartidaNoFunciona3() {
 
-        //TODO aun falta el DAL.
-        /*
         //Hago que en este test el código no exista en la BD.
         onView(withId(R.id.EditTextCodigo)).perform(clearText(), replaceText(codigo3));
 
@@ -76,8 +95,7 @@ public class PruebaIntegracionEntrarEnPartida {
         //Compruebo que ha fallado y por tanto no va a comenzar la partida.
         //Falla porque el código no existe en la BD.
         onView(withId(R.id.TextViewFedBackIntroducirCodigo)).check(matches(withText("Error al leer la partida, el código introducido no existe")));
-        */
-    }
 
+    }
 
 }
