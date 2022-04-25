@@ -64,6 +64,10 @@
         "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_crear_quiz_vista.xml"
     },
     {
+        "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_admin_login_vista.xml.flat",
+        "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_admin_login_vista.xml"
+    },
+    {
         "merged": "/home/inirolga/Documentos/GitHub/LCQNV/app/build/intermediates/merged_res/debug/layout_activity_info_vista.xml.flat",
         "source": "/home/inirolga/Documentos/GitHub/LCQNV/app/src/main/res/layout/activity_info_vista.xml"
     },

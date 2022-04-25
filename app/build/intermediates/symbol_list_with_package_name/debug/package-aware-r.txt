@@ -2594,6 +2594,7 @@ id Contraseña
 id EditTextCodigo
 id Error
 id FUNCTION
+id InfoNumPantallas
 id InfoVerPartida
 id InpOpc1Quiz
 id InpOpc2Quiz
@@ -2643,6 +2644,8 @@ id TextViewIntroducirCodigo
 id TextoComprobacionCrearTematica
 id TextoComprobacionPorAhora
 id TextoCrearPtll
+id TextoErrorCrearPtll
+id TextoFedBackCrearPartida
 id Texto_quiz
 id Titulo_del_texto
 id VistaCrearQuiz

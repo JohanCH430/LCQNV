@@ -26,20 +26,20 @@ public class PruebaIntegracionCrearPartida {
     public void testIntegracionCrearPantallaFunciona(){
 
         //Introducimos el numero de pantalla a crear
-        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("5"));
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("1"));
 
         //Hacemos click en el botón de Crear
-        onView(withId(R.id.buttonCrearTematica)).perform(click());
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
 
         //Esperamos a que se complete la escritura en BD
         try{
-            Thread.sleep(3000);
+            Thread.sleep(8000);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
 
         //Comparamos si se ha terminado correctamente
-        //onView(withId(R.id.testViewTestError)).check(matches(withText("No Fallo")));
+        onView(withId(R.id.testViewTestError)).check(matches(withText("Partida creada correctamente, pulse finalizar para guardarla.")));
 
     }
 
@@ -50,17 +50,17 @@ public class PruebaIntegracionCrearPartida {
         onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText(""));
 
         //Hacemos click en el botón de Crear
-        onView(withId(R.id.buttonCrearTematica)).perform(click());
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
 
         //Esperamos a que se complete la escritura en BD
         try{
-            Thread.sleep(3000);
+            Thread.sleep(8000);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
 
         //Comparamos no se ha terminado correctamente
-        //onView(withId(R.id.testViewTestError)).check(matches(withText("No Fallo")));
+        onView(withId(R.id.TextoErrorCrearPtll)).check(matches(withText("Debes introducir un número")));
 
     }
 
@@ -69,8 +69,120 @@ public class PruebaIntegracionCrearPartida {
     public void testIntegracionCrearPantallaAtras(){
         //Hacemos click en el botón de Atras
         onView(withId(R.id.BtnAtrasCrearPtll)).perform(click());
+        assert(true);
         //Falta completar que retorna a Main Crear
         //onView(withId()).check(matches(isDisplayed()));
+
+    }
+
+    @Test
+    public void testIntegracionVerPantallaInicio(){
+
+        //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.BtnVerPtll)).perform(click());
+        onView(withId(R.id.InfoNumPantallas)).check(matches(withText("Previsualización pantalla 1/2")));
+
+    }
+
+    @Test
+    public void testIntegracionVerPantallaSig1(){
+
+        //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.BtnVerPtll)).perform(click());
+        onView(withId(R.id.BtnSiguienteVerPtll)).perform(click());
+        onView(withId(R.id.InfoNumPantallas)).check(matches(withText("Previsualización pantalla 2/2")));
+
+    }
+
+    @Test
+    public void testIntegracionVerPantallaSig2(){
+
+        //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.BtnVerPtll)).perform(click());
+        onView(withId(R.id.BtnSiguienteVerPtll)).perform(click());
+        onView(withId(R.id.BtnSiguienteVerPtll)).perform(click());
+        onView(withId(R.id.InfoNumPantallas)).check(matches(withText("Previsualización pantalla 1/2")));
+
+    }
+
+    @Test
+    public void testIntegracionVerPantallaAnt1(){
+
+        //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.BtnVerPtll)).perform(click());
+        onView(withId(R.id.BtnAnteriorVerPtll)).perform(click());
+        onView(withId(R.id.InfoNumPantallas)).check(matches(withText("Previsualización pantalla 2/2")));
+
+    }
+
+    @Test
+    public void testIntegracionVerPantallaAnt2(){
+
+        //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.BtnVerPtll)).perform(click());
+        onView(withId(R.id.BtnSiguienteVerPtll)).perform(click());
+        onView(withId(R.id.BtnSiguienteVerPtll)).perform(click());
+        onView(withId(R.id.InfoNumPantallas)).check(matches(withText("Previsualización pantalla 1/2")));
 
     }
 

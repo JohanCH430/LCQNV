@@ -7,6 +7,16 @@
     tools:context=".CrearPartidaVista">
 
     <TextView
+        android:id="@+id/TextoErrorCrearPtll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:visibility="invisible"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
         android:id="@+id/TextoCrearPtll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,15 +54,15 @@
         android:layout_marginTop="20dp"
         android:text="CREAR"
         />
+
     <Button
         android:id="@+id/BtnVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/BtnCrearPtll"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="VER"
-        />
+        android:text="VER" />
     <Button
         android:id="@+id/BtnFinalizarCrearPtll"
         android:layout_width="100dp"

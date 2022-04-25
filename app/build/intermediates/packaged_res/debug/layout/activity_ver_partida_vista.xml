@@ -7,12 +7,23 @@
     tools:context=".VerPartidaVista">
 
     <TextView
+        android:id="@+id/InfoNumPantallas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:autoSizeTextType="uniform"
+        android:text="Previsualización pantalla"
+        android:textSize="25sp" />
+
+    <TextView
         android:id="@+id/InfoVerPartida"
+        android:layout_below="@id/InfoNumPantallas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Información:"
         android:textSize="25sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         />
 
@@ -21,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/InfoVerPartida"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:text=""
         android:textSize="25sp" />
@@ -40,7 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/PreguntaVerPartida"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:text=""
         android:textSize="25sp" />
@@ -56,11 +69,42 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/TextOpcVerPartida"
+        android:id="@+id/TextOpc1VerPartida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/OpcionesVerPartida"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc2VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc1VerPartida"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc3VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc2VerPartida"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/TextOpc4VerPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc3VerPartida"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:text=""
         android:textSize="25sp" />
@@ -69,18 +113,25 @@
         android:id="@+id/BtnSiguienteVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc4VerPartida"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/TextOpcVerPartida"
         android:layout_marginTop="40dp"
-        android:text="SIGUIENTE"
-        />
+        android:text="SIGUIENTE" />
 
+    <Button
+        android:id="@+id/BtnAnteriorVerPtll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnSiguienteVerPtll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="ANTERIOR" />
     <Button
         android:id="@+id/BtnTerminarVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/BtnSiguienteVerPtll"
+        android:layout_below="@id/BtnAnteriorVerPtll"
         android:layout_marginTop="10dp"
         android:text="TERMINAR"
         />

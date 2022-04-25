@@ -10,12 +10,11 @@
         android:id="@+id/InfoNumPantallas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previsualización pantalla"
-        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:autoSizeTextType="uniform"
-        android:layout_marginLeft="20dp"
-        />
+        android:text="Previsualización pantalla"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/InfoVerPartida"
@@ -114,21 +113,19 @@
         android:id="@+id/BtnSiguienteVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/TextOpc4VerPartida"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="SIGUIENTE"
-        />
+        android:text="SIGUIENTE" />
 
     <Button
         android:id="@+id/BtnAnteriorVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/BtnSiguienteVerPtll"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="ANTERIOR"
-        />
+        android:text="ANTERIOR" />
     <Button
         android:id="@+id/BtnTerminarVerPtll"
         android:layout_width="100dp"
