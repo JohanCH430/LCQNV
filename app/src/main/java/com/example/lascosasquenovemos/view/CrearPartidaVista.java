@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class CrearPartidaVista extends AppCompatActivity implements TextListener, QuizListener, PartidaListener {
     Button btnCrear, btnReturn, btnVer, btnFinalizar;
-    TextView numPantallas, numpantallas, tVcodigo, fedBackCreacion;
+    TextView numPantallas, numpantallas, tVcodigo, fedBackCreacion, errorTest;
     Intent Preview;
     int N, i = 0;
     HashMap<String, TextoModelo> textos = new HashMap<>();
@@ -52,6 +52,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
         btnReturn = findViewById(R.id.BtnAtrasCrearPtll);
         tVcodigo = findViewById(R.id.MuestraCodP);
         fedBackCreacion = findViewById(R.id.TextoFedBackCrearPartida);
+        errorTest = findViewById(R.id.TextoErrorCrearPtll);
 
         numPantallas = findViewById(R.id.InputNumPtlls);
         numPantallas.setText("");
@@ -90,6 +91,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
                     }
                 }else{
                     Toast.makeText(getApplicationContext(), "Debes introducir un número", Toast.LENGTH_SHORT).show();
+                    errorTest.setText("Debes introducir un número");
                 }
 
 

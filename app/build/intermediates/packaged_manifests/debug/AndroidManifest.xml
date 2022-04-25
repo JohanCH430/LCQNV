@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
+            android:name="com.example.lascosasquenovemos.view.AdminLoginVista"
+            android:exported="false" />
+        <activity
             android:name="com.example.lascosasquenovemos.view.UsuarioVista"
             android:exported="false" />
         <activity

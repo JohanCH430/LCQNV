@@ -41,7 +41,7 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:id="@+id/btnAtrasUsuario"
-        android:text="ATRAS"></Button>
+        android:text="ATRÁS"></Button>
 
     <Space
         android:layout_width="wrap_content"

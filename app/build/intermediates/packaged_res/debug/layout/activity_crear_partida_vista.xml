@@ -7,6 +7,16 @@
     tools:context=".CrearPartidaVista">
 
     <TextView
+        android:id="@+id/TextoErrorCrearPtll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:visibility="invisible"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
         android:id="@+id/TextoCrearPtll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,32 +35,70 @@
         android:hint="Número de pantallas"
         android:inputType="number"
         />
+
+    <TextView
+        android:id="@+id/TextoFedBackCrearPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InputNumPtlls"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="" />
+
     <Button
         android:id="@+id/BtnCrearPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/InputNumPtlls"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/TextoFedBackCrearPartida"
+        android:layout_marginTop="20dp"
         android:text="CREAR"
         />
+
     <Button
         android:id="@+id/BtnVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/BtnCrearPtll"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="VER"
+        android:text="VER" />
+    <Button
+        android:id="@+id/BtnFinalizarCrearPtll"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/BtnVerPtll"
+        android:layout_marginTop="10dp"
+        android:text="FINALIZAR"
         />
     <Button
         android:id="@+id/BtnAtrasCrearPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/BtnVerPtll"
+        android:layout_below="@id/BtnFinalizarCrearPtll"
         android:layout_marginTop="10dp"
         android:text="ATRÁS"
+        />
+
+    <TextView
+        android:id="@+id/MuestraNumP"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text=""
+
+        />
+
+    <TextView
+        android:id="@+id/MuestraCodP"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@id/BtnAtrasCrearPtll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text=""
+
         />
 
 </RelativeLayout>
