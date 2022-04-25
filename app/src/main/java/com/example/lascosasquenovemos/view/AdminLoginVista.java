@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lascosasquenovemos.bll.AdminLoginBll;
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.Interfaces.AdminLoginListener;
 
 public class AdminLoginVista extends AppCompatActivity implements AdminLoginListener{
@@ -22,6 +23,8 @@ public class AdminLoginVista extends AppCompatActivity implements AdminLoginList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login_vista);
+        FirebaseDAL.getInstance(getApplicationContext());
+
         btnLogin = findViewById(R.id.BtnLogin);
         btnAtras = findViewById(R.id.BtnAtrasLogin);
         contr = findViewById(R.id.Contraseña);

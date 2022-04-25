@@ -28,12 +28,11 @@ import org.junit.Test;
 public class PruebaIntegracionLoginAdmin implements AdminLoginListener {
 
     @Rule
-    public ActivityScenarioRule<MainVista> crearQuizRule =  new ActivityScenarioRule<>(MainVista.class);
+    public ActivityScenarioRule<AdminLoginVista> crearQuizRule =  new ActivityScenarioRule<>(AdminLoginVista.class);
     String password, lectura;
 
     @Before
     public void initTest(){
-        onView(withId(R.id.btnModoAdmin)).perform(click());
         password  = "pw";
     }
 

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
 import com.example.lascosasquenovemos.model.PantallaModelo;
 import com.example.lascosasquenovemos.model.PartidaModelo;
 
@@ -20,6 +21,7 @@ public class VerPartidaVista extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_partida_vista);
+        FirebaseDAL.getInstance(getApplicationContext());
 
         //Inicializar variables para poder añadir los listeenrs de los botones y cambiar los textos
         btnAnterior = findViewById(R.id.BtnAnteriorVerPtll);

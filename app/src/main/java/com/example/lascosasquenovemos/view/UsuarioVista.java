@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.lascosasquenovemos.dal.FirebaseDAL;
+
 public class UsuarioVista extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_vista);
+        FirebaseDAL.getInstance(getApplicationContext());
 
         Button btnCrear = findViewById(R.id.btnCrearPartida);
         Button btnJugar = findViewById(R.id.btnJugarPartida);

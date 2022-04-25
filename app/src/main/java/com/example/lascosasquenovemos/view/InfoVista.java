@@ -28,7 +28,7 @@ public class InfoVista extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_vista);
 
-        //FirebaseDAL.getInstance(getApplicationContext());
+        FirebaseDAL.getInstance(getApplicationContext());
         next = new Intent(InfoVista.this, VerQuizVista.class);
         //bd = new TextoBll();
 
