@@ -38,6 +38,10 @@ public class ComprobarResultadoVista extends AppCompatActivity {
         btnReintento.setEnabled(false);
         btnTerminar.setEnabled(false);
 
+        if (indice > maxPant[0]){
+            btnContinuar.setEnabled(false);
+        }
+
         if (respuesta.equals("correcto")) {
             comprobacion.setText("¡CORRECTO!");
             btnTerminar.setEnabled(true);
@@ -71,7 +75,7 @@ public class ComprobarResultadoVista extends AppCompatActivity {
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (finalIndice >= maxPant[0]) {
+                if (finalIndice <= maxPant[0]) {
                     Intent i = new Intent(ComprobarResultadoVista.this, InfoVista.class);
                     //Se añaden estas flags para que se limpie la pila de pantallas y se vuelta a la pantalla principal sin problemas
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
