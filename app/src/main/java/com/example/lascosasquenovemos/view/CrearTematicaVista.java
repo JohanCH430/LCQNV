@@ -1,10 +1,13 @@
 package com.example.lascosasquenovemos.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,8 +48,18 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
             @Override
             public void onClick(View view) {
                 crearTematica();
+                cerrarTeclado();
             }
         });
+    }
+
+    private void cerrarTeclado() {
+        View view =  this.getCurrentFocus();
+
+        if(view != null){
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     private void crearTematica() {
@@ -59,6 +72,7 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
             TematicaBll.crearTematica(tematica, this);
         } else{
             comprobracion.setText("No puedes dejar el nombre de la tematica vacío.");
+            Toast.makeText(getApplicationContext(), "No puedes dejar el nombre de la temática vacío.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -78,10 +92,12 @@ public class CrearTematicaVista extends AppCompatActivity implements TematicaLis
         if(bool){
             ((TextView)findViewById(R.id.testViewTestError)).setText("No Fallo");
             comprobracion.setText("Tematica creada con éxito.");
+            Toast.makeText(getApplicationContext(), "Temática creada con éxito.", Toast.LENGTH_LONG).show();
             vaciarElementosView();
         } else {
             ((TextView)findViewById(R.id.testViewTestError)).setText("Fallo");
             comprobracion.setText("No se ha podido crear la temática. Nombre repetido.");
+            Toast.makeText(getApplicationContext(), "No se ha podido crear la temática. Nombre repetido.", Toast.LENGTH_LONG).show();
         }
     }
 
