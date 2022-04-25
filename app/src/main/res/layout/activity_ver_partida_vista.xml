@@ -7,18 +7,7 @@
     tools:context=".VerPartidaVista">
 
     <TextView
-        android:id="@+id/InfoNumPantallas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:autoSizeTextType="uniform"
-        android:text="Previsualización pantalla"
-        android:textSize="25sp" />
-
-    <TextView
         android:id="@+id/InfoVerPartida"
-        android:layout_below="@id/InfoNumPantallas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Información:"
@@ -109,13 +98,25 @@
         android:text=""
         android:textSize="25sp" />
 
+    <TextView
+        android:id="@+id/InfoNumPantallas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextOpc4VerPartida"
+        android:layout_marginTop="40dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Previsualización pantalla"
+        android:textSize="15sp" />
+
     <Button
         android:id="@+id/BtnSiguienteVerPtll"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/TextOpc4VerPartida"
+        android:layout_below="@id/InfoNumPantallas"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="SIGUIENTE" />
 
     <Button
