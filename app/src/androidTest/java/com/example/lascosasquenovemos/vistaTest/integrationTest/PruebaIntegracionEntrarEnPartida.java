@@ -16,7 +16,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import com.example.lascosasquenovemos.view.EntrarEnPartidaVista;
 import com.example.lascosasquenovemos.view.InfoVista;
 import com.example.lascosasquenovemos.view.R;
-import com.example.lascosasquenovemos.view.VerQuizVista;
 
 import org.junit.Before;
 import org.junit.Rule;
