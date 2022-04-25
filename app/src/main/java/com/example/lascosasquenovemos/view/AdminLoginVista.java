@@ -1,5 +1,7 @@
 package com.example.lascosasquenovemos.view;
 
+import static android.app.PendingIntent.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lascosasquenovemos.bll.AdminLoginBll;
 import com.example.lascosasquenovemos.model.Interfaces.AdminLoginListener;
@@ -30,6 +33,7 @@ public class AdminLoginVista extends AppCompatActivity implements AdminLoginList
                 //Comprobar que la contraseña no es nula
                 if(!AdminLoginBll.comprobarSintaxis(contr.getText().toString())){
                     comprobacion.setText("ERROR: La contraseña es nula o mayor de 25 caracteres");
+                    Toast.makeText(getApplicationContext(), "ERROR: La contraseña es nula o mayor de 25 caracteres", Toast.LENGTH_LONG).show();
                 }
                 else{
                     //Comprobar que existe dicho contraseña
@@ -54,6 +58,7 @@ public class AdminLoginVista extends AppCompatActivity implements AdminLoginList
     public void onAdminLoginReadSuccess(String pw) {
         if(pw == null){
             comprobacion.setText("Contraseña incorrecta");
+            Toast.makeText(getApplicationContext(), "Contraseña incorrecta", Toast.LENGTH_LONG).show();
         }
         else{
             startActivity(new Intent(AdminLoginVista.this, AdminVista.class));
