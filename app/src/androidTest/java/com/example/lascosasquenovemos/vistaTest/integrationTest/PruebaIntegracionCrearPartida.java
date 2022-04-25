@@ -186,4 +186,26 @@ public class PruebaIntegracionCrearPartida {
 
     }
 
+    //Test de integracion para comprobar que se escribe correctamente en la BD (comentado para no llenar la BD de datos)
+
+    /*
+    @Test
+    public void testIntegracionFinalizar(){
+     //Introducimos el numero de pantalla a crear
+        onView(withId(R.id.InputNumPtlls)).perform(clearText(), replaceText("2"));
+
+        //Hacemos click en el botón de Crear
+        onView(withId(R.id.BtnCrearPtll)).perform(click());
+
+        //Esperamos a que se complete la escritura en BD
+        try{
+            Thread.sleep(8000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        onView(withId(R.id.BtnFinalizarCrearPtll)).perform(click());
+        onView(withId(R.id.BtnCrearPtll)).check(matches(not(isEnabled())));
+      }
+     */
+
 }

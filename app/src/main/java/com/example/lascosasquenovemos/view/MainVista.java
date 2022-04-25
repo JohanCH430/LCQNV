@@ -39,7 +39,7 @@ public class MainVista extends AppCompatActivity implements PantallaListener {
         //Creo los Intents de las activities a las que tiene que redireccionar.
         iAdminMode = new Intent(MainVista.this, AdminLoginVista.class);
         iJugar = new Intent(MainVista.this, InfoVista.class);
-        iUsuario = new Intent(MainVista.this, UsuarioVista.class);
+        iUsuario = new Intent(MainVista.this, LoginUsuarioVista.class);
 
         //Inicializado las variables con los diferentes elementos de la vista.
         txtVersion = findViewById(R.id.txtVersion);
