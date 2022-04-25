@@ -50,7 +50,7 @@ public class PruebaIntegracionIdentificarseConNombre {
             e.printStackTrace();
         }
 
-        //Compruebo que la siguiente pantalla es un InfoVista y que por tanto la partida se ha leido correctamente.
+        //Compruebo que la siguiente pantalla es la Vista de Usuario y que por tanto el nombre era válido.
         intended(hasComponent(UsuarioVista.class.getName()));
     }
 
