@@ -56,8 +56,7 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
 
         numPantallas = findViewById(R.id.InputNumPtlls);
         numPantallas.setText("");
-        //Inicializamos partida vacía
-        partida = new PartidaModelo("", new HashMap<Integer, PantallaModelo>());
+
 
         //btnReturn vuelve a mainUsuario
         btnReturn.setOnClickListener(new View.OnClickListener() {
@@ -82,9 +81,14 @@ public class CrearPartidaVista extends AppCompatActivity implements TextListener
             @Override
             public void onClick(View view) {
                 String num = numPantallas.getText().toString();
+                btnVer.setEnabled(false);
+                btnFinalizar.setEnabled(false);
+                fedBackCreacion.setText("");
                 if(!num.trim().equals("")){
                     N = Integer.parseInt(num);
                     if(N > 0){
+                        //Inicializamos partida vacía
+                        partida = new PartidaModelo("", new HashMap<Integer, PantallaModelo>());
                         TextoBll.leerTodoTexto(CrearPartidaVista.this);
                     }else{
                         Toast.makeText(getApplicationContext(), "Debe haber al menos una pantalla por partida", Toast.LENGTH_SHORT).show();
